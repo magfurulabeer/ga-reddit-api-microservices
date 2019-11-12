@@ -13,6 +13,7 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/all")
+//    pass username in header?
     public Iterable<User> getAll() {
         return userService.getAll();
     }
@@ -32,7 +33,7 @@ public class UserController {
         return userService.deleteUser(id);
     }
 
-    @PostMapping("/create")
+    @PostMapping("/signup")
     public HttpStatus createUser(@RequestBody User user) {
         return userService.createUser(user);
     }
