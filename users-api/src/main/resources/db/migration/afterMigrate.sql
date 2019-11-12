@@ -5,3 +5,7 @@ VALUES ('user1', 'user1@users.com', 'quinto'),
 INSERT INTO posts(title, description)
 VALUES ('first post', 'this is the first post'),
 ('second post', 'this is the second post');
+
+INSERT INTO comments(text)
+VALUES ('first comment'),
+('second comment');
