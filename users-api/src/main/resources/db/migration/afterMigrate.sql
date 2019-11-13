@@ -1,11 +1,15 @@
-INSERT INTO users(username, email, password)
-VALUES ('user1', 'user1@users.com', 'quinto'),
-('user2', 'user2@users.com', 'quinto');
-
-INSERT INTO posts(title, description)
-VALUES ('first post', 'this is the first post'),
-('second post', 'this is the second post');
-
-INSERT INTO comments(text)
-VALUES ('first comment'),
-('second comment');
+-- INSERT INTO users(username, email, password, profile_id)
+-- VALUES ('user1', 'user1@users.com', 'quinto', 1),
+-- ('user2', 'user2@users.com', 'quinto', 2);
+--
+-- INSERT INTO posts(title, description)
+-- VALUES ('first post', 'this is the first post'),
+-- ('second post', 'this is the second post');
+--
+-- INSERT INTO comments(text)
+-- VALUES ('first comment'),
+-- ('second comment');
+--
+-- INSERT INTO profiles(addl_email, mobile, address, user_id)
+-- VALUES ('email@email.com', '123-4567', '123 St.', 1),
+-- ('email2@email.com', '125-2345', '456 St.', 2);

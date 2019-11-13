@@ -18,6 +18,10 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "profile_id")
+    private UserProfile profile;
+
     public User() {}
 
     public User(long id, String username, String email, String password) {
@@ -57,5 +61,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public UserProfile getProfile() {
+        return profile;
+    }
+
+    public void setProfile(UserProfile profile) {
+        this.profile = profile;
     }
 }
