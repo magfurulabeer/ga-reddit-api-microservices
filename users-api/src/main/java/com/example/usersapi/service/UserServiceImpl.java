@@ -59,6 +59,16 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public String login(User user) {
+        User foundUser = userRepository.getUserByUsername(user.getUsername());
+        if(foundUser != null && encoder().matches(user.getPassword(), foundUser.getPassword())) {
+            String token = jwtUtil.generateToken(foundUser.getUsername());
+            return token;
+        }
+        return null;
+    }
+
+    @Override
     public HttpStatus updateUser(long id, User userRequest) {
         User user = userRepository.findById(id).get();
         user.setUsername(userRequest.getUsername());

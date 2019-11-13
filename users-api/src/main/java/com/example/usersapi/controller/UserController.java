@@ -35,8 +35,12 @@ public class UserController {
 
     @PostMapping("/signup")
     public String createUser(@RequestBody User user) {
-        return "hello";
-//        return userService.createUser(user);
+        return userService.createUser(user);
+    }
+
+    @PostMapping("/login")
+    public String login(@RequestBody User user) {
+        return userService.login(user);
     }
 
     @PatchMapping("/update/{id}")
