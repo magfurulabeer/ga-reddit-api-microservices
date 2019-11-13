@@ -13,7 +13,7 @@ public interface PostService {
 
     public HttpStatus deletePost(long id);
 
-    public HttpStatus createPost(Post post);
+    public Post createPost(Post post);
 
     public HttpStatus updatePost(long id, Post postRequest);
 }

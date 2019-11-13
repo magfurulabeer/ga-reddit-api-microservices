@@ -22,12 +22,6 @@ public class PostServiceImpl implements PostService {
         return postRepository.findById(id).get();
     }
 
-//        @Override
-//        public Iterable<Post> searchByName(String name) {
-//            String normalized = name.trim().toLowerCase();
-//            return postRepository.findByFirstNameContainsOrLastNameContains(normalized, normalized);
-//        }
-
     @Override
     public HttpStatus deletePost(long id) {
         postRepository.deleteById(id);
@@ -35,9 +29,8 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public HttpStatus createPost(Post post) {
-        postRepository.save(post);
-        return HttpStatus.OK;
+    public Post createPost(Post post) {
+        return postRepository.save(post);
     }
 
     @Override

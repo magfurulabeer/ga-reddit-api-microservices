@@ -12,6 +12,8 @@ public class CommentController {
     @Autowired
     private CommentService commentService;
 
+//    TODO: /post/${id}/comment - GET
+
     @GetMapping("/all")
     public Iterable<Comment> getAll() {
         return commentService.getAll();
@@ -22,17 +24,13 @@ public class CommentController {
         return commentService.searchById(id);
     }
 
-//    @GetMapping("/search/{name}")
-//    public Iterable<comment> searchByName(@PathVariable String name) {
-//        return commentService.searchByName(name);
-//    }
-
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
     public HttpStatus deletecomment(@PathVariable long id) {
         return commentService.deleteComment(id);
     }
 
-    @PostMapping("/create")
+//    TODO: attach to post
+    @PostMapping("/{postId}")
     public HttpStatus createcomment(@RequestBody Comment comment) {
         return commentService.createComment(comment);
     }

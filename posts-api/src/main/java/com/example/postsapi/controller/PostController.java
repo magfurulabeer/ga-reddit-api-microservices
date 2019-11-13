@@ -12,7 +12,7 @@ public class PostController {
     @Autowired
     private PostService postService;
 
-    @GetMapping("/all")
+    @GetMapping("/list")
     public Iterable<Post> getAll() {
         return postService.getAll();
     }
@@ -28,17 +28,18 @@ public class PostController {
 //    }
 
     @DeleteMapping("/delete/{id}")
-    public HttpStatus deletepost(@PathVariable long id) {
+    public HttpStatus deletePost(@PathVariable long id) {
         return postService.deletePost(id);
     }
 
-    @PostMapping("/create")
-    public HttpStatus createpost(@RequestBody Post post) {
+//    TODO: Return post
+    @PostMapping("/")
+    public Post createPost(@RequestBody Post post) {
         return postService.createPost(post);
     }
 
     @PatchMapping("/update/{id}")
-    public HttpStatus updatepost(@PathVariable long id, @RequestBody Post postRequest) {
+    public HttpStatus updatePost(@PathVariable long id, @RequestBody Post postRequest) {
         return postService.updatePost(id, postRequest);
     }
 }
