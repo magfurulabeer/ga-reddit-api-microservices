@@ -34,8 +34,9 @@ public class UserController {
     }
 
     @PostMapping("/signup")
-    public HttpStatus createUser(@RequestBody User user) {
-        return userService.createUser(user);
+    public String createUser(@RequestBody User user) {
+        return "hello";
+//        return userService.createUser(user);
     }
 
     @PatchMapping("/update/{id}")

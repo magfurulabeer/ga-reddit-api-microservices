@@ -2,8 +2,12 @@ package com.example.usersapi.service;
 
 import com.example.usersapi.model.User;
 import com.example.usersapi.repository.UserRepository;
+import com.example.usersapi.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -11,6 +15,14 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Bean
+    public PasswordEncoder encoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+    @Autowired
+    JwtUtil jwtUtil;
 
     @Override
     public Iterable<User> getAll() {
@@ -35,9 +47,15 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public HttpStatus createUser(User user) {
-        userRepository.save(user);
-        return HttpStatus.OK;
+    public String createUser(User user) {
+        user.setPassword(encoder().encode(user.getPassword()));
+        User savedUser = userRepository.save(user);
+        if (savedUser != null) {
+            String token = jwtUtil.generateToken(savedUser.getUsername());
+            return token;
+
+        }
+        return null;
     }
 
     @Override

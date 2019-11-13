@@ -13,7 +13,7 @@ public interface UserService {
 
     public HttpStatus deleteUser(long id);
 
-    public HttpStatus createUser(User user);
+    public String createUser(User user);
 
     public HttpStatus updateUser(long id, User userRequest);
 }
