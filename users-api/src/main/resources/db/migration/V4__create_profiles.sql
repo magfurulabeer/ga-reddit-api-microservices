@@ -1,7 +1,0 @@
--- CREATE TABLE profiles (
---     id SERIAL,
---     addl_email VARCHAR(100),
---     mobile VARCHAR(100),
---     address VARCHAR(100) NOT NULL,
---     user_id INTEGER FOREIGN KEY REFERENCES users(id)
--- );
