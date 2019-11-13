@@ -1,0 +1,5 @@
+hystrix:
+    execution:
+      isolation:
+        thread:
+          timeoutInMilliseconds: 10000
