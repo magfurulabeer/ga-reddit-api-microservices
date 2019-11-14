@@ -22,7 +22,7 @@ public class PostController {
 //        return postService.searchById(id);
 //    }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
     public HttpStatus deletePost(@PathVariable long id) {
         return postService.deletePost(id);
     }

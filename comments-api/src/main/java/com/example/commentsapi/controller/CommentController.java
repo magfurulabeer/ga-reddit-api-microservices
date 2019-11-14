@@ -12,12 +12,9 @@ public class CommentController {
     @Autowired
     private CommentService commentService;
 
-//    TODO: /post/${id}/comment - GET
-//    changed to comments/postid
-
-    @GetMapping("/{postid}")
-    public Iterable<Comment> getAll() {
-        return commentService.getAll();
+    @GetMapping("/{postId}")
+    public Iterable<Comment> getCommentsByPostId(@PathVariable long postId) {
+        return commentService.getCommentsByPostId(postId);
     }
 
     @GetMapping("/view/{id}")
@@ -30,14 +27,18 @@ public class CommentController {
         return commentService.deleteComment(id);
     }
 
-//    TODO: attach to post
     @PostMapping("/{postId}")
-    public HttpStatus createcomment(@RequestBody Comment comment) {
-        return commentService.createComment(comment);
+    public Comment createcomment(@RequestBody Comment comment, @PathVariable long postId, @RequestHeader("username") String username) {
+        return commentService.createComment(comment, postId, username);
     }
 
     @PatchMapping("/update/{id}")
     public HttpStatus updatecomment(@PathVariable long id, @RequestBody Comment commentRequest) {
         return commentService.updateComment(id, commentRequest);
+    }
+
+    @DeleteMapping("/posts/{postId}")
+    public HttpStatus deleteCommentsByPostId(@PathVariable long postId) {
+        return commentService.deleteCommentsByPostId(postId);
     }
 }
