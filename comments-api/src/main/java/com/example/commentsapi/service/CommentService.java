@@ -5,7 +5,7 @@ import org.springframework.http.HttpStatus;
 
 public interface CommentService {
 
-    public Iterable<Comment> getAll();
+    public Iterable<Comment> getCommentsByPostId(long postId);
 
     public Comment searchById(long id);
 
@@ -13,7 +13,9 @@ public interface CommentService {
 
     public HttpStatus deleteComment(long id);
 
-    public HttpStatus createComment(Comment comment);
+    public Comment createComment(Comment comment, long postId, String username);
 
     public HttpStatus updateComment(long id, Comment commentRequest);
+
+    public HttpStatus deleteCommentsByPostId(long postId);
 }
