@@ -9,11 +9,9 @@ public interface PostService {
 
     public Post searchById(long id);
 
-//    public Iterable<User> searchByName(String name);
-
     public HttpStatus deletePost(long id);
 
-    public Post createPost(Post post);
+    public Post createPost(Post post, String username);
 
     public HttpStatus updatePost(long id, Post postRequest);
 }

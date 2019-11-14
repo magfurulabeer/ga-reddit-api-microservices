@@ -12,6 +12,12 @@ public class Comment {
     @Column(name = "text", nullable = false)
     private String text;
 
+    @Column(name = "username", nullable = false)
+    private String username;
+
+    @Column(name = "post_id", nullable = false)
+    private int post_id;
+
     public Comment() {}
 
     public Comment(long id, String text) {
@@ -33,5 +39,21 @@ public class Comment {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public int getPost_id() {
+        return post_id;
+    }
+
+    public void setPost_id(int post_id) {
+        this.post_id = post_id;
     }
 }

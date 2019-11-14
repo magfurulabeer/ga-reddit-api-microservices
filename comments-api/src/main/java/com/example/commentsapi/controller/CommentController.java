@@ -13,8 +13,9 @@ public class CommentController {
     private CommentService commentService;
 
 //    TODO: /post/${id}/comment - GET
+//    changed to comments/postid
 
-    @GetMapping("/all")
+    @GetMapping("/{postid}")
     public Iterable<Comment> getAll() {
         return commentService.getAll();
     }

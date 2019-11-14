@@ -15,6 +15,9 @@ public class Post {
     @Column(name = "description")
     private String description;
 
+    @Column(name = "username", nullable = false)
+    private String username;
+
     public Post() {}
 
     public Post(long id, String title, String description) {
@@ -45,5 +48,13 @@ public class Post {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

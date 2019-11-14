@@ -4,7 +4,9 @@ import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Component;
 
+@Component
 public class AuthenticationFilter extends ZuulFilter {
     @Override
     public String filterType() {
@@ -25,6 +27,8 @@ public class AuthenticationFilter extends ZuulFilter {
     public Object run() throws ZuulException {
         RequestContext ctx = RequestContext.getCurrentContext();
         String un = SecurityContextHolder.getContext().getAuthentication().getName();
+        System.out.println("apitest");
+        System.out.println(un);
         ctx.addZuulRequestHeader("username", un);
         return null;
     }

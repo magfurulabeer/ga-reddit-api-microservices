@@ -17,14 +17,9 @@ public class PostController {
         return postService.getAll();
     }
 
-    @GetMapping("/view/{id}")
-    public Post searchById(@PathVariable long id) {
-        return postService.searchById(id);
-    }
-
-//    @GetMapping("/search/{name}")
-//    public Iterable<post> searchByName(@PathVariable String name) {
-//        return postService.searchByName(name);
+//    @GetMapping("/view/{id}")
+//    public Post searchById(@PathVariable long id) {
+//        return postService.searchById(id);
 //    }
 
     @DeleteMapping("/delete/{id}")
@@ -32,14 +27,13 @@ public class PostController {
         return postService.deletePost(id);
     }
 
-//    TODO: Return post
     @PostMapping("/")
-    public Post createPost(@RequestBody Post post) {
-        return postService.createPost(post);
+    public Post createPost(@RequestBody Post post, @RequestHeader("username") String username) {
+        return postService.createPost(post, username);
     }
 
-    @PatchMapping("/update/{id}")
-    public HttpStatus updatePost(@PathVariable long id, @RequestBody Post postRequest) {
-        return postService.updatePost(id, postRequest);
-    }
+//    @PatchMapping("/update/{id}")
+//    public HttpStatus updatePost(@PathVariable long id, @RequestBody Post postRequest) {
+//        return postService.updatePost(id, postRequest);
+//    }
 }
