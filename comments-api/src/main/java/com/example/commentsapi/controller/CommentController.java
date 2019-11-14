@@ -23,17 +23,17 @@ public class CommentController {
     }
 
     @DeleteMapping("/{id}")
-    public HttpStatus deletecomment(@PathVariable long id) {
-        return commentService.deleteComment(id);
+    public String deleteComment(@PathVariable long id) {
+        return commentService.deleteComment(id) == HttpStatus.OK ? "success" : "error";
     }
 
     @PostMapping("/{postId}")
-    public Comment createcomment(@RequestBody Comment comment, @PathVariable long postId, @RequestHeader("username") String username) {
+    public Comment createComment(@RequestBody Comment comment, @PathVariable long postId, @RequestHeader("username") String username) {
         return commentService.createComment(comment, postId, username);
     }
 
     @PatchMapping("/update/{id}")
-    public HttpStatus updatecomment(@PathVariable long id, @RequestBody Comment commentRequest) {
+    public HttpStatus updateComment(@PathVariable long id, @RequestBody Comment commentRequest) {
         return commentService.updateComment(id, commentRequest);
     }
 

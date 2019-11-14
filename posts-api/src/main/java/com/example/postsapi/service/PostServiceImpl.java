@@ -35,16 +35,6 @@ public class PostServiceImpl implements PostService {
     public HttpStatus deletePost(long id) throws IOException {
         postRepository.deleteById(id);
         return commentsClient.deleteCommentsByPostId(id);
-//        URL url = new URL("http://localhost:8083/posts/" + id);
-//        HttpURLConnection con = (HttpURLConnection) url.openConnection();
-//        con.setRequestMethod("DELETE");
-//        int responseCode = con.getResponseCode();
-
-//        if (responseCode == 200) {
-//            return HttpStatus.OK;
-//        } else {
-//            return HttpStatus.I_AM_A_TEAPOT;
-//        }
     }
 
     @Override

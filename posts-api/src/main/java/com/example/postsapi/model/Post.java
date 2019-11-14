@@ -1,9 +1,13 @@
 package com.example.postsapi.model;
 
+import com.example.postsapi.serializer.PostSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "posts")
+@JsonSerialize(using = PostSerializer.class)
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
