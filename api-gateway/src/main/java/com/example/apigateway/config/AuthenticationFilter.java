@@ -27,8 +27,6 @@ public class AuthenticationFilter extends ZuulFilter {
     public Object run() throws ZuulException {
         RequestContext ctx = RequestContext.getCurrentContext();
         String un = SecurityContextHolder.getContext().getAuthentication().getName();
-        System.out.println("apitest");
-        System.out.println(un);
         ctx.addZuulRequestHeader("username", un);
         return null;
     }

@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
+
 @RestController
 public class PostController {
 
@@ -23,7 +25,7 @@ public class PostController {
 //    }
 
     @DeleteMapping("/{id}")
-    public HttpStatus deletePost(@PathVariable long id) {
+    public HttpStatus deletePost(@PathVariable long id) throws IOException {
         return postService.deletePost(id);
     }
 
