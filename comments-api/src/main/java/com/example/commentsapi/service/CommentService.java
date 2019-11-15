@@ -13,7 +13,7 @@ public interface CommentService {
 
     public HttpStatus deleteComment(long id);
 
-    public Comment createComment(Comment comment, long postId, String username);
+    public Comment createComment(Comment comment, long postId, String username) throws Exception;
 
     public HttpStatus updateComment(long id, Comment commentRequest);
 
