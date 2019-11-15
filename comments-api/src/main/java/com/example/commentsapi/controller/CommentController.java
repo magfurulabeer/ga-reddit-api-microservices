@@ -28,7 +28,7 @@ public class CommentController {
     }
 
     @PostMapping("/{postId}")
-    public Comment createComment(@RequestBody Comment comment, @PathVariable long postId, @RequestHeader("username") String username) {
+    public Comment createComment(@RequestBody Comment comment, @PathVariable long postId, @RequestHeader("username") String username) throws Exception {
         return commentService.createComment(comment, postId, username);
     }
 

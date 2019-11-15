@@ -34,6 +34,17 @@ public class PostController {
         return postService.createPost(post, username);
     }
 
+    @GetMapping("/{postId}")
+    public boolean postWithPostIdExists(@PathVariable long postId) {
+        try {
+            Post post = postService.searchById(postId);
+            return post != null;
+        } catch(Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
 //    @PatchMapping("/update/{id}")
 //    public HttpStatus updatePost(@PathVariable long id, @RequestBody Post postRequest) {
 //        return postService.updatePost(id, postRequest);

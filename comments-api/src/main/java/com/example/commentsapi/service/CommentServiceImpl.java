@@ -1,5 +1,6 @@
 package com.example.commentsapi.service;
 
+import com.example.commentsapi.feign.PostsClient;
 import com.example.commentsapi.model.Comment;
 import com.example.commentsapi.repository.CommentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,9 @@ public class CommentServiceImpl implements CommentService {
 
     @Autowired
     private CommentRepository commentRepository;
+
+    @Autowired
+    PostsClient postsClient;
 
     @Override
     public Iterable<Comment> getCommentsByPostId(long postId) {
@@ -35,7 +39,10 @@ public class CommentServiceImpl implements CommentService {
     }
 
     @Override
-    public Comment createComment(Comment comment, long postId, String username) {
+    public Comment createComment(Comment comment, long postId, String username) throws Exception {
+        if(!postsClient.postWithPostIdExists(postId)) {
+            throw new Exception("Post with id " + postId + " does not exist!");
+        }
         comment.setPostId(postId);
         comment.setUsername(username);
         return commentRepository.save(comment);
