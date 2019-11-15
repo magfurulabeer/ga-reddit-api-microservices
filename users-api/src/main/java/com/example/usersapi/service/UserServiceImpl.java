@@ -1,7 +1,9 @@
 package com.example.usersapi.service;
 
 import com.example.usersapi.model.User;
+import com.example.usersapi.model.UserRole;
 import com.example.usersapi.repository.UserRepository;
+import com.example.usersapi.repository.UserRoleRepository;
 import com.example.usersapi.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -10,11 +12,17 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private UserRoleRepository userRoleRepository;
 
     @Bean
     public PasswordEncoder encoder() {
@@ -43,6 +51,14 @@ public class UserServiceImpl implements UserService {
     @Override
     public String createUser(User user) {
         user.setPassword(encoder().encode(user.getPassword()));
+
+        UserRole userRole = new UserRole();
+        userRole.setName("ROLE_USER");
+        userRoleRepository.save(userRole);
+        List<UserRole> userRoles = new ArrayList<>();
+        userRoles.add(userRole);
+
+        user.setUserRoles(userRoles);
         User savedUser = userRepository.save(user);
         if (savedUser != null) {
             String token = jwtUtil.generateToken(savedUser.getUsername());
