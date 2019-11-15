@@ -34,12 +34,6 @@ public class UserServiceImpl implements UserService {
         return userRepository.findById(id).get();
     }
 
-//        @Override
-//        public Iterable<User> searchByName(String name) {
-//            String normalized = name.trim().toLowerCase();
-//            return userRepository.findByFirstNameContainsOrLastNameContains(normalized, normalized);
-//        }
-
     @Override
     public HttpStatus deleteUser(long id) {
         userRepository.deleteById(id);
