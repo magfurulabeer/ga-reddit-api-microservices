@@ -1,0 +1,44 @@
+applications:
+- name: micro-eureka
+  memory: 512M
+  instances: 1
+  env:
+    SPRING_PROFILES_ACTIVE: pcf
+  docker:
+    image: grantk/micro-eureka-server:0.0.1-SNAPSHOT
+    username: grantk
+- name: micro-api-gateway
+  memory: 512M
+  instances: 1
+  env:
+    SPRING_PROFILES_ACTIVE: pcf
+  docker:
+    image: grantk/micro-api-gateway:0.0.1-SNAPSHOT
+    username: grantk
+- name: micro-users-api
+  memory: 512M
+  instances: 1
+  env:
+    SPRING_PROFILES_ACTIVE: pcf
+    SPRING_APPLICATION_NAME: users
+  docker:
+    image: grantk/micro-users-api:0.0.1-SNAPSHOT
+    username: grantk
+- name: micro-posts-api
+  memory: 512M
+  instances: 1
+  env:
+    SPRING_PROFILES_ACTIVE: pcf
+    SPRING_APPLICATION_NAME: posts
+  docker:
+    image: grantk/micro-posts-api:0.0.1-SNAPSHOT
+    username: grantk
+- name: micro-comments-api
+  memory: 512M
+  instances: 1
+  env:
+    SPRING_PROFILES_ACTIVE: pcf
+    SPRING_APPLICATION_NAME: comments
+  docker:
+    image: grantk/micro-comments-api:0.0.1-SNAPSHOT
+    username: grantk
