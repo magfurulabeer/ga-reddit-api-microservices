@@ -13,6 +13,6 @@ During the frontend integration, we realized that the frontend was expecting the
 One of the challenges we faced was having microservices communicate with each. We had a handful of options to choose from including RestTemplate but we ultimately decided on Feign. It was a bit excessive for this project but it was simple to set up.
 
 ### Architecture
-![Image of Architecture](https://github.com/magfurulabeer/ga-reddit-api-microservices/blob/master/docs/assets/architecture.png)
+![Image of Architecture](https://github.com/magfurulabeer/ga-reddit-api-microservices/blob/master/docs/assets/architecture-diagram.png)
 
 Our Architecture is quite standard. When the client sends a request to our backend (in this case, through the frontend application), it goes to our API Gateway (Netflix Zuul) first and then goes to our Service Discovery (Netflix Eureka) which then locates one of three services: Users, Posts, or Comments. All 3 services, as well as our API Gateway, use and depend on our shared Postgres Database.
