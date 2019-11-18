@@ -6,6 +6,20 @@ https://www.pivotaltracker.com/n/projects/2416893
 ### ERD
 ![Image of ERD](https://github.com/magfurulabeer/ga-reddit-api-monolith/blob/master/erd-final.png)
 
+## Technologies Used
+Pivotal Tracker - User Stories
+Maven - Dependency Manager
+Spring Boot - Backend Framework
+Hibernate - ORM
+Feign - HTTP Client
+PostgreSQL - Database
+Docker - Containers
+Docker Compose - Container Orchestration 
+Netflix Zuul - API Gateway
+Netflix Eureka - Service Registry
+IntelliJ IDEA - IDE
+Sketch - Image Editing
+
 ### Challenges
 
 During the frontend integration, we realized that the frontend was expecting the Post and Comment JSON response to include a user property and a nested username property. This didn't match up with our Post and Comment models which directly had a username property. We solved this issue by creating a custom serializer with Jackson which would return the JSON in the format the frontend expected.
