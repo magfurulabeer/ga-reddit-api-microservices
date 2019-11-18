@@ -36,3 +36,6 @@
 >![Image of Architecture](https://github.com/magfurulabeer/ga-reddit-api-microservices/blob/master/docs/assets/architecture-diagram.png)
 
 >Our Architecture is quite standard. When the client sends a request to our backend (in this case, through the frontend application), it goes to our API Gateway (Netflix Zuul) first and then goes to our Service Discovery (Netflix Eureka) which then locates one of three services: Users, Posts, or Comments. All 3 services, as well as our API Gateway, use and depend on our shared Postgres Database.
+
+### Documentation
+>JavaDocs are currently available for the users-api in the docs branch. Due to it's monotonous and tedious nature, only users-api was documented. With more time, we could easily complete the full documentations. Swagger is set up in the docs branch as well, but there are no annotations for it in the code currently.
