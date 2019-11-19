@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @RestController
 public class UserController {
 
@@ -13,7 +16,6 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/all")
-//    pass username in header?
     public Iterable<User> getAll() {
         return userService.getAll();
     }
@@ -23,24 +25,23 @@ public class UserController {
         return userService.searchById(id);
     }
 
-//    @GetMapping("/search/{name}")
-//    public Iterable<User> searchByName(@PathVariable String name) {
-//        return userService.searchByName(name);
-//    }
-
     @DeleteMapping("/delete/{id}")
     public HttpStatus deleteUser(@PathVariable long id) {
         return userService.deleteUser(id);
     }
 
     @PostMapping("/signup")
-    public String createUser(@RequestBody User user) {
-        return userService.createUser(user);
+    public Map<String, String> createUser(@RequestBody User user) {
+        Map<String, String> result = new HashMap<String,String>();
+        result.put("token", userService.createUser(user));
+        return result;
     }
 
     @PostMapping("/login")
-    public String login(@RequestBody User user) {
-        return userService.login(user);
+    public Map<String, String> login(@RequestBody User user) {
+        Map<String, String> result = new HashMap<String,String>();
+        result.put("token", userService.login(user));
+        return result;
     }
 
     @PatchMapping("/update/{id}")

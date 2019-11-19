@@ -1,5 +1,6 @@
 package com.example.commentsapi.service;
 
+import com.example.commentsapi.feign.PostsClient;
 import com.example.commentsapi.model.Comment;
 import com.example.commentsapi.repository.CommentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,9 +13,12 @@ public class CommentServiceImpl implements CommentService {
     @Autowired
     private CommentRepository commentRepository;
 
+    @Autowired
+    PostsClient postsClient;
+
     @Override
-    public Iterable<Comment> getAll() {
-        return commentRepository.findAll();
+    public Iterable<Comment> getCommentsByPostId(long postId) {
+        return commentRepository.findAllByPostId(postId);
     }
 
     @Override
@@ -35,9 +39,13 @@ public class CommentServiceImpl implements CommentService {
     }
 
     @Override
-    public HttpStatus createComment(Comment comment) {
-        commentRepository.save(comment);
-        return HttpStatus.OK;
+    public Comment createComment(Comment comment, long postId, String username) throws Exception {
+        if(!postsClient.postWithPostIdExists(postId)) {
+            throw new Exception("Post with id " + postId + " does not exist!");
+        }
+        comment.setPostId(postId);
+        comment.setUsername(username);
+        return commentRepository.save(comment);
     }
 
     @Override
@@ -45,6 +53,12 @@ public class CommentServiceImpl implements CommentService {
         Comment comment = commentRepository.findById(id).get();
         comment.setText(commentRequest.getText());
         commentRepository.save(comment);
+        return HttpStatus.OK;
+    }
+
+    @Override
+    public HttpStatus deleteCommentsByPostId(long postId) {
+        commentRepository.deleteAllByPostId(postId);
         return HttpStatus.OK;
     }
 }

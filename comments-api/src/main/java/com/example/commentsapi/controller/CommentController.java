@@ -12,9 +12,9 @@ public class CommentController {
     @Autowired
     private CommentService commentService;
 
-    @GetMapping("/all")
-    public Iterable<Comment> getAll() {
-        return commentService.getAll();
+    @GetMapping("/{postId}")
+    public Iterable<Comment> getCommentsByPostId(@PathVariable long postId) {
+        return commentService.getCommentsByPostId(postId);
     }
 
     @GetMapping("/view/{id}")
@@ -22,23 +22,23 @@ public class CommentController {
         return commentService.searchById(id);
     }
 
-//    @GetMapping("/search/{name}")
-//    public Iterable<comment> searchByName(@PathVariable String name) {
-//        return commentService.searchByName(name);
-//    }
-
-    @DeleteMapping("/delete/{id}")
-    public HttpStatus deletecomment(@PathVariable long id) {
-        return commentService.deleteComment(id);
+    @DeleteMapping("/{id}")
+    public String deleteComment(@PathVariable long id) {
+        return commentService.deleteComment(id) == HttpStatus.OK ? "success" : "error";
     }
 
-    @PostMapping("/create")
-    public HttpStatus createcomment(@RequestBody Comment comment) {
-        return commentService.createComment(comment);
+    @PostMapping("/{postId}")
+    public Comment createComment(@RequestBody Comment comment, @PathVariable long postId, @RequestHeader("username") String username) throws Exception {
+        return commentService.createComment(comment, postId, username);
     }
 
     @PatchMapping("/update/{id}")
-    public HttpStatus updatecomment(@PathVariable long id, @RequestBody Comment commentRequest) {
+    public HttpStatus updateComment(@PathVariable long id, @RequestBody Comment commentRequest) {
         return commentService.updateComment(id, commentRequest);
+    }
+
+    @DeleteMapping("/posts/{postId}")
+    public HttpStatus deleteCommentsByPostId(@PathVariable long postId) {
+        return commentService.deleteCommentsByPostId(postId);
     }
 }
