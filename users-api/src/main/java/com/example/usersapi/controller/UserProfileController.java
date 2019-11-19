@@ -14,9 +14,9 @@ public class UserProfileController {
     @Autowired
     private UserProfileService userProfileService;
 
-    @GetMapping("/profile/{userId}")
-    public UserProfile searchById(@PathVariable long userId) {
-        return userProfileService.searchById(userId);
+    @GetMapping("/profile/{id}")
+    public UserProfile searchById(@PathVariable long id) {
+        return userProfileService.searchById(id);
     }
 
 
@@ -30,8 +30,8 @@ public class UserProfileController {
         return userProfileService.createUserProfile(userId, userProfileRequest);
     }
 
-    @PutMapping("/profile/{userId}")
-    public UserProfile updateUserProfile(@PathVariable long userId, @RequestBody UserProfile userProfileRequest) {
-        return userProfileService.updateUserProfile(userId, userProfileRequest);
+    @PutMapping("/profile/{id}")
+    public UserProfile updateUserProfile(@PathVariable long id, @RequestBody UserProfile userProfileRequest) {
+        return userProfileService.updateUserProfile(id, userProfileRequest);
     }
 }

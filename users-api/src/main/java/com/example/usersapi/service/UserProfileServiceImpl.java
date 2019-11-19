@@ -17,8 +17,8 @@ public class UserProfileServiceImpl implements UserProfileService {
     UserRepository userRepository;
 
     @Override
-    public UserProfile searchById(long userId) {
-        return userProfileRepository.findByUserId(userId);
+    public UserProfile searchById(long id) {
+        return userProfileRepository.findById(id).get();
     }
 
     @Override
@@ -28,8 +28,8 @@ public class UserProfileServiceImpl implements UserProfileService {
     }
 
     @Override
-    public UserProfile updateUserProfile(long userId, UserProfile userProfileRequest) {
-        UserProfile profile = userProfileRepository.findByUserId(userId);
+    public UserProfile updateUserProfile(long id, UserProfile userProfileRequest) {
+        UserProfile profile = userProfileRepository.findById(id).get();
         profile.setAddlEmail(userProfileRequest.getAddlEmail());
         profile.setAddress(userProfileRequest.getAddress());
         profile.setMobile(userProfileRequest.getMobile());

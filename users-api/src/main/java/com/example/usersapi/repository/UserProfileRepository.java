@@ -7,6 +7,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserProfileRepository extends CrudRepository<UserProfile, Long> {
-    @Query("FROM profiles WHERE user_id = ?1")
-    UserProfile findByUserId(long userId);
 }
