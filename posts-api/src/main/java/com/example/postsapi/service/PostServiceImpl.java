@@ -1,18 +1,13 @@
 package com.example.postsapi.service;
 
-import com.example.postsapi.feign.CommentsClient;
 import com.example.postsapi.model.Post;
 import com.example.postsapi.mq.Sender;
 import com.example.postsapi.repository.PostRepository;
-import com.netflix.discovery.converters.Auto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 
 @Service
 public class PostServiceImpl implements PostService {
@@ -22,9 +17,6 @@ public class PostServiceImpl implements PostService {
 
     @Autowired
     private PostRepository postRepository;
-
-    @Autowired
-    private CommentsClient commentsClient;
 
     @Override
     public Iterable<Post> getAll() {
@@ -39,10 +31,9 @@ public class PostServiceImpl implements PostService {
     @Override
     public HttpStatus deletePost(long id) throws IOException {
         sender.send(String.valueOf(id));
-//        postRepository.deleteById(id);
+        postRepository.deleteById(id);
         return HttpStatus.OK;
         // TODO: Add try catch
-//        return commentsClient.deleteCommentsByPostId(id);
     }
 
     @Override

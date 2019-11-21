@@ -22,9 +22,7 @@ public class Sender {
     @Autowired
     private Queue queue;
 
-    public void send(String message) {
-        System.out.println("Sending message...");
-        template.convertAndSend(queue.getName(),message);
-        System.out.println("Message sent: " + message + " on q: " + queue.getName());
+    public void send(String id) {
+        template.convertAndSend(queue.getName(), id);
     }
 }
