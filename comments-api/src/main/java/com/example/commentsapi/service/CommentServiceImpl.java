@@ -59,6 +59,7 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public HttpStatus deleteCommentsByPostId(long postId) {
         commentRepository.deleteAllByPostId(postId);
+        System.out.println("<><><><><><><><");
         return HttpStatus.OK;
     }
 }
