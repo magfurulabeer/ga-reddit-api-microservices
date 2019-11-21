@@ -2,7 +2,9 @@ package com.example.postsapi.service;
 
 import com.example.postsapi.feign.CommentsClient;
 import com.example.postsapi.model.Post;
+import com.example.postsapi.mq.Sender;
 import com.example.postsapi.repository.PostRepository;
+import com.netflix.discovery.converters.Auto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -14,6 +16,9 @@ import java.net.URL;
 
 @Service
 public class PostServiceImpl implements PostService {
+
+    @Autowired
+    private Sender sender;
 
     @Autowired
     private PostRepository postRepository;
@@ -33,8 +38,11 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public HttpStatus deletePost(long id) throws IOException {
-        postRepository.deleteById(id);
-        return commentsClient.deleteCommentsByPostId(id);
+        sender.send(String.valueOf(id));
+//        postRepository.deleteById(id);
+        return HttpStatus.OK;
+        // TODO: Add try catch
+//        return commentsClient.deleteCommentsByPostId(id);
     }
 
     @Override
