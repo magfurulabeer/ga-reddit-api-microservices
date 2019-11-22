@@ -7,10 +7,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
-
-import java.util.regex.Pattern;
-
-//import javax.persistence.EntityNotFoundException;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 
 @ControllerAdvice
 public class ExceptionHandler extends ResponseEntityExceptionHandler {
@@ -30,15 +27,26 @@ public class ExceptionHandler extends ResponseEntityExceptionHandler {
     }
 
     @Override
-    protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
-        String[] sections = ex.getMessage().split(" default message ");
+    protected ResponseEntity<Object> handleHttpMessageNotReadable(HttpMessageNotReadableException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
+        ErrorResponse errorResponse = new ErrorResponse(HttpStatus.BAD_REQUEST, ex.getMessage());
 
-        String problemField = sections[sections.length - 2];
+        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);    }
+
+    @Override
+    protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
+        ErrorResponse errorResponse = new ErrorResponse(HttpStatus.BAD_REQUEST, parseNotValidExceptionMessage(ex));
+        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
+    }
+
+    public String parseNotValidExceptionMessage(MethodArgumentNotValidException ex) {
+        String[] sections = ex.getMessage().split(" default message ");
+        String[] problemFieldSections = sections[sections.length - 2].split("]");
+
+        String problemField = problemFieldSections[0];
         String message = sections[sections.length - 1].replaceAll("\\[", "").replaceAll("\\]", "");
         message = message.substring(0, 1).toUpperCase() + message.substring(1).trim();
-        message = problemField + ": " + message;
+        message = problemField + "]: " + message;
 
-        ErrorResponse errorResponse = new ErrorResponse(HttpStatus.BAD_REQUEST, message);
-        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
+        return message;
     }
 }
