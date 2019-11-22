@@ -1,6 +1,9 @@
 package com.example.usersapi.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 import java.util.List;
 
 @Entity
@@ -10,12 +13,16 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @Size(min=3, max=30)
     @Column(name = "username", nullable = false, unique = true)
     private String username;
 
+    @NotEmpty
+    @Email
     @Column(name = "email", nullable = false, unique = true)
     private String email;
 
+    @Size(min=3, max=30)
     @Column(name = "password", nullable = false)
     private String password;
 
