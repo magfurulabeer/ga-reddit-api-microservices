@@ -4,6 +4,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -91,5 +92,13 @@ public class User {
 
     public void setUserRoles(List<UserRole> userRoles) {
         this.userRoles = userRoles;
+    }
+
+    public List<UserRole> addUserRole(UserRole userRole) {
+        if (this.userRoles == null) {
+            this.userRoles = new ArrayList<>();
+        }
+        this.userRoles.add(userRole);
+        return this.userRoles;
     }
 }
