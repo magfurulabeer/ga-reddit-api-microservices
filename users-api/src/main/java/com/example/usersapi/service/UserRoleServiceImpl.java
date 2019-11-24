@@ -1,15 +1,16 @@
 package com.example.usersapi.service;
 
+import com.example.usersapi.exception.EntityNotFoundException;
 import com.example.usersapi.model.User;
 import com.example.usersapi.model.UserRole;
 import com.example.usersapi.repository.UserRepository;
 import com.example.usersapi.repository.UserRoleRepository;
-import com.netflix.ribbon.proxy.annotation.Http;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.Collection;
+import java.util.NoSuchElementException;
 
 @Service
 public class UserRoleServiceImpl implements UserRoleService {
@@ -25,14 +26,24 @@ public class UserRoleServiceImpl implements UserRoleService {
     }
 
     @Override
-    public List<UserRole> searchByUserId(long userId) {
-        User user = userRepository.findById(userId).get();
-        return user.getUserRoles();
+    public Collection<UserRole> searchByUserId(long userId) throws EntityNotFoundException {
+        try {
+            User user = userRepository.findById(userId).get();
+            return user.getUserRoles();
+        } catch(NoSuchElementException e) {
+            throw new EntityNotFoundException("Id does not match any user");
+        }
+
     }
 
     @Override
-    public HttpStatus deleteUserRole(long id) {
-        userRoleRepository.deleteById(id);
-        return HttpStatus.OK;
+    public HttpStatus deleteUserRole(long id) throws EntityNotFoundException {
+        try {
+            userRoleRepository.deleteById(id);
+            return HttpStatus.OK;
+        } catch(NoSuchElementException e) {
+            throw new EntityNotFoundException("Id does not match any user profile");
+        }
+
     }
 }

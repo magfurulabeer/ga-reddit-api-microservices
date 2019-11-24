@@ -1,5 +1,6 @@
 package com.example.usersapi.controller;
 
+import com.example.usersapi.exception.EntityNotFoundException;
 import com.example.usersapi.model.User;
 import com.example.usersapi.model.UserProfile;
 import com.example.usersapi.service.UserProfileService;
@@ -15,7 +16,7 @@ public class UserProfileController {
     private UserProfileService userProfileService;
 
     @GetMapping("/profile/{id}")
-    public UserProfile searchById(@PathVariable long id) {
+    public UserProfile searchById(@PathVariable long id) throws EntityNotFoundException {
         return userProfileService.searchById(id);
     }
 
@@ -26,12 +27,12 @@ public class UserProfileController {
 //    }
 
     @PostMapping("/profile/{userId}")
-    public UserProfile createUserProfile(@PathVariable long userId, @RequestBody UserProfile userProfileRequest) {
+    public UserProfile createUserProfile(@PathVariable long userId, @RequestBody UserProfile userProfileRequest) throws EntityNotFoundException {
         return userProfileService.createUserProfile(userId, userProfileRequest);
     }
 
     @PutMapping("/profile/{id}")
-    public UserProfile updateUserProfile(@PathVariable long id, @RequestBody UserProfile userProfileRequest) {
+    public UserProfile updateUserProfile(@PathVariable long id, @RequestBody UserProfile userProfileRequest) throws EntityNotFoundException {
         return userProfileService.updateUserProfile(id, userProfileRequest);
     }
 }

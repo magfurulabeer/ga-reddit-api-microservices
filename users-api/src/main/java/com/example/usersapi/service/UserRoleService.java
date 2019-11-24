@@ -1,14 +1,15 @@
 package com.example.usersapi.service;
 
+import com.example.usersapi.exception.EntityNotFoundException;
 import com.example.usersapi.model.UserRole;
 import org.springframework.http.HttpStatus;
 
-import java.util.List;
+import java.util.Collection;
 
 public interface UserRoleService {
     public UserRole createUserRole(UserRole userRole);
 
-    public List<UserRole> searchByUserId(long userId);
+    public Collection<UserRole> searchByUserId(long userId) throws EntityNotFoundException;
 
-    public HttpStatus deleteUserRole(long id);
+    public HttpStatus deleteUserRole(long id) throws EntityNotFoundException;
 }

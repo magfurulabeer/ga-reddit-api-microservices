@@ -5,6 +5,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 @Entity
@@ -35,7 +36,7 @@ public class User {
     @JoinTable(name = "user_role_user",
             joinColumns = {@JoinColumn(name = "user_id")},
             inverseJoinColumns = {@JoinColumn(name = "user_role_id")})
-    private List<UserRole> userRoles;
+    private Collection<UserRole> userRoles;
 
     public User() {}
 
@@ -86,15 +87,15 @@ public class User {
         this.profile = profile;
     }
 
-    public List<UserRole> getUserRoles() {
+    public Collection<UserRole> getUserRoles() {
         return userRoles;
     }
 
-    public void setUserRoles(List<UserRole> userRoles) {
+    public void setUserRoles(Collection<UserRole> userRoles) {
         this.userRoles = userRoles;
     }
 
-    public List<UserRole> addUserRole(UserRole userRole) {
+    public Collection<UserRole> addUserRole(UserRole userRole) {
         if (this.userRoles == null) {
             this.userRoles = new ArrayList<>();
         }

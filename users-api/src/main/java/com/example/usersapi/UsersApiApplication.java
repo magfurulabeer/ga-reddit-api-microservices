@@ -30,13 +30,13 @@ public class UsersApiApplication {
 		user.setUsername("DBAuser");
 		user.setEmail("DBA@dba.com");
 		user.setPassword("DBAuser");
-		userService.createUser(user);
 
 		UserRole userRole = new UserRole();
 		userRole.setName("ROLE_DBA");
 		userRoleService.createUserRole(userRole);
 
 		user.addUserRole(userRole);
+		userService.createUser(user);
 		return user;
 	}
 

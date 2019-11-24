@@ -1,12 +1,13 @@
 package com.example.usersapi.controller;
 
+import com.example.usersapi.exception.EntityNotFoundException;
 import com.example.usersapi.model.UserRole;
 import com.example.usersapi.service.UserRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.Collection;
 
 @RestController
 public class UserRoleController {
@@ -15,12 +16,12 @@ public class UserRoleController {
     private UserRoleService userRoleService;
 
     @GetMapping("/role/{userId}")
-    public List<UserRole> searchByUserId(@PathVariable long userId) {
+    public Collection<UserRole> searchByUserId(@PathVariable long userId) throws EntityNotFoundException {
         return userRoleService.searchByUserId(userId);
     }
 
     @DeleteMapping("/role/{id}")
-    public HttpStatus deleteUserRole(@PathVariable long id) {
+    public HttpStatus deleteUserRole(@PathVariable long id) throws EntityNotFoundException {
         return userRoleService.deleteUserRole(id);
     }
 

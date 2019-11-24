@@ -62,10 +62,8 @@ public class UserServiceImpl implements UserService {
             UserRole userRole = new UserRole();
             userRole.setName("ROLE_USER");
             userRoleRepository.save(userRole);
-            List<UserRole> userRoles = new ArrayList<>();
-            userRoles.add(userRole);
 
-            user.setUserRoles(userRoles);
+            user.addUserRole(userRole);
             User savedUser = userRepository.save(user);
             String token = jwtUtil.generateToken(savedUser.getUsername());
             return token;
