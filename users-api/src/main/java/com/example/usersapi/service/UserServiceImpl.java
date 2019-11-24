@@ -9,12 +9,14 @@ import com.example.usersapi.repository.UserRoleRepository;
 import com.example.usersapi.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.dao.DataAccessException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import javax.naming.AuthenticationException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -77,13 +79,13 @@ public class UserServiceImpl implements UserService {
         try {
             User foundUser = userRepository.getUserByUsername(user.getUsername());
 
-            if(encoder().matches(user.getPassword(), foundUser.getPassword())) {
-                throw new Exception();
+            if(!encoder().matches(user.getPassword(), foundUser.getPassword())) {
+                throw new AuthenticationException();
             }
 
             String token = jwtUtil.generateToken(foundUser.getUsername());
             return token;
-        } catch(Exception e) {
+        } catch(AuthenticationException e) {
             throw new InvalidCredentialsException("Username/Password combination is invalid");
         }
     }

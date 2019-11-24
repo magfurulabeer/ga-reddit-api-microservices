@@ -20,10 +20,10 @@ public class UserProfileController {
     }
 
 
-    @DeleteMapping("/profile/{id}")
-    public HttpStatus deleteUserProfile(@PathVariable long id) {
-        return userProfileService.deleteUserProfile(id);
-    }
+//    @DeleteMapping("/profile/{id}")
+//    public HttpStatus deleteUserProfile(@PathVariable long id) {
+//        return userProfileService.deleteUserProfile(id);
+//    }
 
     @PostMapping("/profile/{userId}")
     public UserProfile createUserProfile(@PathVariable long userId, @RequestBody UserProfile userProfileRequest) {

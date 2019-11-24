@@ -21,25 +21,37 @@ public class UserProfileServiceImpl implements UserProfileService {
         return userProfileRepository.findById(id).get();
     }
 
-    @Override
-    public HttpStatus deleteUserProfile(long id) {
-        userProfileRepository.deleteById(id);
-        return HttpStatus.OK;
-    }
+//    @Override
+//    public HttpStatus deleteUserProfile(long id) {
+//        userProfileRepository.deleteById(id);
+//        return HttpStatus.OK;
+//    }
 
     @Override
     public UserProfile updateUserProfile(long id, UserProfile userProfileRequest) {
-        UserProfile profile = userProfileRepository.findById(id).get();
-        profile.setAddlEmail(userProfileRequest.getAddlEmail());
-        profile.setAddress(userProfileRequest.getAddress());
-        profile.setMobile(userProfileRequest.getMobile());
-        return userProfileRepository.save(profile);
+        try {
+            UserProfile profile = userProfileRepository.findById(id).get();
+            profile.setAddlEmail(userProfileRequest.getAddlEmail());
+            profile.setAddress(userProfileRequest.getAddress());
+            profile.setMobile(userProfileRequest.getMobile());
+            return userProfileRepository.save(profile);
+        } catch(Exception e) {
+            System.out.println(e);
+            throw e;
+        }
+
     }
 
     @Override
     public UserProfile createUserProfile(long userId, UserProfile userProfileRequest) {
-        User user = userRepository.findById(userId).get();
-        userProfileRequest.setUser(user);
-        return userProfileRepository.save(userProfileRequest);
+        try {
+            User user = userRepository.findById(userId).get();
+            userProfileRequest.setUser(user);
+            return userProfileRepository.save(userProfileRequest);
+        } catch(Exception e) {
+            System.out.println(e);
+            throw e;
+        }
+
     }
 }

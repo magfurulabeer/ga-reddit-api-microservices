@@ -14,7 +14,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Size(min=3, max=30)
+//    @Size(min=3, max=30)
     @Column(name = "username", nullable = false, unique = true)
     private String username;
 
@@ -23,7 +23,7 @@ public class User {
     @Column(name = "email", nullable = false, unique = true)
     private String email;
 
-    @Size(min=3, max=30)
+//    @Size(min=3, max=30)
     @Column(name = "password", nullable = false)
     private String password;
 
