@@ -48,6 +48,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
     }
 
     @Override
+    public void configure(AuthenticationManagerBuilder auth) throws Exception {
+        User.UserBuilder users = User.withDefaultPasswordEncoder();
+
+        auth.inMemoryAuthentication().withUser(users.username("test").password("test").roles("DBA"));
+    }
+
+    @Override
     protected void configure(HttpSecurity http) throws Exception {
 
         http

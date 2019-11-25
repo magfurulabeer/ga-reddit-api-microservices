@@ -30,6 +30,4 @@ public class UserRoleController {
         return userRoleService.createUserRole(userRoleRequest);
     }
 
-
-
 }
