@@ -33,7 +33,6 @@ public class UserRepository {
         List<Map<String, Object>> userRoleMaps = jdbcTemplate.queryForList(userRoleQuery, new Object[]{username});
         Collection<UserRoleBean> userRoles = new ArrayList<>();
         for (Map<String, Object> role: userRoleMaps) {
-            System.out.println("-----------" + role.get("name"));
             userRoles.add( new UserRoleBean((String) role.get("name")));
         }
 

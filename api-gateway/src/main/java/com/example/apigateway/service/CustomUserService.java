@@ -33,7 +33,7 @@ public class CustomUserService implements UserDetailsService {
             throw new UsernameNotFoundException("User null");
 
         return new org.springframework.security.core.userdetails.User(user.getUsername(), bCryptPasswordEncoder.encode(user.getPassword()),
-                true, true, true, true, new ArrayList<>());
+                true, true, true, true, getGrantedAuthorities(user));
     }
 
     private List<GrantedAuthority> getGrantedAuthorities(UserBean user){
