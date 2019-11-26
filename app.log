@@ -1,0 +1,762 @@
+Attaching to ga-reddit-api-microservices_postgresdev_1, ga-reddit-api-microservices_eureka_1, ga-reddit-api-microservices_rabbitmq_1, ga-reddit-api-microservices_users-api_1, ga-reddit-api-microservices_api-gateway_1, ga-reddit-api-microservices_comments-api_1, ga-reddit-api-microservices_posts-api_1
+[36mpostgresdev_1   |[0m 2019-11-26 16:06:52.559 UTC [1] LOG:  starting PostgreSQL 12.0 (Debian 12.0-2.pgdg100+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+[36mpostgresdev_1   |[0m 2019-11-26 16:06:52.563 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+[36mpostgresdev_1   |[0m 2019-11-26 16:06:52.563 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+[36mpostgresdev_1   |[0m 2019-11-26 16:06:52.575 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+[36mpostgresdev_1   |[0m 2019-11-26 16:06:52.704 UTC [22] LOG:  database system was shut down at 2019-11-25 02:29:21 UTC
+[36mpostgresdev_1   |[0m 2019-11-26 16:06:52.753 UTC [1] LOG:  database system is ready to accept connections
+[33meureka_1        |[0m [INFO] Scanning for projects...
+[35musers-api_1     |[0m [INFO] Scanning for projects...
+[36;1mposts-api_1     |[0m [INFO] Scanning for projects...
+[34mcomments-api_1  |[0m [INFO] Scanning for projects...
+[31mapi-gateway_1   |[0m [INFO] Scanning for projects...
+[33meureka_1        |[0m [WARNING] 
+[33meureka_1        |[0m [WARNING] Some problems were encountered while building the effective model for com.example:eureka-server:jar:0.0.1-SNAPSHOT
+[33meureka_1        |[0m [WARNING] 'dependencies.dependency.version' for org.junit.jupiter:junit-jupiter:jar is either LATEST or RELEASE (both of them are being deprecated) @ line 48, column 13
+[33meureka_1        |[0m [WARNING] 
+[33meureka_1        |[0m [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[33meureka_1        |[0m [WARNING] 
+[33meureka_1        |[0m [WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[33meureka_1        |[0m [WARNING] 
+[33meureka_1        |[0m [INFO] 
+[33meureka_1        |[0m [INFO] ---------------------< com.example:eureka-server >----------------------
+[33meureka_1        |[0m [INFO] Building demo 0.0.1-SNAPSHOT
+[33meureka_1        |[0m [INFO] --------------------------------[ jar ]---------------------------------
+[35musers-api_1     |[0m [WARNING] 
+[35musers-api_1     |[0m [WARNING] Some problems were encountered while building the effective model for com.example:users-api:jar:0.0.1-SNAPSHOT
+[35musers-api_1     |[0m [WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:jar -> version 2.1.2.RELEASE vs 2.1.3.RELEASE @ line 50, column 15
+[35musers-api_1     |[0m [WARNING] 'dependencies.dependency.version' for org.junit.jupiter:junit-jupiter:jar is either LATEST or RELEASE (both of them are being deprecated) @ line 59, column 13
+[35musers-api_1     |[0m [WARNING] 
+[35musers-api_1     |[0m [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[35musers-api_1     |[0m [WARNING] 
+[35musers-api_1     |[0m [WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[35musers-api_1     |[0m [WARNING] 
+[33meureka_1        |[0m [INFO] 
+[33meureka_1        |[0m [INFO] >>> spring-boot-maven-plugin:2.1.3.RELEASE:run (default-cli) > test-compile @ eureka-server >>>
+[36;1mposts-api_1     |[0m [WARNING] 
+[36;1mposts-api_1     |[0m [WARNING] Some problems were encountered while building the effective model for com.example:posts-api:jar:0.0.1-SNAPSHOT
+[36;1mposts-api_1     |[0m [WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:jar -> version 2.1.2.RELEASE vs 2.1.3.RELEASE @ line 50, column 15
+[36;1mposts-api_1     |[0m [WARNING] 'dependencies.dependency.version' for org.junit.jupiter:junit-jupiter:jar is either LATEST or RELEASE (both of them are being deprecated) @ line 59, column 13
+[36;1mposts-api_1     |[0m [WARNING] 
+[31mapi-gateway_1   |[0m [WARNING] 
+[36;1mposts-api_1     |[0m [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[36;1mposts-api_1     |[0m [WARNING] 
+[36;1mposts-api_1     |[0m [WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[36;1mposts-api_1     |[0m [WARNING] 
+[31mapi-gateway_1   |[0m [WARNING] Some problems were encountered while building the effective model for com.example:api-gateway:jar:0.0.1-SNAPSHOT
+[31mapi-gateway_1   |[0m [WARNING] 'dependencies.dependency.version' for org.junit.jupiter:junit-jupiter:jar is either LATEST or RELEASE (both of them are being deprecated) @ line 54, column 13
+[31mapi-gateway_1   |[0m [WARNING] 
+[31mapi-gateway_1   |[0m [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[34mcomments-api_1  |[0m [WARNING] 
+[31mapi-gateway_1   |[0m [WARNING] 
+[31mapi-gateway_1   |[0m [WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[31mapi-gateway_1   |[0m [WARNING] 
+[34mcomments-api_1  |[0m [WARNING] Some problems were encountered while building the effective model for com.example:comments-api:jar:0.0.1-SNAPSHOT
+[34mcomments-api_1  |[0m [WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:jar -> version 2.1.2.RELEASE vs 2.1.3.RELEASE @ line 50, column 15
+[34mcomments-api_1  |[0m [WARNING] 'dependencies.dependency.version' for org.junit.jupiter:junit-jupiter:jar is either LATEST or RELEASE (both of them are being deprecated) @ line 59, column 13
+[34mcomments-api_1  |[0m [WARNING] 
+[34mcomments-api_1  |[0m [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[34mcomments-api_1  |[0m [WARNING] 
+[34mcomments-api_1  |[0m [WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[34mcomments-api_1  |[0m [WARNING] 
+[35musers-api_1     |[0m [INFO] 
+[35musers-api_1     |[0m [INFO] -----------------------< com.example:users-api >------------------------
+[35musers-api_1     |[0m [INFO] Building demo 0.0.1-SNAPSHOT
+[35musers-api_1     |[0m [INFO] --------------------------------[ jar ]---------------------------------
+[35musers-api_1     |[0m [INFO] 
+[35musers-api_1     |[0m [INFO] >>> spring-boot-maven-plugin:2.1.3.RELEASE:run (default-cli) > test-compile @ users-api >>>
+[31mapi-gateway_1   |[0m [INFO] 
+[31mapi-gateway_1   |[0m [INFO] ----------------------< com.example:api-gateway >-----------------------
+[31mapi-gateway_1   |[0m [INFO] Building demo 0.0.1-SNAPSHOT
+[31mapi-gateway_1   |[0m [INFO] --------------------------------[ jar ]---------------------------------
+[36;1mposts-api_1     |[0m [INFO] 
+[36;1mposts-api_1     |[0m [INFO] -----------------------< com.example:posts-api >------------------------
+[36;1mposts-api_1     |[0m [INFO] Building demo 0.0.1-SNAPSHOT
+[36;1mposts-api_1     |[0m [INFO] --------------------------------[ jar ]---------------------------------
+[34mcomments-api_1  |[0m [INFO] 
+[34mcomments-api_1  |[0m [INFO] ----------------------< com.example:comments-api >----------------------
+[34mcomments-api_1  |[0m [INFO] Building demo 0.0.1-SNAPSHOT
+[34mcomments-api_1  |[0m [INFO] --------------------------------[ jar ]---------------------------------
+[31mapi-gateway_1   |[0m [INFO] 
+[31mapi-gateway_1   |[0m [INFO] >>> spring-boot-maven-plugin:2.1.6.RELEASE:run (default-cli) > test-compile @ api-gateway >>>
+[36;1mposts-api_1     |[0m [INFO] 
+[34mcomments-api_1  |[0m [INFO] 
+[34mcomments-api_1  |[0m [INFO] >>> spring-boot-maven-plugin:2.1.3.RELEASE:run (default-cli) > test-compile @ comments-api >>>
+[36;1mposts-api_1     |[0m [INFO] >>> spring-boot-maven-plugin:2.1.3.RELEASE:run (default-cli) > test-compile @ posts-api >>>
+[35musers-api_1     |[0m Downloading from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter/maven-metadata.xml
+[33meureka_1        |[0m Downloading from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter/maven-metadata.xml
+[34mcomments-api_1  |[0m Downloading from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter/maven-metadata.xml
+[31mapi-gateway_1   |[0m Downloading from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter/maven-metadata.xml
+[36;1mposts-api_1     |[0m Downloading from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter/maven-metadata.xml
+[34mcomments-api_1  |[0m Progress (1): 740 B                   Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter/maven-metadata.xml (740 B at 156 B/s)
+[35musers-api_1     |[0m Progress (1): 740 B                   Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter/maven-metadata.xml (740 B at 149 B/s)
+[33meureka_1        |[0m Progress (1): 740 B                   Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter/maven-metadata.xml (740 B at 146 B/s)
+[35musers-api_1     |[0m Downloading from central: https://repo.maven.apache.org/maven2/com/h2database/h2/1.4.200/h2-1.4.200.pom
+[35musers-api_1     |[0m Progress (1): 958 B                   Downloaded from central: https://repo.maven.apache.org/maven2/com/h2database/h2/1.4.200/h2-1.4.200.pom (958 B at 8.6 kB/s)
+[36;1mposts-api_1     |[0m Progress (1): 740 B                   Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter/maven-metadata.xml (740 B at 160 B/s)
+[33meureka_1        |[0m [INFO] 
+[33meureka_1        |[0m [INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ eureka-server ---
+[31mapi-gateway_1   |[0m Progress (1): 740 B                   Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter/maven-metadata.xml (740 B at 139 B/s)
+[34mcomments-api_1  |[0m Downloading from central: https://repo.maven.apache.org/maven2/com/h2database/h2/1.4.200/h2-1.4.200.pom
+[34mcomments-api_1  |[0m Progress (1): 958 B                   Downloaded from central: https://repo.maven.apache.org/maven2/com/h2database/h2/1.4.200/h2-1.4.200.pom (958 B at 8.3 kB/s)
+[35musers-api_1     |[0m Downloading from central: https://repo.maven.apache.org/maven2/com/h2database/h2/1.4.200/h2-1.4.200.jar
+[34mcomments-api_1  |[0m Downloading from central: https://repo.maven.apache.org/maven2/com/h2database/h2/1.4.200/h2-1.4.200.jar
+[31mapi-gateway_1   |[0m Downloading from central: https://repo.maven.apache.org/maven2/com/h2database/h2/1.4.200/h2-1.4.200.pom
+[31mapi-gateway_1   |[0m Progress (1): 958 B                   Downloaded from central: https://repo.maven.apache.org/maven2/com/h2database/h2/1.4.200/h2-1.4.200.pom (958 B at 5.4 kB/s)
+[36;1mposts-api_1     |[0m Downloading from central: https://repo.maven.apache.org/maven2/com/h2database/h2/1.4.200/h2-1.4.200.pom
+[36;1mposts-api_1     |[0m Progress (1): 958 B                   Downloaded from central: https://repo.maven.apache.org/maven2/com/h2database/h2/1.4.200/h2-1.4.200.pom (958 B at 6.1 kB/s)
+[31mapi-gateway_1   |[0m Downloading from central: https://repo.maven.apache.org/maven2/com/h2database/h2/1.4.200/h2-1.4.200.jar
+[33meureka_1        |[0m [INFO] Using 'UTF-8' encoding to copy filtered resources.
+[33meureka_1        |[0m [INFO] Copying 2 resources
+[35musers-api_1     |[0m Progress (1): 0/2.3 MBProgress (1): 0/2.3 MBProgress (1): 0/2.3 MBProgress (1): 0/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.5/2.3 MBProgress (1): 0.5/2.3 MBProgress (1): 0.5/2.3 MBProgress (1): 0.5/2.3 MBProgress (1): 0.5/2.3 MBProgress (1): 0.5/2.3 MBProgress (1): 0.6/2.3 MBProgress (1): 0.6/2.3 MBProgress (1): 0.6/2.3 MBProgress (1): 0.6/2.3 MBProgress (1): 0.6/2.3 MBProgress (1): 0.6/2.3 MBProgress (1): 0.7/2.3 MBProgress (1): 0.7/2.3 MBProgress (1): 0.7/2.3 MBProgress (1): 0.7/2.3 MBProgress (1): 0.7/2.3 MBProgress (1): 0.7/2.3 MBProgress (1): 0.8/2.3 MBProgress (1): 0.8/2.3 MBProgress (1): 0.8/2.3 MBProgress (1): 0.8/2.3 MBProgress (1): 0.8/2.3 MBProgress (1): 0.8/2.3 MBProgress (1): 0.9/2.3 MBProgress (1): 0.9/2.3 MBProgress (1): 0.9/2.3 MBProgress (1): 0.9/2.3 MBProgress (1): 0.9/2.3 MBProgress (1): 0.9/2.3 MBProgress (1): 1.0/2.3 MBProgress (1): 1.0/2.3 MBProgress (1): 1.0/2.3 MBProgress (1): 1.0/2.3 MBProgress (1): 1.0/2.3 MBProgress (1): 1.0/2.3 MBProgress (1): 1.1/2.3 MBProgress (1): 1.1/2.3 MBProgress (1): 1.1/2.3 MBProgress (1): 1.1/2.3 MBProgress (1): 1.1/2.3 MBProgress (1): 1.1/2.3 MBProgress (1): 1.1/2.3 MBProgress (1): 1.2/2.3 MBProgress (1): 1.2/2.3 MBProgress (1): 1.2/2.3 MBProgress (1): 1.2/2.3 MBProgress (1): 1.2/2.3 MBProgress (1): 1.2/2.3 MBProgress (1): 1.3/2.3 MBProgress (1): 1.3/2.3 MBProgress (1): 1.3/2.3 MBProgress (1): 1.3/2.3 MBProgress (1): 1.3/2.3 MBProgress (1): 1.3/2.3 MBProgress (1): 1.4/2.3 MBProgress (1): 1.4/2.3 MBProgress (1): 1.4/2.3 MBProgress (1): 1.4/2.3 MBProgress (1): 1.4/2.3 MBProgress (1): 1.4/2.3 MBProgress (1): 1.5/2.3 MBProgress (1): 1.5/2.3 MBProgress (1): 1.5/2.3 MBProgress (1): 1.5/2.3 MBProgress (1): 1.5/2.3 MBProgress (1): 1.5/2.3 MBProgress (1): 1.6/2.3 MBProgress (1): 1.6/2.3 MBProgress (1): 1.6/2.3 MBProgress (1): 1.6/2.3 MBProgress (1): 1.6/2.3 MBProgress (1): 1.6/2.3 MBProgress (1): 1.7/2.3 MBProgress (1): 1.7/2.3 MBProgress (1): 1.7/2.3 MBProgress (1): 1.7/2.3 MBProgress (1): 1.7/2.3 MBProgress (1): 1.7/2.3 MBProgress (1): 1.8/2.3 MBProgress (1): 1.8/2.3 MBProgress (1): 1.8/2.3 MBProgress (1): 1.8/2.3 MBProgress (1): 1.8/2.3 MBProgress (1): 1.8/2.3 MBProgress (1): 1.9/2.3 MBProgress (1): 1.9/2.3 MBProgress (1): 1.9/2.3 MBProgress (1): 1.9/2.3 MBProgress (1): 1.9/2.3 MBProgress (1): 1.9/2.3 MBProgress (1): 2.0/2.3 MBProgress (1): 2.0/2.3 MBProgress (1): 2.0/2.3 MBProgress (1): 2.0/2.3 MBProgress (1): 2.0/2.3 MBProgress (1): 2.0/2.3 MBProgress (1): 2.0/2.3 MBProgress (1): 2.1/2.3 MBProgress (1): 2.1/2.3 MBProgress (1): 2.1/2.3 MBProgress (1): 2.1/2.3 MBProgress (1): 2.1/2.3 MBProgress (1): 2.1/2.3 MBProgress (1): 2.2/2.3 MBProgress (1): 2.2/2.3 MBProgress (1): 2.2/2.3 MBProgress (1): 2.2/2.3 MBProgress (1): 2.2/2.3 MBProgress (1): 2.2/2.3 MBProgress (1): 2.3/2.3 MBProgress (1): 2.3/2.3 MBProgress (1): 2.3/2.3 MBProgress (1): 2.3 MB                        Downloaded from central: https://repo.maven.apache.org/maven2/com/h2database/h2/1.4.200/h2-1.4.200.jar (2.3 MB at 710 kB/s)
+[35musers-api_1     |[0m [INFO] 
+[35musers-api_1     |[0m [INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ users-api ---
+[33meureka_1        |[0m [INFO] Copying 0 resource
+[33meureka_1        |[0m [INFO] 
+[33meureka_1        |[0m [INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ eureka-server ---
+[36;1mposts-api_1     |[0m Downloading from central: https://repo.maven.apache.org/maven2/com/h2database/h2/1.4.200/h2-1.4.200.jar
+[34mcomments-api_1  |[0m Progress (1): 0/2.3 MBProgress (1): 0/2.3 MBProgress (1): 0/2.3 MBProgress (1): 0/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.5/2.3 MBProgress (1): 0.5/2.3 MBProgress (1): 0.5/2.3 MBProgress (1): 0.5/2.3 MBProgress (1): 0.5/2.3 MBProgress (1): 0.5/2.3 MBProgress (1): 0.5/2.3 MBProgress (1): 0.6/2.3 MBProgress (1): 0.6/2.3 MBProgress (1): 0.6/2.3 MBProgress (1): 0.6/2.3 MBProgress (1): 0.6/2.3 MBProgress (1): 0.6/2.3 MBProgress (1): 0.7/2.3 MBProgress (1): 0.7/2.3 MBProgress (1): 0.7/2.3 MBProgress (1): 0.7/2.3 MBProgress (1): 0.7/2.3 MBProgress (1): 0.7/2.3 MBProgress (1): 0.8/2.3 MBProgress (1): 0.8/2.3 MBProgress (1): 0.8/2.3 MBProgress (1): 0.8/2.3 MBProgress (1): 0.8/2.3 MBProgress (1): 0.8/2.3 MBProgress (1): 0.9/2.3 MBProgress (1): 0.9/2.3 MBProgress (1): 0.9/2.3 MBProgress (1): 0.9/2.3 MBProgress (1): 0.9/2.3 MBProgress (1): 0.9/2.3 MBProgress (1): 1.0/2.3 MBProgress (1): 1.0/2.3 MBProgress (1): 1.0/2.3 MBProgress (1): 1.0/2.3 MBProgress (1): 1.0/2.3 MBProgress (1): 1.0/2.3 MBProgress (1): 1.1/2.3 MBProgress (1): 1.1/2.3 MBProgress (1): 1.1/2.3 MBProgress (1): 1.1/2.3 MBProgress (1): 1.1/2.3 MBProgress (1): 1.1/2.3 MBProgress (1): 1.2/2.3 MBProgress (1): 1.2/2.3 MBProgress (1): 1.2/2.3 MBProgress (1): 1.2/2.3 MBProgress (1): 1.2/2.3 MBProgress (1): 1.2/2.3 MBProgress (1): 1.2/2.3 MBProgress (1): 1.3/2.3 MBProgress (1): 1.3/2.3 MBProgress (1): 1.3/2.3 MBProgress (1): 1.3/2.3 MBProgress (1): 1.3/2.3 MBProgress (1): 1.3/2.3 MBProgress (1): 1.4/2.3 MBProgress (1): 1.4/2.3 MBProgress (1): 1.4/2.3 MBProgress (1): 1.4/2.3 MBProgress (1): 1.4/2.3 MBProgress (1): 1.4/2.3 MBProgress (1): 1.5/2.3 MBProgress (1): 1.5/2.3 MBProgress (1): 1.5/2.3 MBProgress (1): 1.5/2.3 MBProgress (1): 1.5/2.3 MBProgress (1): 1.5/2.3 MBProgress (1): 1.6/2.3 MBProgress (1): 1.6/2.3 MBProgress (1): 1.6/2.3 MBProgress (1): 1.6/2.3 MBProgress (1): 1.6/2.3 MBProgress (1): 1.6/2.3 MBProgress (1): 1.7/2.3 MBProgress (1): 1.7/2.3 MBProgress (1): 1.7/2.3 MBProgress (1): 1.7/2.3 MBProgress (1): 1.7/2.3 MBProgress (1): 1.7/2.3 MBProgress (1): 1.8/2.3 MBProgress (1): 1.8/2.3 MBProgress (1): 1.8/2.3 MBProgress (1): 1.8/2.3 MBProgress (1): 1.8/2.3 MBProgress (1): 1.8/2.3 MBProgress (1): 1.9/2.3 MBProgress (1): 1.9/2.3 MBProgress (1): 1.9/2.3 MBProgress (1): 1.9/2.3 MBProgress (1): 1.9/2.3 MBProgress (1): 1.9/2.3 MBProgress (1): 2.0/2.3 MBProgress (1): 2.0/2.3 MBProgress (1): 2.0/2.3 MBProgress (1): 2.0/2.3 MBProgress (1): 2.0/2.3 MBProgress (1): 2.0/2.3 MBProgress (1): 2.1/2.3 MBProgress (1): 2.1/2.3 MBProgress (1): 2.1/2.3 MBProgress (1): 2.1/2.3 MBProgress (1): 2.1/2.3 MBProgress (1): 2.1/2.3 MBProgress (1): 2.2/2.3 MBProgress (1): 2.2/2.3 MBProgress (1): 2.2/2.3 MBProgress (1): 2.2/2.3 MBProgress (1): 2.2/2.3 MBProgress (1): 2.2/2.3 MBProgress (1): 2.2/2.3 MBProgress (1): 2.3/2.3 MBProgress (1): 2.3/2.3 MBProgress (1): 2.3/2.3 MBProgress (1): 2.3 MB                        Downloaded from central: https://repo.maven.apache.org/maven2/com/h2database/h2/1.4.200/h2-1.4.200.jar (2.3 MB at 660 kB/s)
+[34mcomments-api_1  |[0m [INFO] 
+[34mcomments-api_1  |[0m [INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ comments-api ---
+[31mapi-gateway_1   |[0m Progress (1): 0/2.3 MBProgress (1): 0/2.3 MBProgress (1): 0/2.3 MBProgress (1): 0/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.5/2.3 MBProgress (1): 0.5/2.3 MBProgress (1): 0.5/2.3 MBProgress (1): 0.5/2.3 MBProgress (1): 0.5/2.3 MBProgress (1): 0.5/2.3 MBProgress (1): 0.5/2.3 MBProgress (1): 0.6/2.3 MBProgress (1): 0.6/2.3 MBProgress (1): 0.6/2.3 MBProgress (1): 0.6/2.3 MBProgress (1): 0.6/2.3 MBProgress (1): 0.6/2.3 MBProgress (1): 0.7/2.3 MBProgress (1): 0.7/2.3 MBProgress (1): 0.7/2.3 MBProgress (1): 0.7/2.3 MBProgress (1): 0.7/2.3 MBProgress (1): 0.7/2.3 MBProgress (1): 0.8/2.3 MBProgress (1): 0.8/2.3 MBProgress (1): 0.8/2.3 MBProgress (1): 0.8/2.3 MBProgress (1): 0.8/2.3 MBProgress (1): 0.8/2.3 MBProgress (1): 0.9/2.3 MBProgress (1): 0.9/2.3 MBProgress (1): 0.9/2.3 MBProgress (1): 0.9/2.3 MBProgress (1): 0.9/2.3 MBProgress (1): 0.9/2.3 MBProgress (1): 1.0/2.3 MBProgress (1): 1.0/2.3 MBProgress (1): 1.0/2.3 MBProgress (1): 1.0/2.3 MBProgress (1): 1.0/2.3 MBProgress (1): 1.0/2.3 MBProgress (1): 1.1/2.3 MBProgress (1): 1.1/2.3 MBProgress (1): 1.1/2.3 MBProgress (1): 1.1/2.3 MBProgress (1): 1.1/2.3 MBProgress (1): 1.1/2.3 MBProgress (1): 1.1/2.3 MBProgress (1): 1.2/2.3 MBProgress (1): 1.2/2.3 MBProgress (1): 1.2/2.3 MBProgress (1): 1.2/2.3 MBProgress (1): 1.2/2.3 MBProgress (1): 1.2/2.3 MBProgress (1): 1.3/2.3 MBProgress (1): 1.3/2.3 MBProgress (1): 1.3/2.3 MBProgress (1): 1.3/2.3 MBProgress (1): 1.3/2.3 MBProgress (1): 1.3/2.3 MBProgress (1): 1.4/2.3 MBProgress (1): 1.4/2.3 MBProgress (1): 1.4/2.3 MBProgress (1): 1.4/2.3 MBProgress (1): 1.4/2.3 MBProgress (1): 1.4/2.3 MBProgress (1): 1.5/2.3 MBProgress (1): 1.5/2.3 MBProgress (1): 1.5/2.3 MBProgress (1): 1.5/2.3 MBProgress (1): 1.5/2.3 MBProgress (1): 1.5/2.3 MBProgress (1): 1.6/2.3 MBProgress (1): 1.6/2.3 MBProgress (1): 1.6/2.3 MBProgress (1): 1.6/2.3 MBProgress (1): 1.6/2.3 MBProgress (1): 1.6/2.3 MBProgress (1): 1.7/2.3 MBProgress (1): 1.7/2.3 MBProgress (1): 1.7/2.3 MBProgress (1): 1.7/2.3 MBProgress (1): 1.7/2.3 MBProgress (1): 1.7/2.3 MBProgress (1): 1.8/2.3 MBProgress (1): 1.8/2.3 MBProgress (1): 1.8/2.3 MBProgress (1): 1.8/2.3 MBProgress (1): 1.8/2.3 MBProgress (1): 1.8/2.3 MBProgress (1): 1.9/2.3 MBProgress (1): 1.9/2.3 MBProgress (1): 1.9/2.3 MBProgress (1): 1.9/2.3 MBProgress (1): 1.9/2.3 MBProgress (1): 1.9/2.3 MBProgress (1): 2.0/2.3 MBProgress (1): 2.0/2.3 MBProgress (1): 2.0/2.3 MBProgress (1): 2.0/2.3 MBProgress (1): 2.0/2.3 MBProgress (1): 2.0/2.3 MBProgress (1): 2.1/2.3 MBProgress (1): 2.1/2.3 MBProgress (1): 2.1/2.3 MBProgress (1): 2.1/2.3 MBProgress (1): 2.1/2.3 MBProgress (1): 2.1/2.3 MBProgress (1): 2.1/2.3 MBProgress (1): 2.2/2.3 MBProgress (1): 2.2/2.3 MBProgress (1): 2.2/2.3 MBProgress (1): 2.2/2.3 MBProgress (1): 2.2/2.3 MBProgress (1): 2.2/2.3 MBProgress (1): 2.3/2.3 MBProgress (1): 2.3/2.3 MBProgress (1): 2.3/2.3 MBProgress (1): 2.3 MB                        Downloaded from central: https://repo.maven.apache.org/maven2/com/h2database/h2/1.4.200/h2-1.4.200.jar (2.3 MB at 574 kB/s)
+[31mapi-gateway_1   |[0m [INFO] 
+[31mapi-gateway_1   |[0m [INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ api-gateway ---
+[36;1mposts-api_1     |[0m Progress (1): 0/2.3 MBProgress (1): 0/2.3 MBProgress (1): 0/2.3 MBProgress (1): 0/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.1/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.2/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.3/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.4/2.3 MBProgress (1): 0.5/2.3 MBProgress (1): 0.5/2.3 MBProgress (1): 0.5/2.3 MBProgress (1): 0.5/2.3 MBProgress (1): 0.5/2.3 MBProgress (1): 0.5/2.3 MBProgress (1): 0.6/2.3 MBProgress (1): 0.6/2.3 MBProgress (1): 0.6/2.3 MBProgress (1): 0.6/2.3 MBProgress (1): 0.6/2.3 MBProgress (1): 0.6/2.3 MBProgress (1): 0.7/2.3 MBProgress (1): 0.7/2.3 MBProgress (1): 0.7/2.3 MBProgress (1): 0.7/2.3 MBProgress (1): 0.7/2.3 MBProgress (1): 0.7/2.3 MBProgress (1): 0.8/2.3 MBProgress (1): 0.8/2.3 MBProgress (1): 0.8/2.3 MBProgress (1): 0.8/2.3 MBProgress (1): 0.8/2.3 MBProgress (1): 0.8/2.3 MBProgress (1): 0.9/2.3 MBProgress (1): 0.9/2.3 MBProgress (1): 0.9/2.3 MBProgress (1): 0.9/2.3 MBProgress (1): 0.9/2.3 MBProgress (1): 0.9/2.3 MBProgress (1): 1.0/2.3 MBProgress (1): 1.0/2.3 MBProgress (1): 1.0/2.3 MBProgress (1): 1.0/2.3 MBProgress (1): 1.0/2.3 MBProgress (1): 1.0/2.3 MBProgress (1): 1.0/2.3 MBProgress (1): 1.1/2.3 MBProgress (1): 1.1/2.3 MBProgress (1): 1.1/2.3 MBProgress (1): 1.1/2.3 MBProgress (1): 1.1/2.3 MBProgress (1): 1.1/2.3 MBProgress (1): 1.2/2.3 MBProgress (1): 1.2/2.3 MBProgress (1): 1.2/2.3 MBProgress (1): 1.2/2.3 MBProgress (1): 1.2/2.3 MBProgress (1): 1.2/2.3 MBProgress (1): 1.3/2.3 MBProgress (1): 1.3/2.3 MBProgress (1): 1.3/2.3 MBProgress (1): 1.3/2.3 MBProgress (1): 1.3/2.3 MBProgress (1): 1.3/2.3 MBProgress (1): 1.4/2.3 MBProgress (1): 1.4/2.3 MBProgress (1): 1.4/2.3 MBProgress (1): 1.4/2.3 MBProgress (1): 1.4/2.3 MBProgress (1): 1.4/2.3 MBProgress (1): 1.5/2.3 MBProgress (1): 1.5/2.3 MBProgress (1): 1.5/2.3 MBProgress (1): 1.5/2.3 MBProgress (1): 1.5/2.3 MBProgress (1): 1.5/2.3 MBProgress (1): 1.6/2.3 MBProgress (1): 1.6/2.3 MBProgress (1): 1.6/2.3 MBProgress (1): 1.6/2.3 MBProgress (1): 1.6/2.3 MBProgress (1): 1.6/2.3 MBProgress (1): 1.7/2.3 MBProgress (1): 1.7/2.3 MBProgress (1): 1.7/2.3 MBProgress (1): 1.7/2.3 MBProgress (1): 1.7/2.3 MBProgress (1): 1.7/2.3 MBProgress (1): 1.8/2.3 MBProgress (1): 1.8/2.3 MBProgress (1): 1.8/2.3 MBProgress (1): 1.8/2.3 MBProgress (1): 1.8/2.3 MBProgress (1): 1.8/2.3 MBProgress (1): 1.8/2.3 MBProgress (1): 1.9/2.3 MBProgress (1): 1.9/2.3 MBProgress (1): 1.9/2.3 MBProgress (1): 1.9/2.3 MBProgress (1): 1.9/2.3 MBProgress (1): 1.9/2.3 MBProgress (1): 2.0/2.3 MBProgress (1): 2.0/2.3 MBProgress (1): 2.0/2.3 MBProgress (1): 2.0/2.3 MBProgress (1): 2.0/2.3 MBProgress (1): 2.0/2.3 MBProgress (1): 2.1/2.3 MBProgress (1): 2.1/2.3 MBProgress (1): 2.1/2.3 MBProgress (1): 2.1/2.3 MBProgress (1): 2.1/2.3 MBProgress (1): 2.1/2.3 MBProgress (1): 2.2/2.3 MBProgress (1): 2.2/2.3 MBProgress (1): 2.2/2.3 MBProgress (1): 2.2/2.3 MBProgress (1): 2.2/2.3 MBProgress (1): 2.2/2.3 MBProgress (1): 2.3/2.3 MBProgress (1): 2.3/2.3 MBProgress (1): 2.3/2.3 MBProgress (1): 2.3/2.3 MBProgress (1): 2.3 MB                        Downloaded from central: https://repo.maven.apache.org/maven2/com/h2database/h2/1.4.200/h2-1.4.200.jar (2.3 MB at 627 kB/s)
+[35musers-api_1     |[0m [INFO] Using 'UTF-8' encoding to copy filtered resources.
+[36;1mposts-api_1     |[0m [INFO] 
+[33meureka_1        |[0m [INFO] Nothing to compile - all classes are up to date
+[36;1mposts-api_1     |[0m [INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ posts-api ---
+[33meureka_1        |[0m [INFO] 
+[33meureka_1        |[0m [INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ eureka-server ---
+[35musers-api_1     |[0m [INFO] Copying 3 resources
+[33meureka_1        |[0m [INFO] Using 'UTF-8' encoding to copy filtered resources.
+[33meureka_1        |[0m [INFO] skip non existing resourceDirectory /app/src/test/resources
+[33meureka_1        |[0m [INFO] 
+[33meureka_1        |[0m [INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ eureka-server ---
+[35musers-api_1     |[0m [INFO] Copying 0 resource
+[35musers-api_1     |[0m [INFO] 
+[35musers-api_1     |[0m [INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ users-api ---
+[33meureka_1        |[0m [INFO] Nothing to compile - all classes are up to date
+[33meureka_1        |[0m [INFO] 
+[33meureka_1        |[0m [INFO] <<< spring-boot-maven-plugin:2.1.3.RELEASE:run (default-cli) < test-compile @ eureka-server <<<
+[33meureka_1        |[0m [INFO] 
+[33meureka_1        |[0m [INFO] 
+[33meureka_1        |[0m [INFO] --- spring-boot-maven-plugin:2.1.3.RELEASE:run (default-cli) @ eureka-server ---
+[34mcomments-api_1  |[0m [INFO] Using 'UTF-8' encoding to copy filtered resources.
+[34mcomments-api_1  |[0m [INFO] Copying 3 resources
+[34mcomments-api_1  |[0m [INFO] Copying 0 resource
+[34mcomments-api_1  |[0m [INFO] 
+[34mcomments-api_1  |[0m [INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ comments-api ---
+[31mapi-gateway_1   |[0m [INFO] Using 'UTF-8' encoding to copy filtered resources.
+[31mapi-gateway_1   |[0m [INFO] Copying 3 resources
+[31mapi-gateway_1   |[0m [INFO] Copying 0 resource
+[31mapi-gateway_1   |[0m [INFO] 
+[31mapi-gateway_1   |[0m [INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ api-gateway ---
+[36;1mposts-api_1     |[0m [INFO] Using 'UTF-8' encoding to copy filtered resources.
+[36;1mposts-api_1     |[0m [INFO] Copying 3 resources
+[36;1mposts-api_1     |[0m [INFO] Copying 0 resource
+[36;1mposts-api_1     |[0m [INFO] 
+[36;1mposts-api_1     |[0m [INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ posts-api ---
+[35musers-api_1     |[0m [INFO] Changes detected - recompiling the module!
+[35musers-api_1     |[0m [INFO] Compiling 22 source files to /app/target/classes
+[34mcomments-api_1  |[0m [INFO] Nothing to compile - all classes are up to date
+[34mcomments-api_1  |[0m [INFO] 
+[34mcomments-api_1  |[0m [INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ comments-api ---
+[34mcomments-api_1  |[0m [INFO] Using 'UTF-8' encoding to copy filtered resources.
+[34mcomments-api_1  |[0m [INFO] skip non existing resourceDirectory /app/src/test/resources
+[34mcomments-api_1  |[0m [INFO] 
+[34mcomments-api_1  |[0m [INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ comments-api ---
+[34mcomments-api_1  |[0m [INFO] Nothing to compile - all classes are up to date
+[34mcomments-api_1  |[0m [INFO] 
+[34mcomments-api_1  |[0m [INFO] <<< spring-boot-maven-plugin:2.1.3.RELEASE:run (default-cli) < test-compile @ comments-api <<<
+[34mcomments-api_1  |[0m [INFO] 
+[34mcomments-api_1  |[0m [INFO] 
+[34mcomments-api_1  |[0m [INFO] --- spring-boot-maven-plugin:2.1.3.RELEASE:run (default-cli) @ comments-api ---
+[36;1mposts-api_1     |[0m [INFO] Nothing to compile - all classes are up to date
+[36;1mposts-api_1     |[0m [INFO] 
+[36;1mposts-api_1     |[0m [INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ posts-api ---
+[31mapi-gateway_1   |[0m [INFO] Changes detected - recompiling the module!
+[36;1mposts-api_1     |[0m [INFO] Using 'UTF-8' encoding to copy filtered resources.
+[36;1mposts-api_1     |[0m [INFO] skip non existing resourceDirectory /app/src/test/resources
+[36;1mposts-api_1     |[0m [INFO] 
+[36;1mposts-api_1     |[0m [INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ posts-api ---
+[31mapi-gateway_1   |[0m [INFO] Compiling 9 source files to /app/target/classes
+[36;1mposts-api_1     |[0m [INFO] Nothing to compile - all classes are up to date
+[36;1mposts-api_1     |[0m [INFO] 
+[36;1mposts-api_1     |[0m [INFO] <<< spring-boot-maven-plugin:2.1.3.RELEASE:run (default-cli) < test-compile @ posts-api <<<
+[36;1mposts-api_1     |[0m [INFO] 
+[36;1mposts-api_1     |[0m [INFO] 
+[36;1mposts-api_1     |[0m [INFO] --- spring-boot-maven-plugin:2.1.3.RELEASE:run (default-cli) @ posts-api ---
+[35musers-api_1     |[0m [INFO] 
+[35musers-api_1     |[0m [INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ users-api ---
+[35musers-api_1     |[0m [INFO] Using 'UTF-8' encoding to copy filtered resources.
+[35musers-api_1     |[0m [INFO] skip non existing resourceDirectory /app/src/test/resources
+[35musers-api_1     |[0m [INFO] 
+[35musers-api_1     |[0m [INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ users-api ---
+[35musers-api_1     |[0m [INFO] Changes detected - recompiling the module!
+[35musers-api_1     |[0m [INFO] Compiling 2 source files to /app/target/test-classes
+[35musers-api_1     |[0m [INFO] 
+[35musers-api_1     |[0m [INFO] <<< spring-boot-maven-plugin:2.1.3.RELEASE:run (default-cli) < test-compile @ users-api <<<
+[35musers-api_1     |[0m [INFO] 
+[35musers-api_1     |[0m [INFO] 
+[35musers-api_1     |[0m [INFO] --- spring-boot-maven-plugin:2.1.3.RELEASE:run (default-cli) @ users-api ---
+[31mapi-gateway_1   |[0m [INFO] /app/src/main/java/com/example/apigateway/config/SecurityConfig.java: /app/src/main/java/com/example/apigateway/config/SecurityConfig.java uses or overrides a deprecated API.
+[31mapi-gateway_1   |[0m [INFO] /app/src/main/java/com/example/apigateway/config/SecurityConfig.java: Recompile with -Xlint:deprecation for details.
+[31mapi-gateway_1   |[0m [INFO] 
+[31mapi-gateway_1   |[0m [INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ api-gateway ---
+[31mapi-gateway_1   |[0m [INFO] Using 'UTF-8' encoding to copy filtered resources.
+[31mapi-gateway_1   |[0m [INFO] skip non existing resourceDirectory /app/src/test/resources
+[31mapi-gateway_1   |[0m [INFO] 
+[31mapi-gateway_1   |[0m [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ api-gateway ---
+[31mapi-gateway_1   |[0m [INFO] Changes detected - recompiling the module!
+[31mapi-gateway_1   |[0m [INFO] Compiling 1 source file to /app/target/test-classes
+[31mapi-gateway_1   |[0m [INFO] 
+[31mapi-gateway_1   |[0m [INFO] <<< spring-boot-maven-plugin:2.1.6.RELEASE:run (default-cli) < test-compile @ api-gateway <<<
+[31mapi-gateway_1   |[0m [INFO] 
+[31mapi-gateway_1   |[0m [INFO] 
+[31mapi-gateway_1   |[0m [INFO] --- spring-boot-maven-plugin:2.1.6.RELEASE:run (default-cli) @ api-gateway ---
+[35musers-api_1     |[0m [INFO] Attaching agents: []
+[33meureka_1        |[0m 2019-11-26 16:07:59.964  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f5ce236b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[33meureka_1        |[0m 
+[33meureka_1        |[0m   .   ____          _            __ _ _
+[33meureka_1        |[0m  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+[33meureka_1        |[0m ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+[33meureka_1        |[0m  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+[33meureka_1        |[0m   '  |____| .__|_| |_|_| |_\__, | / / / /
+[33meureka_1        |[0m  =========|_|==============|___/=/_/_/_/
+[33meureka_1        |[0m  :: Spring Boot ::        (v2.1.3.RELEASE)
+[33meureka_1        |[0m 
+[33meureka_1        |[0m 2019-11-26 16:08:03.412  INFO 1 --- [           main] c.e.e.EurekaServerApplication            : The following profiles are active: dev
+[36;1mposts-api_1     |[0m 2019-11-26 16:08:05.063  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$c0ace0a6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:05.814 [info] <0.8.0> Feature flags: list of feature flags found:
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:05.814 [info] <0.8.0> Feature flags:   [x] drop_unroutable_metric
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:05.816 [info] <0.8.0> Feature flags:   [x] empty_basic_get_metric
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:05.816 [info] <0.8.0> Feature flags:   [x] implicit_default_bindings
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:05.816 [info] <0.8.0> Feature flags:   [x] quorum_queue
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:05.817 [info] <0.8.0> Feature flags:   [x] virtual_host_metadata
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:05.818 [info] <0.8.0> Feature flags: feature flag states written to disk: yes
+[34mcomments-api_1  |[0m 2019-11-26 16:08:05.744  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$2917da31] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:06.506 [info] <0.305.0> ra: meta data store initialised. 0 record(s) recovered
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:06.512 [info] <0.318.0> WAL: recovering ["/var/lib/rabbitmq/mnesia/rabbit@f6ec04976bf5/quorum/rabbit@f6ec04976bf5/00000007.wal"]
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:06.549 [info] <0.327.0> 
+[32mrabbitmq_1      |[0m  Starting RabbitMQ 3.8.1 on Erlang 22.1.7
+[32mrabbitmq_1      |[0m  Copyright (c) 2007-2019 Pivotal Software, Inc.
+[32mrabbitmq_1      |[0m  Licensed under the MPL 1.1. Website: https://rabbitmq.com
+[32mrabbitmq_1      |[0m 
+[32mrabbitmq_1      |[0m   ##  ##      RabbitMQ 3.8.1
+[32mrabbitmq_1      |[0m   ##  ##
+[32mrabbitmq_1      |[0m   ##########  Copyright (c) 2007-2019 Pivotal Software, Inc.
+[32mrabbitmq_1      |[0m   ######  ##
+[32mrabbitmq_1      |[0m   ##########  Licensed under the MPL 1.1. Website: https://rabbitmq.com
+[32mrabbitmq_1      |[0m 
+[32mrabbitmq_1      |[0m   Doc guides: https://rabbitmq.com/documentation.html
+[32mrabbitmq_1      |[0m   Support:    https://rabbitmq.com/contact.html
+[32mrabbitmq_1      |[0m   Tutorials:  https://rabbitmq.com/getstarted.html
+[32mrabbitmq_1      |[0m   Monitoring: https://rabbitmq.com/monitoring.html
+[32mrabbitmq_1      |[0m 
+[32mrabbitmq_1      |[0m   Logs: <stdout>
+[32mrabbitmq_1      |[0m 
+[32mrabbitmq_1      |[0m   Config file(s): /etc/rabbitmq/rabbitmq.conf
+[32mrabbitmq_1      |[0m 
+[32mrabbitmq_1      |[0m   Starting broker...2019-11-26 16:08:06.582 [info] <0.327.0> 
+[32mrabbitmq_1      |[0m  node           : rabbit@f6ec04976bf5
+[32mrabbitmq_1      |[0m  home dir       : /var/lib/rabbitmq
+[32mrabbitmq_1      |[0m  config file(s) : /etc/rabbitmq/rabbitmq.conf
+[32mrabbitmq_1      |[0m  cookie hash    : UDQh1/LtRPFCGRTSQukoHw==
+[32mrabbitmq_1      |[0m  log(s)         : <stdout>
+[32mrabbitmq_1      |[0m  database dir   : /var/lib/rabbitmq/mnesia/rabbit@f6ec04976bf5
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:06.701 [info] <0.327.0> Running boot step pre_boot defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:06.702 [info] <0.327.0> Running boot step rabbit_core_metrics defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:06.730 [info] <0.327.0> Running boot step rabbit_alarm defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:06.773 [info] <0.333.0> Memory high watermark set to 1579 MiB (1655801446 bytes) of 3947 MiB (4139503616 bytes) total
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:06.861 [info] <0.335.0> Enabling free disk space monitoring
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:06.861 [info] <0.335.0> Disk free limit set to 50MB
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:06.903 [info] <0.327.0> Running boot step code_server_cache defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:06.904 [info] <0.327.0> Running boot step file_handle_cache defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:06.905 [info] <0.338.0> Limiting to approx 1048479 file handles (943629 sockets)
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:06.905 [info] <0.339.0> FHC read buffering:  OFF
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:06.905 [info] <0.339.0> FHC write buffering: ON
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:06.919 [info] <0.327.0> Running boot step worker_pool defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:06.919 [info] <0.328.0> Will use 2 processes for default worker pool
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:06.919 [info] <0.328.0> Starting worker pool 'worker_pool' with 2 processes in it
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:06.920 [info] <0.327.0> Running boot step database defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:06.938 [info] <0.327.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:06.939 [info] <0.327.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.171 [info] <0.327.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.171 [info] <0.327.0> Peer discovery backend rabbit_peer_discovery_classic_config does not support registration, skipping registration.
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.178 [info] <0.327.0> Running boot step database_sync defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.179 [info] <0.327.0> Running boot step feature_flags defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.179 [info] <0.327.0> Running boot step codec_correctness_check defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.179 [info] <0.327.0> Running boot step external_infrastructure defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.179 [info] <0.327.0> Running boot step rabbit_registry defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.180 [info] <0.327.0> Running boot step rabbit_auth_mechanism_cr_demo defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.180 [info] <0.327.0> Running boot step rabbit_queue_location_random defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.180 [info] <0.327.0> Running boot step rabbit_event defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.180 [info] <0.327.0> Running boot step rabbit_auth_mechanism_amqplain defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.181 [info] <0.327.0> Running boot step rabbit_auth_mechanism_plain defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.181 [info] <0.327.0> Running boot step rabbit_exchange_type_direct defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.181 [info] <0.327.0> Running boot step rabbit_exchange_type_fanout defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.181 [info] <0.327.0> Running boot step rabbit_exchange_type_headers defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.181 [info] <0.327.0> Running boot step rabbit_exchange_type_topic defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.181 [info] <0.327.0> Running boot step rabbit_mirror_queue_mode_all defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.181 [info] <0.327.0> Running boot step rabbit_mirror_queue_mode_exactly defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.181 [info] <0.327.0> Running boot step rabbit_mirror_queue_mode_nodes defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.181 [info] <0.327.0> Running boot step rabbit_priority_queue defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.181 [info] <0.327.0> Priority queues enabled, real BQ is rabbit_variable_queue
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.181 [info] <0.327.0> Running boot step rabbit_queue_location_client_local defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.182 [info] <0.327.0> Running boot step rabbit_queue_location_min_masters defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.182 [info] <0.327.0> Running boot step kernel_ready defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.182 [info] <0.327.0> Running boot step rabbit_sysmon_minder defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.182 [info] <0.327.0> Running boot step rabbit_epmd_monitor defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.203 [info] <0.359.0> epmd monitor knows us, inter-node communication (distribution) port: 25672
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.209 [info] <0.327.0> Running boot step guid_generator defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.245 [info] <0.327.0> Running boot step rabbit_node_monitor defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.246 [info] <0.365.0> Starting rabbit_node_monitor
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.247 [info] <0.327.0> Running boot step delegate_sup defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.248 [info] <0.327.0> Running boot step rabbit_memory_monitor defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.249 [info] <0.327.0> Running boot step core_initialized defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.249 [info] <0.327.0> Running boot step upgrade_queues defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.380 [info] <0.327.0> Running boot step rabbit_connection_tracking defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.381 [info] <0.327.0> Running boot step rabbit_connection_tracking_handler defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.382 [info] <0.327.0> Running boot step rabbit_exchange_parameters defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.382 [info] <0.327.0> Running boot step rabbit_mirror_queue_misc defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.383 [info] <0.327.0> Running boot step rabbit_policies defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.384 [info] <0.327.0> Running boot step rabbit_policy defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.385 [info] <0.327.0> Running boot step rabbit_queue_location_validator defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.385 [info] <0.327.0> Running boot step rabbit_quorum_memory_manager defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.385 [info] <0.327.0> Running boot step rabbit_vhost_limit defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.385 [info] <0.327.0> Running boot step rabbit_mgmt_reset_handler defined by app rabbitmq_management
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.385 [info] <0.327.0> Running boot step rabbit_mgmt_db_handler defined by app rabbitmq_management_agent
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.385 [info] <0.327.0> Management plugin: using rates mode 'basic'
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.385 [info] <0.327.0> Running boot step recovery defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.397 [info] <0.398.0> Making sure data directory '/var/lib/rabbitmq/mnesia/rabbit@f6ec04976bf5/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L' for vhost '/' exists
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.417 [info] <0.398.0> Starting message stores for vhost '/'
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.418 [info] <0.403.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_transient": using rabbit_msg_store_ets_index to provide index
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.435 [info] <0.398.0> Started message store of type transient for vhost '/'
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.436 [info] <0.406.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent": using rabbit_msg_store_ets_index to provide index
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.456 [info] <0.398.0> Started message store of type persistent for vhost '/'
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.459 [info] <0.327.0> Running boot step load_definitions defined by app rabbitmq_management
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.459 [info] <0.327.0> Running boot step empty_db_check defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.485 [info] <0.327.0> Running boot step rabbit_looking_glass defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.485 [info] <0.327.0> Running boot step rabbit_core_metrics_gc defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.485 [info] <0.327.0> Running boot step background_gc defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.487 [info] <0.327.0> Running boot step connection_tracking defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.487 [info] <0.327.0> Setting up a table for connection tracking on this node: tracked_connection_on_node_rabbit@f6ec04976bf5
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.488 [info] <0.327.0> Setting up a table for per-vhost connection counting on this node: tracked_connection_per_vhost_on_node_rabbit@f6ec04976bf5
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.488 [info] <0.327.0> Running boot step routing_ready defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.488 [info] <0.327.0> Running boot step pre_flight defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.488 [info] <0.327.0> Running boot step notify_cluster defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.488 [info] <0.327.0> Running boot step networking defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.519 [info] <0.443.0> started TCP listener on [::]:5672
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.520 [info] <0.327.0> Running boot step cluster_name defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.528 [info] <0.327.0> Running boot step direct_client defined by app rabbit
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.675 [info] <0.493.0> Management plugin: HTTP (non-TLS) listener started on port 15672
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.675 [info] <0.599.0> Statistics database started.
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:07.675 [info] <0.598.0> Starting worker pool 'management_worker_pool' with 3 processes in it
+[36;1mposts-api_1     |[0m 
+[36;1mposts-api_1     |[0m   .   ____          _            __ _ _
+[36;1mposts-api_1     |[0m  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+[36;1mposts-api_1     |[0m ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+[36;1mposts-api_1     |[0m  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+[36;1mposts-api_1     |[0m   '  |____| .__|_| |_|_| |_\__, | / / / /
+[36;1mposts-api_1     |[0m  =========|_|==============|___/=/_/_/_/
+[36;1mposts-api_1     |[0m  :: Spring Boot ::        (v2.1.3.RELEASE)
+[36;1mposts-api_1     |[0m 
+[36;1mposts-api_1     |[0m 2019-11-26 16:08:08.151  INFO 1 --- [           main] c.example.postsapi.PostsApiApplication   : The following profiles are active: dev
+[34mcomments-api_1  |[0m 
+[34mcomments-api_1  |[0m   .   ____          _            __ _ _
+[34mcomments-api_1  |[0m  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+[34mcomments-api_1  |[0m ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+[34mcomments-api_1  |[0m  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+[34mcomments-api_1  |[0m   '  |____| .__|_| |_|_| |_\__, | / / / /
+[34mcomments-api_1  |[0m  =========|_|==============|___/=/_/_/_/
+[34mcomments-api_1  |[0m  :: Spring Boot ::        (v2.1.3.RELEASE)
+[34mcomments-api_1  |[0m 
+[34mcomments-api_1  |[0m 2019-11-26 16:08:08.391  INFO 1 --- [           main] c.e.commentsapi.CommentsApiApplication   : The following profiles are active: dev
+[32mrabbitmq_1      |[0m  completed with 3 plugins.
+[32mrabbitmq_1      |[0m 2019-11-26 16:08:11.692 [info] <0.8.0> Server startup complete; 3 plugins started.
+[32mrabbitmq_1      |[0m  * rabbitmq_management
+[32mrabbitmq_1      |[0m  * rabbitmq_management_agent
+[32mrabbitmq_1      |[0m  * rabbitmq_web_dispatch
+[33meureka_1        |[0m 2019-11-26 16:08:13.039  WARN 1 --- [           main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+[35musers-api_1     |[0m 2019-11-26 16:08:13.791  INFO 40 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[36;1mposts-api_1     |[0m 2019-11-26 16:08:14.618  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+[34mcomments-api_1  |[0m 2019-11-26 16:08:15.276  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+[36;1mposts-api_1     |[0m 2019-11-26 16:08:15.924  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1182ms. Found 1 repository interfaces.
+[34mcomments-api_1  |[0m 2019-11-26 16:08:16.618  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1123ms. Found 1 repository interfaces.
+[33meureka_1        |[0m 2019-11-26 16:08:17.203  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=70732503-b5f4-38d3-8aa5-7fe93f9c0d3b
+[31mapi-gateway_1   |[0m 2019-11-26 16:08:17.118  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$95f64186] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[33meureka_1        |[0m 2019-11-26 16:08:18.684  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f5ce236b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[31mapi-gateway_1   |[0m 
+[31mapi-gateway_1   |[0m   .   ____          _            __ _ _
+[31mapi-gateway_1   |[0m  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+[31mapi-gateway_1   |[0m ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+[31mapi-gateway_1   |[0m  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+[31mapi-gateway_1   |[0m   '  |____| .__|_| |_|_| |_\__, | / / / /
+[31mapi-gateway_1   |[0m  =========|_|==============|___/=/_/_/_/
+[31mapi-gateway_1   |[0m  :: Spring Boot ::        (v2.1.6.RELEASE)
+[31mapi-gateway_1   |[0m 
+[31mapi-gateway_1   |[0m 2019-11-26 16:08:19.571  INFO 1 --- [           main] c.e.apigateway.ZuulGatewayApplication    : The following profiles are active: dev
+[35musers-api_1     |[0m 2019-11-26 16:08:19.718  INFO 40 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a7d83f4f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[36;1mposts-api_1     |[0m 2019-11-26 16:08:20.748  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2e3dd01d-8a36-3ba8-ad66-d54e972b6d12
+[34mcomments-api_1  |[0m 2019-11-26 16:08:21.189  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=06d7ca2b-ea61-30cd-abc4-d3d33464a06e
+[36;1mposts-api_1     |[0m 2019-11-26 16:08:21.257  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$6afe9bd7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[34mcomments-api_1  |[0m 2019-11-26 16:08:21.529  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'com.example.commentsapi.feign.PostsClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[34mcomments-api_1  |[0m 2019-11-26 16:08:21.880  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$d3699562] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[35musers-api_1     |[0m 
+[35musers-api_1     |[0m   .   ____          _            __ _ _
+[35musers-api_1     |[0m  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+[35musers-api_1     |[0m ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+[35musers-api_1     |[0m  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+[35musers-api_1     |[0m   '  |____| .__|_| |_|_| |_\__, | / / / /
+[35musers-api_1     |[0m  =========|_|==============|___/=/_/_/_/
+[35musers-api_1     |[0m [32m :: Spring Boot :: [39m      [2m (v2.1.3.RELEASE)[0;39m
+[35musers-api_1     |[0m 
+[36;1mposts-api_1     |[0m 2019-11-26 16:08:22.413  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a492dda9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[35musers-api_1     |[0m [2m2019-11-26 16:08:22.429[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.example.usersapi.UsersApiApplication  [0;39m [2m:[0;39m The following profiles are active: dev
+[33meureka_1        |[0m 2019-11-26 16:08:22.784  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8761 (http)
+[36;1mposts-api_1     |[0m 2019-11-26 16:08:22.923  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$c0ace0a6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[34mcomments-api_1  |[0m 2019-11-26 16:08:22.953  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cfdd734] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[33meureka_1        |[0m 2019-11-26 16:08:23.195  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+[33meureka_1        |[0m 2019-11-26 16:08:23.216  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+[33meureka_1        |[0m 2019-11-26 16:08:23.372  INFO 1 --- [           main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+[34mcomments-api_1  |[0m 2019-11-26 16:08:23.460  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$2917da31] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[33meureka_1        |[0m 2019-11-26 16:08:24.425  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+[33meureka_1        |[0m 2019-11-26 16:08:24.431  INFO 1 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 20857 ms
+[33meureka_1        |[0m 2019-11-26 16:08:25.793  WARN 1 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+[33meureka_1        |[0m 2019-11-26 16:08:25.795  INFO 1 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[33meureka_1        |[0m 2019-11-26 16:08:25.880  INFO 1 --- [           main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@29145839
+[36;1mposts-api_1     |[0m 2019-11-26 16:08:26.876  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+[36;1mposts-api_1     |[0m 2019-11-26 16:08:27.179  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+[36;1mposts-api_1     |[0m 2019-11-26 16:08:27.194  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+[36;1mposts-api_1     |[0m 2019-11-26 16:08:27.341  INFO 1 --- [           main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+[34mcomments-api_1  |[0m 2019-11-26 16:08:27.453  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+[34mcomments-api_1  |[0m 2019-11-26 16:08:27.939  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+[34mcomments-api_1  |[0m 2019-11-26 16:08:27.944  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+[34mcomments-api_1  |[0m 2019-11-26 16:08:28.068  INFO 1 --- [           main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+[36;1mposts-api_1     |[0m 2019-11-26 16:08:28.263  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+[36;1mposts-api_1     |[0m 2019-11-26 16:08:28.267  INFO 1 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 19938 ms
+[34mcomments-api_1  |[0m 2019-11-26 16:08:28.720  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+[34mcomments-api_1  |[0m 2019-11-26 16:08:28.736  INFO 1 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 20134 ms
+[31mapi-gateway_1   |[0m 2019-11-26 16:08:29.871  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+[31mapi-gateway_1   |[0m 2019-11-26 16:08:30.193  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 192ms. Found 0 repository interfaces.
+[36;1mposts-api_1     |[0m 2019-11-26 16:08:33.197  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+[35musers-api_1     |[0m [2m2019-11-26 16:08:34.401[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Bootstrapping Spring Data repositories in DEFAULT mode.
+[34mcomments-api_1  |[0m 2019-11-26 16:08:34.819  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+[31mapi-gateway_1   |[0m 2019-11-26 16:08:36.386  WARN 1 --- [           main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+[31mapi-gateway_1   |[0m 2019-11-26 16:08:37.601  WARN 1 --- [           main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+[36;1mposts-api_1     |[0m 2019-11-26 16:08:38.935  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+[35musers-api_1     |[0m [2m2019-11-26 16:08:45.033[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Finished Spring Data repository scanning in 10027ms. Found 3 repository interfaces.
+[34mcomments-api_1  |[0m 2019-11-26 16:08:46.131  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+[33meureka_1        |[0m 2019-11-26 16:08:46.560  INFO 1 --- [           main] c.s.j.s.i.a.WebApplicationImpl           : Initiating Jersey application, version 'Jersey: 1.19.1 03/11/2016 02:08 PM'
+[36;1mposts-api_1     |[0m 2019-11-26 16:08:46.939  INFO 1 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+[36;1mposts-api_1     |[0m 	name: default
+[36;1mposts-api_1     |[0m 	...]
+[33meureka_1        |[0m 2019-11-26 16:08:47.380  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+[33meureka_1        |[0m 2019-11-26 16:08:47.408  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+[31mapi-gateway_1   |[0m 2019-11-26 16:08:50.821  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e0e5eaf7-c395-3661-96f6-882dbcbe6618
+[34mcomments-api_1  |[0m 2019-11-26 16:08:51.174  INFO 1 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+[34mcomments-api_1  |[0m 	name: default
+[34mcomments-api_1  |[0m 	...]
+[36;1mposts-api_1     |[0m 2019-11-26 16:08:51.256  INFO 1 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+[35musers-api_1     |[0m [2m2019-11-26 16:08:51.299[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.cloud.context.scope.GenericScope    [0;39m [2m:[0;39m BeanFactory id=01069287-786b-3cd6-8fdc-eedc23e87e59
+[36;1mposts-api_1     |[0m 2019-11-26 16:08:51.278  INFO 1 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+[34mcomments-api_1  |[0m 2019-11-26 16:08:51.730  INFO 1 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+[34mcomments-api_1  |[0m 2019-11-26 16:08:51.744  INFO 1 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+[31mapi-gateway_1   |[0m 2019-11-26 16:08:52.705  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$79dc3e89] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[36;1mposts-api_1     |[0m 2019-11-26 16:08:52.831  INFO 1 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+[35musers-api_1     |[0m [2m2019-11-26 16:08:52.884[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8bbe3c52] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[33meureka_1        |[0m 2019-11-26 16:08:52.938  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+[33meureka_1        |[0m 2019-11-26 16:08:52.960  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+[34mcomments-api_1  |[0m 2019-11-26 16:08:53.143  INFO 1 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+[35musers-api_1     |[0m [2m2019-11-26 16:08:53.418[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a7d83f4f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[36;1mposts-api_1     |[0m 2019-11-26 16:08:54.637  INFO 1 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+[36;1mposts-api_1     |[0m 2019-11-26 16:08:54.868  INFO 1 --- [           main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000422: Disabling contextual LOB creation as connection was null
+[36;1mposts-api_1     |[0m 2019-11-26 16:08:54.936  INFO 1 --- [           main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@59a221c5
+[34mcomments-api_1  |[0m 2019-11-26 16:08:55.201  INFO 1 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+[34mcomments-api_1  |[0m 2019-11-26 16:08:55.493  INFO 1 --- [           main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000422: Disabling contextual LOB creation as connection was null
+[34mcomments-api_1  |[0m 2019-11-26 16:08:55.552  INFO 1 --- [           main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@2a82e3aa
+[31mapi-gateway_1   |[0m 2019-11-26 16:08:57.357  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$95f64186] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[33meureka_1        |[0m 2019-11-26 16:08:57.945  WARN 1 --- [           main] o.s.c.n.a.ArchaiusAutoConfiguration      : No spring.application.name found, defaulting to 'application'
+[33meureka_1        |[0m 2019-11-26 16:08:57.976  WARN 1 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+[33meureka_1        |[0m 2019-11-26 16:08:57.983  INFO 1 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[33meureka_1        |[0m 2019-11-26 16:09:02.145  INFO 1 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+[36;1mposts-api_1     |[0m Hibernate: drop table if exists posts cascade
+[35musers-api_1     |[0m [2m2019-11-26 16:09:03.188[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 8081 (http)
+[36;1mposts-api_1     |[0m Hibernate: create table posts (id  bigserial not null, description varchar(255), title varchar(255) not null, username varchar(255) not null, primary key (id))
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:03.313  INFO 1 --- [           main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@766d1100'
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:03.321  INFO 1 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+[35musers-api_1     |[0m [2m2019-11-26 16:09:03.561[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+[35musers-api_1     |[0m [2m2019-11-26 16:09:03.570[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.apache.catalina.core.StandardEngine [0;39m [2m:[0;39m Starting Servlet engine: [Apache Tomcat/9.0.16]
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:03.643  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+[35musers-api_1     |[0m [2m2019-11-26 16:09:03.750[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.a.catalina.core.AprLifecycleListener  [0;39m [2m:[0;39m The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+[34mcomments-api_1  |[0m Hibernate: drop table if exists comments cascade
+[34mcomments-api_1  |[0m Hibernate: create table comments (id  bigserial not null, post_id int8 not null, text varchar(255) not null, username varchar(255) not null, primary key (id))
+[34mcomments-api_1  |[0m 2019-11-26 16:09:03.912  INFO 1 --- [           main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@55f60082'
+[34mcomments-api_1  |[0m 2019-11-26 16:09:03.943  INFO 1 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:04.117  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:04.122  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:05.223  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:05.225  INFO 1 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 45528 ms
+[35musers-api_1     |[0m [2m2019-11-26 16:09:05.246[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[35musers-api_1     |[0m [2m2019-11-26 16:09:05.252[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.web.context.ContextLoader           [0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 42691 ms
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:07.131  WARN 1 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:07.133  INFO 1 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:07.461  INFO 1 --- [           main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@2ba4cd2
+[35musers-api_1     |[0m [2m2019-11-26 16:09:08.665[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Starting...
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:09.622  WARN 1 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:09.630  INFO 1 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:09.856  WARN 1 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:09.856  INFO 1 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[35musers-api_1     |[0m [2m2019-11-26 16:09:11.708[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Start completed.
+[33meureka_1        |[0m 2019-11-26 16:09:12.754  INFO 1 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+[33meureka_1        |[0m 2019-11-26 16:09:13.211  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+[33meureka_1        |[0m 2019-11-26 16:09:13.211  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+[33meureka_1        |[0m 2019-11-26 16:09:13.331  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1574784553317 with initial instances count: 0
+[35musers-api_1     |[0m [2m2019-11-26 16:09:13.349[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.hibernate.jpa.internal.util.LogHelper [0;39m [2m:[0;39m HHH000204: Processing PersistenceUnitInfo [
+[35musers-api_1     |[0m 	name: default
+[35musers-api_1     |[0m 	...]
+[33meureka_1        |[0m 2019-11-26 16:09:13.820  INFO 1 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+[33meureka_1        |[0m 2019-11-26 16:09:13.841  INFO 1 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
+[33meureka_1        |[0m 2019-11-26 16:09:14.315  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+[33meureka_1        |[0m 2019-11-26 16:09:14.333  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+[33meureka_1        |[0m 2019-11-26 16:09:14.335  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+[33meureka_1        |[0m 2019-11-26 16:09:14.335  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+[34mcomments-api_1  |[0m 2019-11-26 16:09:14.409  WARN 1 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+[34mcomments-api_1  |[0m 2019-11-26 16:09:14.410  INFO 1 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[34mcomments-api_1  |[0m 2019-11-26 16:09:14.534  WARN 1 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+[34mcomments-api_1  |[0m 2019-11-26 16:09:14.534  INFO 1 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:14.654  INFO 1 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+[35musers-api_1     |[0m [2m2019-11-26 16:09:14.717[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.hibernate.Version                   [0;39m [2m:[0;39m HHH000412: Hibernate Core {5.3.7.Final}
+[35musers-api_1     |[0m [2m2019-11-26 16:09:14.737[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.hibernate.cfg.Environment           [0;39m [2m:[0;39m HHH000206: hibernate.properties not found
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:15.445  WARN 1 --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[33meureka_1        |[0m 2019-11-26 16:09:15.540  INFO 1 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
+[33meureka_1        |[0m 2019-11-26 16:09:15.630  INFO 1 --- [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+[33meureka_1        |[0m 2019-11-26 16:09:15.632  INFO 1 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+[33meureka_1        |[0m 2019-11-26 16:09:15.733  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+[33meureka_1        |[0m 2019-11-26 16:09:16.788  INFO 1 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UNKNOWN with eureka with status UP
+[33meureka_1        |[0m 2019-11-26 16:09:16.864  INFO 1 --- [      Thread-14] o.s.c.n.e.server.EurekaServerBootstrap   : Setting the eureka configuration..
+[33meureka_1        |[0m 2019-11-26 16:09:16.922  INFO 1 --- [      Thread-14] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka data center value eureka.datacenter is not set, defaulting to default
+[33meureka_1        |[0m 2019-11-26 16:09:16.926  INFO 1 --- [      Thread-14] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka environment value eureka.environment is not set, defaulting to test
+[34mcomments-api_1  |[0m 2019-11-26 16:09:17.181  INFO 1 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+[35musers-api_1     |[0m [2m2019-11-26 16:09:17.382[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.hibernate.annotations.common.Version  [0;39m [2m:[0;39m HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+[34mcomments-api_1  |[0m 2019-11-26 16:09:18.114  WARN 1 --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[33meureka_1        |[0m 2019-11-26 16:09:18.163  INFO 1 --- [      Thread-14] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+[33meureka_1        |[0m 2019-11-26 16:09:18.169  INFO 1 --- [      Thread-14] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+[33meureka_1        |[0m 2019-11-26 16:09:18.185  INFO 1 --- [      Thread-14] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+[33meureka_1        |[0m 2019-11-26 16:09:18.186  INFO 1 --- [      Thread-14] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+[33meureka_1        |[0m 2019-11-26 16:09:18.221  INFO 1 --- [      Thread-14] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+[33meureka_1        |[0m 2019-11-26 16:09:18.273  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8761 (http) with context path ''
+[33meureka_1        |[0m 2019-11-26 16:09:18.374  INFO 1 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+[33meureka_1        |[0m 2019-11-26 16:09:18.403  INFO 1 --- [           main] c.e.e.EurekaServerApplication            : Started EurekaServerApplication in 93.527 seconds (JVM running for 146.12)
+[33meureka_1        |[0m 2019-11-26 16:09:18.605  INFO 1 --- [      Thread-14] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+[35musers-api_1     |[0m [2m2019-11-26 16:09:19.681[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.hibernate.dialect.Dialect           [0;39m [2m:[0;39m HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+[35musers-api_1     |[0m [2m2019-11-26 16:09:19.995[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.h.e.j.e.i.LobCreatorBuilderImpl       [0;39m [2m:[0;39m HHH000422: Disabling contextual LOB creation as connection was null
+[35musers-api_1     |[0m [2m2019-11-26 16:09:20.077[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.hibernate.type.BasicTypeRegistry    [0;39m [2m:[0;39m HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@284488da
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:23.216  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:24.209  INFO 1 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:24.775  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:25.076  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:25.799  INFO 1 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+[31mapi-gateway_1   |[0m 	name: default
+[31mapi-gateway_1   |[0m 	...]
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:26.002  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:26.016  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+[34mcomments-api_1  |[0m 2019-11-26 16:09:26.795  INFO 1 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:26.979  INFO 1 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:27.023  INFO 1 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+[35musers-api_1     |[0m Hibernate: alter table if exists profiles drop constraint if exists FK410q61iev7klncmpqfuo85ivh
+[35musers-api_1     |[0m Hibernate: alter table if exists user_role_user drop constraint if exists FKe9icuqa61qky86xsbhfjctlef
+[35musers-api_1     |[0m Hibernate: alter table if exists user_role_user drop constraint if exists FK4upilw5soq2yx9dh37yjd7lho
+[35musers-api_1     |[0m Hibernate: alter table if exists users drop constraint if exists FKq2e6rj0p6p1gec2cslmaxugw1
+[35musers-api_1     |[0m Hibernate: drop table if exists profiles cascade
+[35musers-api_1     |[0m Hibernate: drop table if exists user_role_user cascade
+[35musers-api_1     |[0m Hibernate: drop table if exists user_roles cascade
+[35musers-api_1     |[0m Hibernate: drop table if exists users cascade
+[35musers-api_1     |[0m Hibernate: create table profiles (id  bigserial not null, addl_email varchar(255), address varchar(255), mobile varchar(255), user_id int8, primary key (id))
+[35musers-api_1     |[0m Hibernate: create table user_role_user (user_id int8 not null, user_role_id int8 not null)
+[35musers-api_1     |[0m Hibernate: create table user_roles (id  bigserial not null, name varchar(255) not null, primary key (id))
+[35musers-api_1     |[0m Hibernate: create table users (id  bigserial not null, email varchar(255) not null, password varchar(255) not null, username varchar(255) not null, profile_id int8, primary key (id))
+[35musers-api_1     |[0m Hibernate: alter table if exists users add constraint UK_6dotkott2kjsp8vw4d0m25fb7 unique (email)
+[35musers-api_1     |[0m Hibernate: alter table if exists users add constraint UK_r43af9ap4edm43mmtq01oddj6 unique (username)
+[35musers-api_1     |[0m Hibernate: alter table if exists profiles add constraint FK410q61iev7klncmpqfuo85ivh foreign key (user_id) references users
+[34mcomments-api_1  |[0m 2019-11-26 16:09:27.463  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+[35musers-api_1     |[0m Hibernate: alter table if exists user_role_user add constraint FKe9icuqa61qky86xsbhfjctlef foreign key (user_role_id) references user_roles
+[35musers-api_1     |[0m Hibernate: alter table if exists user_role_user add constraint FK4upilw5soq2yx9dh37yjd7lho foreign key (user_id) references users
+[35musers-api_1     |[0m Hibernate: alter table if exists users add constraint FKq2e6rj0p6p1gec2cslmaxugw1 foreign key (profile_id) references profiles
+[35musers-api_1     |[0m [2m2019-11-26 16:09:27.534[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.h.t.schema.internal.SchemaCreatorImpl [0;39m [2m:[0;39m HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@43e35178'
+[35musers-api_1     |[0m [2m2019-11-26 16:09:27.549[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+[35musers-api_1     |[0m [2m2019-11-26 16:09:27.823[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.d.a.OptionalLiveReloadServer      [0;39m [2m:[0;39m LiveReload server is running on port 35729
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:28.105  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:28.107  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+[34mcomments-api_1  |[0m 2019-11-26 16:09:28.692  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+[34mcomments-api_1  |[0m 2019-11-26 16:09:28.698  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:28.782  INFO 1 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+[34mcomments-api_1  |[0m 2019-11-26 16:09:30.080  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+[34mcomments-api_1  |[0m 2019-11-26 16:09:30.097  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:30.141  INFO 1 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:30.250  INFO 1 --- [           main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000422: Disabling contextual LOB creation as connection was null
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:30.272  INFO 1 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:30.299  INFO 1 --- [           main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@39910681
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:30.593  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:30.593  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:30.593  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:30.593  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:30.593  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:30.594  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:30.594  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+[34mcomments-api_1  |[0m 2019-11-26 16:09:31.261  INFO 1 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+[34mcomments-api_1  |[0m 2019-11-26 16:09:31.483  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+[34mcomments-api_1  |[0m 2019-11-26 16:09:31.483  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+[34mcomments-api_1  |[0m 2019-11-26 16:09:31.489  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+[34mcomments-api_1  |[0m 2019-11-26 16:09:31.491  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+[34mcomments-api_1  |[0m 2019-11-26 16:09:31.492  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+[34mcomments-api_1  |[0m 2019-11-26 16:09:31.495  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+[34mcomments-api_1  |[0m 2019-11-26 16:09:31.497  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+[33meureka_1        |[0m 2019-11-26 16:09:32.029  INFO 1 --- [nio-8761-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+[33meureka_1        |[0m 2019-11-26 16:09:32.032  INFO 1 --- [nio-8761-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+[33meureka_1        |[0m 2019-11-26 16:09:32.084  INFO 1 --- [nio-8761-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 52 ms
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:32.193  INFO 1 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:32.875  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:32.882  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:32.892  INFO 1 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+[35musers-api_1     |[0m [2m2019-11-26 16:09:32.892[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.h.h.i.QueryTranslatorFactoryInitiator [0;39m [2m:[0;39m HHH000397: Using ASTQueryTranslatorFactory
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:32.950  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1574784572929 with initial instances count: 0
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:32.957  INFO 1 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application POSTS with eureka with status UP
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:32.966  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1574784572966, current=UP, previous=STARTING]
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:32.981  INFO 1 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_POSTS/dc553853816d:posts:8082: registering service...
+[34mcomments-api_1  |[0m 2019-11-26 16:09:33.138  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+[34mcomments-api_1  |[0m 2019-11-26 16:09:33.145  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+[34mcomments-api_1  |[0m 2019-11-26 16:09:33.159  INFO 1 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+[34mcomments-api_1  |[0m 2019-11-26 16:09:33.180  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1574784573173 with initial instances count: 0
+[34mcomments-api_1  |[0m 2019-11-26 16:09:33.208  INFO 1 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application COMMENTS with eureka with status UP
+[34mcomments-api_1  |[0m 2019-11-26 16:09:33.230  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1574784573230, current=UP, previous=STARTING]
+[34mcomments-api_1  |[0m 2019-11-26 16:09:33.237  INFO 1 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_COMMENTS/27420ac0254a:comments:8083: registering service...
+[34mcomments-api_1  |[0m 2019-11-26 16:09:33.278  INFO 1 --- [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:33.428  WARN 1 --- [           main] o.s.security.core.userdetails.User       : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:33.578  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:33.638  INFO 1 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:33.673  INFO 1 --- [           main] c.example.postsapi.PostsApiApplication   : Started PostsApiApplication in 104.423 seconds (JVM running for 158.758)
+[32mrabbitmq_1      |[0m 2019-11-26 16:09:33.720 [info] <0.694.0> accepting AMQP connection <0.694.0> (172.18.0.7:41868 -> 172.18.0.2:5672)
+[32mrabbitmq_1      |[0m 2019-11-26 16:09:34.379 [info] <0.694.0> Connection <0.694.0> (172.18.0.7:41868 -> 172.18.0.2:5672) has a client-provided name: rabbitConnectionFactory#dc9d60a:0
+[32mrabbitmq_1      |[0m 2019-11-26 16:09:34.435 [info] <0.694.0> connection <0.694.0> (172.18.0.7:41868 -> 172.18.0.2:5672 - rabbitConnectionFactory#dc9d60a:0): user 'guest' authenticated and granted access to vhost '/'
+[34mcomments-api_1  |[0m 2019-11-26 16:09:34.496  INFO 1 --- [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#dc9d60a:0/SimpleConnection@7d336cbd [delegate=amqp://guest@172.18.0.2:5672/, localPort= 41868]
+[33meureka_1        |[0m 2019-11-26 16:09:34.536  INFO 1 --- [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance COMMENTS/27420ac0254a:comments:8083 with status UP (replication=false)
+[33meureka_1        |[0m 2019-11-26 16:09:34.591  INFO 1 --- [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance POSTS/dc553853816d:posts:8082 with status UP (replication=false)
+[34mcomments-api_1  |[0m 2019-11-26 16:09:34.569  INFO 1 --- [           main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue1) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+[34mcomments-api_1  |[0m 2019-11-26 16:09:34.599  INFO 1 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_COMMENTS/27420ac0254a:comments:8083 - registration status: 204
+[36;1mposts-api_1     |[0m 2019-11-26 16:09:34.599  INFO 1 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_POSTS/dc553853816d:posts:8082 - registration status: 204
+[34mcomments-api_1  |[0m 2019-11-26 16:09:35.210  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+[34mcomments-api_1  |[0m 2019-11-26 16:09:35.216  INFO 1 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8083
+[34mcomments-api_1  |[0m 2019-11-26 16:09:35.232  INFO 1 --- [           main] c.e.commentsapi.CommentsApiApplication   : Started CommentsApiApplication in 105.574 seconds (JVM running for 160.384)
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:35.268  WARN 1 --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[35musers-api_1     |[0m Hibernate: insert into user_roles (name) values (?)
+[35musers-api_1     |[0m Hibernate: select currval('user_roles_id_seq')
+[35musers-api_1     |[0m Hibernate: insert into user_roles (name) values (?)
+[35musers-api_1     |[0m Hibernate: select currval('user_roles_id_seq')
+[35musers-api_1     |[0m Hibernate: insert into users (email, password, profile_id, username) values (?, ?, ?, ?)
+[35musers-api_1     |[0m Hibernate: select currval('users_id_seq')
+[33meureka_1        |[0m 2019-11-26 16:09:36.091  INFO 1 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance COMMENTS/27420ac0254a:comments:8083 with status UP (replication=true)
+[33meureka_1        |[0m 2019-11-26 16:09:36.096  INFO 1 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance POSTS/dc553853816d:posts:8082 with status UP (replication=true)
+[35musers-api_1     |[0m Hibernate: insert into user_role_user (user_id, user_role_id) values (?, ?)
+[35musers-api_1     |[0m Hibernate: insert into user_role_user (user_id, user_role_id) values (?, ?)
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:36.384  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:36.697  INFO 1 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7597d7fe, org.springframework.security.web.context.SecurityContextPersistenceFilter@3ac3d30, org.springframework.security.web.header.HeaderWriterFilter@4053ae93, org.springframework.web.filter.CorsFilter@62a3910f, org.springframework.security.web.authentication.logout.LogoutFilter@27c58e39, com.example.apigateway.config.JwtRequestFilter@2f9593f8, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@d1f5126, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@36f1ffc0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@72a78ba, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1426dc4f, org.springframework.security.web.session.SessionManagementFilter@25245f88, org.springframework.security.web.access.ExceptionTranslationFilter@5b906b1d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@227a476c]
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:36.856  WARN 1 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:36.857  INFO 1 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[35musers-api_1     |[0m [2m2019-11-26 16:09:36.930[0;39m [33m WARN[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.n.c.sources.URLConfigurationSource    [0;39m [2m:[0;39m No URLs will be polled as dynamic configuration sources.
+[35musers-api_1     |[0m [2m2019-11-26 16:09:36.931[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.n.c.sources.URLConfigurationSource    [0;39m [2m:[0;39m To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[35musers-api_1     |[0m [2m2019-11-26 16:09:36.985[0;39m [33m WARN[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.n.c.sources.URLConfigurationSource    [0;39m [2m:[0;39m No URLs will be polled as dynamic configuration sources.
+[35musers-api_1     |[0m [2m2019-11-26 16:09:36.985[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.n.c.sources.URLConfigurationSource    [0;39m [2m:[0;39m To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:37.519  INFO 1 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+[35musers-api_1     |[0m [2m2019-11-26 16:09:38.131[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Initializing ExecutorService 'applicationTaskExecutor'
+[35musers-api_1     |[0m [2m2019-11-26 16:09:38.465[0;39m [33m WARN[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36maWebConfiguration$JpaWebMvcConfiguration[0;39m [2m:[0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:40.180  INFO 1 --- [           main] o.s.c.n.zuul.ZuulFilterInitializer       : Starting filter initializer
+[35musers-api_1     |[0m [2m2019-11-26 16:09:40.534[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.c.n.eureka.InstanceInfoFactory      [0;39m [2m:[0;39m Setting initial instance status as: STARTING
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:40.593  INFO 1 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+[35musers-api_1     |[0m [2m2019-11-26 16:09:40.794[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Initializing Eureka in region us-east-1
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:40.922  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:42.729  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:42.733  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+[35musers-api_1     |[0m [2m2019-11-26 16:09:42.818[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.n.d.provider.DiscoveryJerseyProvider  [0;39m [2m:[0;39m Using JSON encoding codec LegacyJacksonJson
+[35musers-api_1     |[0m [2m2019-11-26 16:09:42.820[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.n.d.provider.DiscoveryJerseyProvider  [0;39m [2m:[0;39m Using JSON decoding codec LegacyJacksonJson
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:44.962  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:44.969  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+[35musers-api_1     |[0m [2m2019-11-26 16:09:45.133[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.n.d.provider.DiscoveryJerseyProvider  [0;39m [2m:[0;39m Using XML encoding codec XStreamXml
+[35musers-api_1     |[0m [2m2019-11-26 16:09:45.144[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.n.d.provider.DiscoveryJerseyProvider  [0;39m [2m:[0;39m Using XML decoding codec XStreamXml
+[35musers-api_1     |[0m [2m2019-11-26 16:09:46.830[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.n.d.s.r.aws.ConfigClusterResolver     [0;39m [2m:[0;39m Resolving eureka endpoints via configuration
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:47.070  INFO 1 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+[35musers-api_1     |[0m [2m2019-11-26 16:09:47.184[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Disable delta property : false
+[35musers-api_1     |[0m [2m2019-11-26 16:09:47.193[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Single vip registry refresh property : null
+[35musers-api_1     |[0m [2m2019-11-26 16:09:47.198[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Force full registry fetch : false
+[35musers-api_1     |[0m [2m2019-11-26 16:09:47.199[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Application is null : false
+[35musers-api_1     |[0m [2m2019-11-26 16:09:47.204[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Registered Applications size is zero : true
+[35musers-api_1     |[0m [2m2019-11-26 16:09:47.206[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Application version is -1: true
+[35musers-api_1     |[0m [2m2019-11-26 16:09:47.207[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Getting all instance registry info from the eureka server
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:47.374  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:47.392  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:47.394  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:47.395  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:47.397  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:47.401  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:47.403  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+[35musers-api_1     |[0m [2m2019-11-26 16:09:48.274[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m The response status is 200
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:48.288  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+[35musers-api_1     |[0m [2m2019-11-26 16:09:48.291[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Starting heartbeat executor: renew interval is: 30
+[35musers-api_1     |[0m [2m2019-11-26 16:09:48.306[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.n.discovery.InstanceInfoReplicator    [0;39m [2m:[0;39m InstanceInfoReplicator onDemand update allowed rate per min is 4
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:48.311  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:48.327  INFO 1 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:48.361  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1574784588354 with initial instances count: 0
+[35musers-api_1     |[0m [2m2019-11-26 16:09:48.371[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Discovery Client initialized at timestamp 1574784588352 with initial instances count: 0
+[35musers-api_1     |[0m [2m2019-11-26 16:09:48.378[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.c.n.e.s.EurekaServiceRegistry       [0;39m [2m:[0;39m Registering application USERS with eureka with status UP
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:48.385  INFO 1 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application API-GATEWAY with eureka with status UP
+[35musers-api_1     |[0m [2m2019-11-26 16:09:48.389[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Saw local status change event StatusChangeEvent [timestamp=1574784588389, current=UP, previous=STARTING]
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:48.393  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1574784588393, current=UP, previous=STARTING]
+[35musers-api_1     |[0m [2m2019-11-26 16:09:48.407[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[nfoReplicator-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m DiscoveryClient_USERS/5966c95ed059:users:8081: registering service...
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:48.422  INFO 1 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/1ce125de6cbe:api-gateway: registering service...
+[35musers-api_1     |[0m [2m2019-11-26 16:09:48.719[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 8081 (http) with context path ''
+[35musers-api_1     |[0m [2m2019-11-26 16:09:48.732[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.s.c.n.e.s.EurekaAutoServiceRegistration[0;39m [2m:[0;39m Updating port to 8081
+[35musers-api_1     |[0m [2m2019-11-26 16:09:48.751[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mc.example.usersapi.UsersApiApplication  [0;39m [2m:[0;39m Started UsersApiApplication in 103.14 seconds (JVM running for 109.476)
+[33meureka_1        |[0m 2019-11-26 16:09:48.818  INFO 1 --- [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance USERS/5966c95ed059:users:8081 with status UP (replication=false)
+[35musers-api_1     |[0m [2m2019-11-26 16:09:48.822[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[nfoReplicator-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m DiscoveryClient_USERS/5966c95ed059:users:8081 - registration status: 204
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:48.876  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:48.879  INFO 1 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:48.902  INFO 1 --- [           main] c.e.apigateway.ZuulGatewayApplication    : Started ZuulGatewayApplication in 105.709 seconds (JVM running for 174.209)
+[33meureka_1        |[0m 2019-11-26 16:09:49.068  INFO 1 --- [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/1ce125de6cbe:api-gateway with status UP (replication=false)
+[31mapi-gateway_1   |[0m 2019-11-26 16:09:49.073  INFO 1 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/1ce125de6cbe:api-gateway - registration status: 204
+[33meureka_1        |[0m 2019-11-26 16:09:49.347  INFO 1 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance USERS/5966c95ed059:users:8081 with status UP (replication=true)
+[33meureka_1        |[0m 2019-11-26 16:09:49.352  INFO 1 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/1ce125de6cbe:api-gateway with status UP (replication=true)
+[36;1mposts-api_1     |[0m 2019-11-26 16:10:02.841  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+[36;1mposts-api_1     |[0m 2019-11-26 16:10:02.842  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+[36;1mposts-api_1     |[0m 2019-11-26 16:10:02.842  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+[36;1mposts-api_1     |[0m 2019-11-26 16:10:02.842  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+[36;1mposts-api_1     |[0m 2019-11-26 16:10:02.842  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+[36;1mposts-api_1     |[0m 2019-11-26 16:10:02.843  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+[36;1mposts-api_1     |[0m 2019-11-26 16:10:02.843  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+[36;1mposts-api_1     |[0m 2019-11-26 16:10:03.001  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+[34mcomments-api_1  |[0m 2019-11-26 16:10:03.105  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+[34mcomments-api_1  |[0m 2019-11-26 16:10:03.107  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+[34mcomments-api_1  |[0m 2019-11-26 16:10:03.109  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+[34mcomments-api_1  |[0m 2019-11-26 16:10:03.110  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+[34mcomments-api_1  |[0m 2019-11-26 16:10:03.112  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+[34mcomments-api_1  |[0m 2019-11-26 16:10:03.113  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+[34mcomments-api_1  |[0m 2019-11-26 16:10:03.113  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+[34mcomments-api_1  |[0m 2019-11-26 16:10:03.267  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+[35musers-api_1     |[0m [2m2019-11-26 16:10:18.251[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Disable delta property : false
+[35musers-api_1     |[0m [2m2019-11-26 16:10:18.252[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Single vip registry refresh property : null
+[35musers-api_1     |[0m [2m2019-11-26 16:10:18.254[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Force full registry fetch : false
+[35musers-api_1     |[0m [2m2019-11-26 16:10:18.254[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Application is null : false
+[35musers-api_1     |[0m [2m2019-11-26 16:10:18.255[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Registered Applications size is zero : true
+[35musers-api_1     |[0m [2m2019-11-26 16:10:18.256[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Application version is -1: false
+[35musers-api_1     |[0m [2m2019-11-26 16:10:18.257[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Getting all instance registry info from the eureka server
+[31mapi-gateway_1   |[0m 2019-11-26 16:10:18.273  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+[31mapi-gateway_1   |[0m 2019-11-26 16:10:18.274  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+[31mapi-gateway_1   |[0m 2019-11-26 16:10:18.275  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+[31mapi-gateway_1   |[0m 2019-11-26 16:10:18.279  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+[31mapi-gateway_1   |[0m 2019-11-26 16:10:18.280  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+[31mapi-gateway_1   |[0m 2019-11-26 16:10:18.281  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+[31mapi-gateway_1   |[0m 2019-11-26 16:10:18.283  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+[33meureka_1        |[0m 2019-11-26 16:10:18.321  INFO 1 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+[35musers-api_1     |[0m [2m2019-11-26 16:10:18.477[0;39m [32m INFO[0;39m [35m40[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m The response status is 200
+[31mapi-gateway_1   |[0m 2019-11-26 16:10:18.492  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+Gracefully stopping... (press Ctrl+C again to force)
