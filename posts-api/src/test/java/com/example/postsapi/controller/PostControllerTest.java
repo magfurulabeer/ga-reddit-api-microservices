@@ -69,6 +69,23 @@ public class PostControllerTest {
                 .andExpect(content().json("{\"id\":1,\"title\":\"title\",\"description\":\"description\",\"user\":{\"username\":\"username\"}}"))
                 .andReturn();
 
+    }
+
+    @Test
+    public void getPostList_ListOfPosts_Success() throws Exception {
+
+        RequestBuilder requestBuilder = MockMvcRequestBuilders
+                .get("/list")
+                .contentType(MediaType.APPLICATION_JSON);
+
+
+        when(postService.getAll()).thenReturn((Iterable<Post>) post);
+
+        MvcResult result = mockMvc.perform(requestBuilder)
+                .andExpect(status().isOk())
+//                .andExpect(content().json("{\"postId\":1,\"title\":\"title\",\"body\":\"body\",\"author\":{\"userId\":1,\"username\":\"name3\",\"password\":\"pass\",\"email\":\"name@domain.com\",\"address\":null,\"mobile\":null,\"addlEmail\":null},\"comments\":null}"))
+                .andReturn();
+
         System.out.println(result.getResponse().getContentAsString());
     }
 }
