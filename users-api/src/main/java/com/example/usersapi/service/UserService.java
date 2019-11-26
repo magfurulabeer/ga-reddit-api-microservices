@@ -39,19 +39,19 @@ public interface UserService {
     public String createUser(User user) throws DuplicateUserException;
 
     /**
-     * Javadoc text.
+     * Logs in using username and password
      *
      * @param user the user object that needs to be saved to the database
      * @return the a JWT to be used for authentication purposes
      */
     public String login(User user) throws InvalidCredentialsException;
 
-    /**
-     * Javadoc text.
-     *
-     * @param id  the id of the user that needs to be updated
-     * @param userRequest  the updated user information that needs to be saved to the database
-     * @return an HttpStatus representing the success or failure of the operation
-     */
-    public HttpStatus updateUser(long id, User userRequest);
+//    /**
+//     * Javadoc text.
+//     *
+//     * @param id  the id of the user that needs to be updated
+//     * @param userRequest  the updated user information that needs to be saved to the database
+//     * @return an HttpStatus representing the success or failure of the operation
+//     */
+//    public HttpStatus updateUser(long id, User userRequest);
 }
