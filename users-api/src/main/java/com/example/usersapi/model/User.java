@@ -154,18 +154,11 @@ public class User {
         this.profile = profile;
     }
 
-<<<<<<< HEAD
-    public Collection<UserRole> getUserRoles() {
-        return userRoles;
-    }
-
-    public void setUserRoles(Collection<UserRole> userRoles) {
-=======
     /**
      * Gets list of user roles
      * @return {@link #userRoles}
      */
-    public List<UserRole> getUserRoles() {
+    public Collection<UserRole> getUserRoles() {
         return userRoles;
     }
 
@@ -173,11 +166,14 @@ public class User {
      * Sets user roles
      * @param userRoles list of user roles the end user possesses
      */
-    public void setUserRoles(List<UserRole> userRoles) {
->>>>>>> 136b0e4e691ec878eb5537419211954b36f3a871
+    public void setUserRoles(Collection<UserRole> userRoles) {
         this.userRoles = userRoles;
     }
 
+    /**
+     * Adds a userRole to the Users userRoles collection
+     * @param userRole list of user roles the end user possesses
+     */
     public Collection<UserRole> addUserRole(UserRole userRole) {
         if (this.userRoles == null) {
             this.userRoles = new ArrayList<>();
