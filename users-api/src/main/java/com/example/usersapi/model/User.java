@@ -1,6 +1,11 @@
 package com.example.usersapi.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 @Entity
@@ -10,12 +15,16 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+//    @Size(min=3, max=30)
     @Column(name = "username", nullable = false, unique = true)
     private String username;
 
+    @NotEmpty
+    @Email
     @Column(name = "email", nullable = false, unique = true)
     private String email;
 
+//    @Size(min=3, max=30)
     @Column(name = "password", nullable = false)
     private String password;
 
@@ -27,7 +36,7 @@ public class User {
     @JoinTable(name = "user_role_user",
             joinColumns = {@JoinColumn(name = "user_id")},
             inverseJoinColumns = {@JoinColumn(name = "user_role_id")})
-    private List<UserRole> userRoles;
+    private Collection<UserRole> userRoles;
 
     public User() {}
 
@@ -78,11 +87,19 @@ public class User {
         this.profile = profile;
     }
 
-    public List<UserRole> getUserRoles() {
+    public Collection<UserRole> getUserRoles() {
         return userRoles;
     }
 
-    public void setUserRoles(List<UserRole> userRoles) {
+    public void setUserRoles(Collection<UserRole> userRoles) {
         this.userRoles = userRoles;
+    }
+
+    public Collection<UserRole> addUserRole(UserRole userRole) {
+        if (this.userRoles == null) {
+            this.userRoles = new ArrayList<>();
+        }
+        this.userRoles.add(userRole);
+        return this.userRoles;
     }
 }

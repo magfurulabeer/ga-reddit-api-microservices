@@ -1,5 +1,7 @@
 package com.example.apigateway.bean;
 
+import java.util.Collection;
+
 public class UserBean {
 
     private Long id;
@@ -9,6 +11,8 @@ public class UserBean {
     private String username;
 
     private String password;
+
+    private Collection<UserRoleBean> userRoles;
 
     public UserBean(Long id, String email, String username, String password) {
         this.id = id;
@@ -47,5 +51,13 @@ public class UserBean {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Collection<UserRoleBean> getUserRoles() {
+        return userRoles;
+    }
+
+    public void setUserRoles(Collection<UserRoleBean> userRoles) {
+        this.userRoles = userRoles;
     }
 }

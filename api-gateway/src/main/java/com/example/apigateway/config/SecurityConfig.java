@@ -48,6 +48,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
     }
 
     @Override
+    public void configure(AuthenticationManagerBuilder auth) throws Exception {
+        User.UserBuilder users = User.withDefaultPasswordEncoder();
+
+        auth.inMemoryAuthentication().withUser(users.username("test").password("test").roles("DBA"));
+    }
+
+    @Override
     protected void configure(HttpSecurity http) throws Exception {
 
         http
@@ -57,6 +64,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
                 .authorizeRequests()
                 .antMatchers("/users/signup/**", "/users/login/**", "/posts/list/**").permitAll()
                 .mvcMatchers(HttpMethod.GET, "/comments/**").permitAll()
+                .mvcMatchers(HttpMethod.GET, "/users/role/**").authenticated()
+                .antMatchers("/users/role/**").hasRole("DBA")
                 .antMatchers("/users/**", "/posts/**", "/comments/**").authenticated()
                 .and()
                 .httpBasic()
