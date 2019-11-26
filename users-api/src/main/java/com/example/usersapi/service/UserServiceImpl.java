@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -54,7 +55,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public String createUser(User user) throws DuplicateUserException {
+    public String createUser(User user) throws DuplicateUserException, DataIntegrityViolationException {
+//        String username = user.getUsername();
+//        User foundUuserRepository.getUserByUsername(username);
         // TODO: Remove id from JSON
         try {
             user.setPassword(encoder().encode(user.getPassword()));
@@ -67,7 +70,7 @@ public class UserServiceImpl implements UserService {
             User savedUser = userRepository.save(user);
             String token = jwtUtil.generateToken(savedUser.getUsername());
             return token;
-        } catch(DataIntegrityViolationException e) {
+        } catch(DuplicateKeyException e) {
             throw new DuplicateUserException("Email/Username is already taken");
         }
     }
