@@ -3,6 +3,7 @@ package com.example.usersapi.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 
 @Entity
 @Table(name = "profiles")
@@ -12,6 +13,7 @@ public class UserProfile {
     private long id;
 
     @Column(name = "addl_email")
+    @Email
     private String addlEmail;
 
     @Column(name = "mobile")

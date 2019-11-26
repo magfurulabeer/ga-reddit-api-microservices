@@ -1,11 +1,14 @@
 package com.example.usersapi.controller;
 
+import com.example.usersapi.exception.DuplicateUserException;
+import com.example.usersapi.exception.InvalidCredentialsException;
 import com.example.usersapi.model.User;
 import com.example.usersapi.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,21 +34,21 @@ public class UserController {
     }
 
     @PostMapping("/signup")
-    public Map<String, String> createUser(@RequestBody User user) {
+    public Map<String, String> createUser(@Valid @RequestBody User user) throws DuplicateUserException {
         Map<String, String> result = new HashMap<String,String>();
         result.put("token", userService.createUser(user));
         return result;
     }
 
     @PostMapping("/login")
-    public Map<String, String> login(@RequestBody User user) {
+    public Map<String, String> login(@Valid @RequestBody User user) throws InvalidCredentialsException {
         Map<String, String> result = new HashMap<String,String>();
         result.put("token", userService.login(user));
         return result;
     }
 
-    @PatchMapping("/update/{id}")
-    public HttpStatus updateUser(@PathVariable long id, @RequestBody User userRequest) {
-        return userService.updateUser(id, userRequest);
-    }
+//    @PatchMapping("/update/{id}")
+//    public HttpStatus updateUser(@PathVariable long id, @RequestBody User userRequest) {
+//        return userService.updateUser(id, userRequest);
+//    }
 }

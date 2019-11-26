@@ -1,6 +1,7 @@
 package com.example.apigateway.service;
 
 import com.example.apigateway.bean.UserBean;
+import com.example.apigateway.bean.UserRoleBean;
 import com.example.apigateway.repository.UserRepository;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -31,13 +33,14 @@ public class CustomUserService implements UserDetailsService {
             throw new UsernameNotFoundException("User null");
 
         return new org.springframework.security.core.userdetails.User(user.getUsername(), bCryptPasswordEncoder.encode(user.getPassword()),
-                true, true, true, true, new ArrayList<>());
+                true, true, true, true, getGrantedAuthorities(user));
     }
 
     private List<GrantedAuthority> getGrantedAuthorities(UserBean user){
         List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
-//    TODO : add this back in for user roles
-//    authorities.add(new SimpleGrantedAuthority(user.getUserRole().getName()));
+        for(UserRoleBean role: user.getUserRoles()) {
+            authorities.add(new SimpleGrantedAuthority(role.getName()));
+        }
 
         return authorities;
     }
