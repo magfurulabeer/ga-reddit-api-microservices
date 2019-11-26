@@ -15,6 +15,9 @@ import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.mockito.Mockito.when;
 import static org.mockito.ArgumentMatchers.any;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -78,12 +81,14 @@ public class PostControllerTest {
                 .get("/list")
                 .contentType(MediaType.APPLICATION_JSON);
 
+        List<Post> posts = new ArrayList<>();
+        posts.add(post);
 
-        when(postService.getAll()).thenReturn((Iterable<Post>) post);
+        when(postService.getAll()).thenReturn(posts);
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
-//                .andExpect(content().json("{\"postId\":1,\"title\":\"title\",\"body\":\"body\",\"author\":{\"userId\":1,\"username\":\"name3\",\"password\":\"pass\",\"email\":\"name@domain.com\",\"address\":null,\"mobile\":null,\"addlEmail\":null},\"comments\":null}"))
+                .andExpect(content().json("[{\"id\":1,\"title\":\"title\",\"description\":\"description\",\"user\":{\"username\":\"username\"}}]"))
                 .andReturn();
 
         System.out.println(result.getResponse().getContentAsString());
