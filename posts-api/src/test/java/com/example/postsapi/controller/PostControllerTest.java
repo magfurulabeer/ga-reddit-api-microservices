@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
@@ -92,5 +93,21 @@ public class PostControllerTest {
                 .andReturn();
 
         System.out.println(result.getResponse().getContentAsString());
+    }
+
+    @Test
+    public void deletePost_Post_Success() throws Exception {
+
+        RequestBuilder requestBuilder = MockMvcRequestBuilders
+                .delete("/post/1")
+                .contentType(MediaType.APPLICATION_JSON);
+
+
+        when(postService.deletePost((any()))).thenReturn(HttpStatus.OK);
+
+        MvcResult result = mockMvc.perform(requestBuilder)
+                .andExpect(status().isOk())
+                .andExpect(content().json("{\"postId\":1,\"title\":\"title\",\"body\":\"body\",\"author\":{\"userId\":1,\"username\":\"name3\",\"password\":\"pass\",\"email\":\"name@domain.com\",\"address\":null,\"mobile\":null,\"addlEmail\":null},\"comments\":null}"))
+                .andReturn();
     }
 }
