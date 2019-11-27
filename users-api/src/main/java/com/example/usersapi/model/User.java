@@ -26,6 +26,7 @@ public class User {
     /**
      * Unique identifier for use by the end user.
      */
+    @NotEmpty
     @Column(name = "username", nullable = false, unique = true)
     private String username;
 
@@ -40,6 +41,7 @@ public class User {
     /**
      * Encoded password for the user to log in.
      */
+    @NotEmpty
     @Column(name = "password", nullable = false)
     private String password;
 

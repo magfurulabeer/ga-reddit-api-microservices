@@ -56,16 +56,12 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public String createUser(User user) throws DuplicateUserException, DataIntegrityViolationException {
-//        String username = user.getUsername();
-//        User foundUuserRepository.getUserByUsername(username);
         // TODO: Remove id from JSON
         try {
             user.setPassword(encoder().encode(user.getPassword()));
-
             UserRole userRole = new UserRole();
             userRole.setName("ROLE_USER");
             userRoleRepository.save(userRole);
-
             user.addUserRole(userRole);
             User savedUser = userRepository.save(user);
             String token = jwtUtil.generateToken(savedUser.getUsername());

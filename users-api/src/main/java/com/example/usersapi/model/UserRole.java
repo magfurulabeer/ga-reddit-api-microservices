@@ -3,6 +3,7 @@ package com.example.usersapi.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.util.List;
 
 /**
@@ -24,6 +25,7 @@ public class UserRole {
     /**
      * Auto Generated Primary Key
      */
+    @NotEmpty
     @Column(name = "name", nullable = false)
     private String name;
 
