@@ -1,11 +1,11 @@
 package com.example.usersapi.repository;
 
 import com.example.usersapi.model.User;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
 
 @Repository
 public interface UserRepository extends CrudRepository<User, Long> {

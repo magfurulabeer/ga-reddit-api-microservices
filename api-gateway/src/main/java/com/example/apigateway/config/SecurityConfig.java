@@ -62,7 +62,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
                 .and()
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/users/signup/**", "/users/login/**", "/posts/list/**", "users/v2/api-docs").permitAll()
+                .antMatchers("/users/signup/**", "/users/login/**", "/posts/list/**", "**/v2/api-docs").permitAll()
                 .mvcMatchers(HttpMethod.GET, "/comments/**").permitAll()
                 .mvcMatchers(HttpMethod.GET, "/users/role/**").authenticated()
                 .antMatchers("/users/role/**").hasRole("DBA")

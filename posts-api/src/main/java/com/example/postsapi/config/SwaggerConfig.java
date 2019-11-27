@@ -1,4 +1,4 @@
-package com.example.usersapi.config;
+package com.example.postsapi.config;
 
 import org.apache.maven.model.io.xpp3.MavenXpp3Reader;
 import org.springframework.context.annotation.Bean;
@@ -19,8 +19,8 @@ public class SwaggerConfig {
         MavenXpp3Reader reader = new MavenXpp3Reader();
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.example.usersapi.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.example.postsapi.controller"))
                 .paths(PathSelectors.any())
-                .build().apiInfo(new ApiInfo("GA Microservices - Users REST API", "GA Microservices - Users REST API", "v2", null, new Contact("abeer", "", "magfurulabeer@gmail.com"), null, null));
+                .build().apiInfo(new ApiInfo("GA Microservices - Posts REST API", "GA Microservices - Posts REST API", "v2", null, new Contact("abeer", "", "magfurulabeer@gmail.com"), null, null));
     }
 }

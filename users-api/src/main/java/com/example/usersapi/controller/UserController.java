@@ -4,6 +4,7 @@ import com.example.usersapi.exception.DuplicateUserException;
 import com.example.usersapi.exception.InvalidCredentialsException;
 import com.example.usersapi.model.User;
 import com.example.usersapi.service.UserService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +20,7 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/all")
+    @ApiOperation(value = "Get all users", notes = "list users", response = Iterable.class)
     public Iterable<User> getAll() {
         return userService.getAll();
     }
