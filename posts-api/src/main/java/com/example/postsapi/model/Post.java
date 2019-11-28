@@ -24,11 +24,11 @@ public class Post {
 
     public Post() {}
 
-    public Post(long id, String title, String description) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-    }
+//    public Post(long id, String title, String description) {
+//        this.id = id;
+//        this.title = title;
+//        this.description = description;
+//    }
 
     public long getId() {
         return id;
