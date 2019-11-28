@@ -24,6 +24,7 @@ public class CommentSerializer extends StdSerializer<Comment> {
 
         jgen.writeStartObject();
         jgen.writeNumberField("id", comment.getId());
+        jgen.writeNumberField("postId", comment.getPostId());
         jgen.writeStringField("text", comment.getText());
             jgen.writeObjectFieldStart("user");
             jgen.writeObjectField("username", comment.getUsername());

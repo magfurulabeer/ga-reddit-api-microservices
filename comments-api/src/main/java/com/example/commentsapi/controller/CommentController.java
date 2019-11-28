@@ -32,10 +32,10 @@ public class CommentController {
         return commentService.createComment(comment, postId, username);
     }
 
-    @PatchMapping("/update/{id}")
-    public HttpStatus updateComment(@PathVariable long id, @RequestBody Comment commentRequest) {
-        return commentService.updateComment(id, commentRequest);
-    }
+//    @PatchMapping("/update/{id}")
+//    public HttpStatus updateComment(@PathVariable long id, @RequestBody Comment commentRequest) {
+//        return commentService.updateComment(id, commentRequest);
+//    }
 
     @DeleteMapping("/posts/{postId}")
     public HttpStatus deleteCommentsByPostId(@PathVariable long postId) {
