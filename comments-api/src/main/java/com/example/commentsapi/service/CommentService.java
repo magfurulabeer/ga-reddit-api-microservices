@@ -15,7 +15,7 @@ public interface CommentService {
 
     public Comment createComment(Comment comment, long postId, String username) throws Exception;
 
-    public HttpStatus updateComment(long id, Comment commentRequest);
+//    public HttpStatus updateComment(long id, Comment commentRequest);
 
     public HttpStatus deleteCommentsByPostId(long postId);
 }

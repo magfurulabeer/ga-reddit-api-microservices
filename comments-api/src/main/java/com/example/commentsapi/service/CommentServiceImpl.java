@@ -48,18 +48,17 @@ public class CommentServiceImpl implements CommentService {
         return commentRepository.save(comment);
     }
 
-    @Override
-    public HttpStatus updateComment(long id, Comment commentRequest) {
-        Comment comment = commentRepository.findById(id).get();
-        comment.setText(commentRequest.getText());
-        commentRepository.save(comment);
-        return HttpStatus.OK;
-    }
+//    @Override
+//    public HttpStatus updateComment(long id, Comment commentRequest) {
+//        Comment comment = commentRepository.findById(id).get();
+//        comment.setText(commentRequest.getText());
+//        commentRepository.save(comment);
+//        return HttpStatus.OK;
+//    }
 
     @Override
     public HttpStatus deleteCommentsByPostId(long postId) {
         commentRepository.deleteAllByPostId(postId);
-        System.out.println("<><><><><><><><");
         return HttpStatus.OK;
     }
 }
