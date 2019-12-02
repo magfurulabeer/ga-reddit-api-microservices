@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
@@ -18,13 +19,14 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.when;
 import static org.mockito.ArgumentMatchers.any;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(MockitoJUnitRunner.class)
-public class PostControllerTest {
+public class PostControllerTests {
     private MockMvc mockMvc;
 
     @InjectMocks
@@ -57,17 +59,15 @@ public class PostControllerTest {
 
     @Test
     public void createPost_Post_Success() throws Exception {
-
         RequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("/")
                 .contentType(MediaType.APPLICATION_JSON)
                 .header("username", "username")
                 .content(createPostInJson("title", "description", "username"));
 
-
         when(postService.createPost((any()), any())).thenReturn(post);
 
-        MvcResult result = mockMvc.perform(requestBuilder)
+        mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
                 .andExpect(content().json("{\"id\":1,\"title\":\"title\",\"description\":\"description\",\"user\":{\"username\":\"username\"}}"))
                 .andReturn();
@@ -76,7 +76,6 @@ public class PostControllerTest {
 
     @Test
     public void getPostList_ListOfPosts_Success() throws Exception {
-
         RequestBuilder requestBuilder = MockMvcRequestBuilders
                 .get("/list")
                 .contentType(MediaType.APPLICATION_JSON);
@@ -90,7 +89,46 @@ public class PostControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().json("[{\"id\":1,\"title\":\"title\",\"description\":\"description\",\"user\":{\"username\":\"username\"}}]"))
                 .andReturn();
+    }
 
-        System.out.println(result.getResponse().getContentAsString());
+    @Test
+    public void deletePost_Post_Success() throws Exception {
+        RequestBuilder requestBuilder = MockMvcRequestBuilders
+                .delete("/1")
+                .contentType(MediaType.APPLICATION_JSON);
+
+        when(postService.deletePost(anyLong())).thenReturn(HttpStatus.OK);
+
+        MvcResult result = mockMvc.perform(requestBuilder)
+                .andExpect(status().isOk())
+                .andReturn();
+    }
+
+    @Test
+    public void postWithPostIdExists_False_Success() throws Exception {
+        RequestBuilder requestBuilder = MockMvcRequestBuilders
+                .get("/1")
+                .contentType(MediaType.APPLICATION_JSON);
+
+        when(postService.searchById(anyLong())).thenReturn(null);
+
+        MvcResult result = mockMvc.perform(requestBuilder)
+                .andExpect(status().isOk())
+                .andExpect(content().string("false"))
+                .andReturn();
+    }
+
+    @Test
+    public void postWithPostIdExists_True_Success() throws Exception {
+        RequestBuilder requestBuilder = MockMvcRequestBuilders
+                .get("/1")
+                .contentType(MediaType.APPLICATION_JSON);
+
+        when(postService.searchById(anyLong())).thenReturn(post);
+
+        MvcResult result = mockMvc.perform(requestBuilder)
+                .andExpect(status().isOk())
+                .andExpect(content().string("true"))
+                .andReturn();
     }
 }

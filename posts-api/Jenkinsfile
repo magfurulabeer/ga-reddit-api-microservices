@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'mvn test -Dspring.profiles.active=test'
+                sh 'mvn test -Dspring.profiles.active=test -Dtest=*Tests'
             }
             post {
                 always {
