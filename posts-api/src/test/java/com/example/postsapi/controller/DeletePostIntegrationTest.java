@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.File;
@@ -88,6 +89,11 @@ public class DeletePostIntegrationTest {
         Thread.sleep(5000);
         assertThat(receiver.getId()).isEqualTo("1");
         postService.searchById(1L);
+    }
+
+    @Test(expected = EmptyResultDataAccessException.class)
+    public void deletePost_NoPostWithId_Failure() throws IOException, InterruptedException {
+        postService.deletePost(1L);
     }
 
 }
