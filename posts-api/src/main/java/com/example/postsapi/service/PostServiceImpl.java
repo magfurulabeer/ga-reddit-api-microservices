@@ -42,13 +42,13 @@ public class PostServiceImpl implements PostService {
         return postRepository.save(post);
     }
 
-    @Override
-    public HttpStatus updatePost(long id, Post postRequest) {
-        Post post = postRepository.findById(id).get();
-        post.setTitle(postRequest.getTitle());
-        post.setDescription(postRequest.getDescription());
-        postRepository.save(post);
-        return HttpStatus.OK;
-    }
+//    @Override
+//    public HttpStatus updatePost(long id, Post postRequest) {
+//        Post post = postRepository.findById(id).get();
+//        post.setTitle(postRequest.getTitle());
+//        post.setDescription(postRequest.getDescription());
+//        postRepository.save(post);
+//        return HttpStatus.OK;
+//    }
 }
 

@@ -17,6 +17,6 @@ public interface PostService {
 
     public Post createPost(Post post, String username);
 
-    public HttpStatus updatePost(long id, Post postRequest);
+//    public HttpStatus updatePost(long id, Post postRequest);
 
 }

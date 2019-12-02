@@ -24,10 +24,10 @@ public class Comment {
 
     public Comment() {}
 
-    public Comment(long id, String text) {
-        this.id = id;
-        this.text = text;
-    }
+//    public Comment(long id, String text) {
+//        this.id = id;
+//        this.text = text;
+//    }
 
     public long getId() {
         return id;
