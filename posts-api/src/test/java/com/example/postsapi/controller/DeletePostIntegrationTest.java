@@ -1,5 +1,6 @@
 package com.example.postsapi.controller;
 
+import com.example.postsapi.mq.DummyReceiver;
 import com.google.common.io.Files;
 import org.apache.qpid.server.Broker;
 import org.apache.qpid.server.BrokerOptions;
@@ -41,8 +42,8 @@ public class DeletePostIntegrationTest {
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
-//    @Autowired
-//    private DummyReceiver reciever;
+    @Autowired
+    private DummyReceiver receiver;
 
     @ClassRule
     public static final ExternalResource resource = new ExternalResource() {
@@ -76,11 +77,13 @@ public class DeletePostIntegrationTest {
 
     @Test
     public void testWithFirstReceiverRoutingKey() throws Exception {
-            rabbitTemplate.convertAndSend("queue1", "Test 1");
-//        rabbitTemplate.convertAndSend("TestQueue", "Hello from RabbitMQ Sent 2!");
-            Thread.sleep(5000);
-//            assertThat(reciever.getId()).isEqualTo("Test 1");
-        assertThat(true).isEqualTo(true);
+        rabbitTemplate.convertAndSend("queue1", "Test 1");
+        Thread.sleep(5000);
+        assertThat(receiver.getId()).isEqualTo("Test 1");
+        rabbitTemplate.convertAndSend("queue1", "Test 2");
+        Thread.sleep(5000);
+        assertThat(receiver.getId()).isEqualTo("Test 2");
+//        assertThat(true).isEqualTo(true);
     }
 
 }
