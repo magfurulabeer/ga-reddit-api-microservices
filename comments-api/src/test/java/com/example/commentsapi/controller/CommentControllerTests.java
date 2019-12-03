@@ -1,5 +1,6 @@
 package com.example.commentsapi.controller;
 
+import com.example.commentsapi.exception.PostNotFoundException;
 import com.example.commentsapi.model.Comment;
 import com.example.commentsapi.service.CommentService;
 import org.junit.Before;
@@ -11,6 +12,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.test.web.servlet.RequestBuilder;

@@ -48,7 +48,6 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public Comment createComment(Comment comment, long postId, String username) throws PostNotFoundException {
         if(!postsClient.postWithPostIdExists(postId)) {
-            // TODO: Throw Custom Exception
             throw new PostNotFoundException("Post with id " + postId + " does not exist!");
         }
         comment.setPostId(postId);
