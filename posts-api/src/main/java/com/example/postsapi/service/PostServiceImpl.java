@@ -1,9 +1,11 @@
 package com.example.postsapi.service;
 
+import com.example.postsapi.exception.PostNotFoundException;
 import com.example.postsapi.model.Post;
 import com.example.postsapi.mq.Sender;
 import com.example.postsapi.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
@@ -29,9 +31,13 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public HttpStatus deletePost(long id) throws IOException {
+    public HttpStatus deletePost(long id) throws PostNotFoundException {
         sender.send(String.valueOf(id));
-        postRepository.deleteById(id);
+        try {
+            postRepository.deleteById(id);
+        } catch(EmptyResultDataAccessException e) {
+            throw new PostNotFoundException("Post with id " + id + " does not exist!");
+        }
         return HttpStatus.OK;
         // TODO: Add try catch
     }
@@ -42,13 +48,5 @@ public class PostServiceImpl implements PostService {
         return postRepository.save(post);
     }
 
-//    @Override
-//    public HttpStatus updatePost(long id, Post postRequest) {
-//        Post post = postRepository.findById(id).get();
-//        post.setTitle(postRequest.getTitle());
-//        post.setDescription(postRequest.getDescription());
-//        postRepository.save(post);
-//        return HttpStatus.OK;
-//    }
 }
 

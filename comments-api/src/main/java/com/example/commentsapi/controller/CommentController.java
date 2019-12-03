@@ -1,5 +1,6 @@
 package com.example.commentsapi.controller;
 
+import com.example.commentsapi.exception.CommentNotFoundException;
 import com.example.commentsapi.model.Comment;
 import com.example.commentsapi.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,7 @@ public class CommentController {
     }
 
     @DeleteMapping("/{id}")
-    public String deleteComment(@PathVariable long id) {
+    public String deleteComment(@PathVariable long id) throws CommentNotFoundException {
         return commentService.deleteComment(id) == HttpStatus.OK ? "success" : "error";
     }
 
