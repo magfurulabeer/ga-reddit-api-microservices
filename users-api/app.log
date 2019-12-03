@@ -541,3 +541,108 @@ insert into users (id, email, password, profile_id, username) values (null, ?, ?
 2019-12-03 14:55:09.851  INFO 25854 --- [Thread-9] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
 2019-12-03 14:55:09.852  INFO 25854 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2019-12-03 14:55:09.855  INFO 25854 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-03 19:59:41.248  INFO 64 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-03 20:00:15.594  INFO 64 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-03 20:00:15.597  INFO 64 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-03 20:00:15.623  INFO 64 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 25 ms
+2019-12-03 20:00:15.908  WARN 64 --- [http-nio-8081-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public java.util.Map<java.lang.String, java.lang.String> com.example.usersapi.controller.UserController.createUser(com.example.usersapi.model.User) throws com.example.usersapi.exception.DuplicateUserException with 2 errors: [Field error in object 'user' on field 'username': rejected value []; codes [NotEmpty.user.username,NotEmpty.username,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.username,username]; arguments []; default message [username]]; default message [must not be empty]] [Field error in object 'user' on field 'email': rejected value [batma]; codes [Email.user.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@503ad0d2,org.springframework.validation.beanvalidation.SpringValidatorAdapter$ResolvableAttribute@6495025e]; default message [must be a well-formed email address]] ]
+2019-12-03 20:00:22.120  WARN 64 --- [http-nio-8081-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public java.util.Map<java.lang.String, java.lang.String> com.example.usersapi.controller.UserController.createUser(com.example.usersapi.model.User) throws com.example.usersapi.exception.DuplicateUserException: [Field error in object 'user' on field 'username': rejected value []; codes [NotEmpty.user.username,NotEmpty.username,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.username,username]; arguments []; default message [username]]; default message [must not be empty]] ]
+2019-12-03 20:04:40.894  INFO 64 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-03 20:04:52.141  INFO 64 --- [Thread-23] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USERS with eureka with status DOWN
+2019-12-03 20:04:52.146  WARN 64 --- [Thread-23] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1575403492146, current=DOWN, previous=UP]
+2019-12-03 20:04:52.150  INFO 64 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS/468dbd9fbeb9:users:8081: registering service...
+2019-12-03 20:04:52.195  INFO 64 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS/468dbd9fbeb9:users:8081 - registration status: 204
+2019-12-03 20:04:52.249  INFO 64 --- [Thread-23] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-03 20:04:52.264  INFO 64 --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-03 20:04:52.273  INFO 64 --- [Thread-23] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-12-03 20:04:55.278  INFO 64 --- [Thread-23] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2019-12-03 20:04:55.303  INFO 64 --- [Thread-23] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS/468dbd9fbeb9:users:8081 - deregister  status: 200
+2019-12-03 20:04:55.324  INFO 64 --- [Thread-23] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-12-03 20:04:55.326  INFO 64 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2019-12-03 20:04:55.353  INFO 64 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2019-12-03 20:09:16.857  INFO 64 --- [restartedMain] c.example.usersapi.UsersApiApplication   : The following profiles are active: dev
+2019-12-03 20:09:22.961  INFO 64 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-03 20:09:24.403  INFO 64 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1314ms. Found 3 repository interfaces.
+2019-12-03 20:09:28.411  INFO 64 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=01069287-786b-3cd6-8fdc-eedc23e87e59
+2019-12-03 20:09:29.971  INFO 64 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$66de5c51] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-03 20:09:30.367  INFO 64 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$82f85f4e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-03 20:09:35.533  INFO 64 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2019-12-03 20:09:35.841  INFO 64 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-03 20:09:35.850  INFO 64 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-12-03 20:09:35.961  INFO 64 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-12-03 20:09:36.876  INFO 64 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-03 20:09:36.908  INFO 64 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 19904 ms
+2019-12-03 20:09:39.480  INFO 64 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-03 20:09:40.626  INFO 64 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-03 20:09:41.594  INFO 64 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-12-03 20:09:42.411  INFO 64 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-12-03 20:09:42.438  INFO 64 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-12-03 20:09:44.513  INFO 64 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-12-03 20:09:46.713  INFO 64 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2019-12-03 20:09:46.961  INFO 64 --- [restartedMain] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000422: Disabling contextual LOB creation as connection was null
+2019-12-03 20:09:47.036  INFO 64 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@5dc74ab4
+2019-12-03 20:09:53.431  WARN 64 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-12-03 20:09:53.473  WARN 64 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "profiles" does not exist, skipping
+2019-12-03 20:09:53.487  WARN 64 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-12-03 20:09:53.493  WARN 64 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "user_role_user" does not exist, skipping
+2019-12-03 20:09:53.495  WARN 64 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-12-03 20:09:53.496  WARN 64 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "user_role_user" does not exist, skipping
+2019-12-03 20:09:53.507  WARN 64 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-12-03 20:09:53.510  WARN 64 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "users" does not exist, skipping
+2019-12-03 20:09:53.522  WARN 64 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-12-03 20:09:53.523  WARN 64 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "profiles" does not exist, skipping
+2019-12-03 20:09:53.526  WARN 64 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-12-03 20:09:53.531  WARN 64 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "user_role_user" does not exist, skipping
+2019-12-03 20:09:53.563  WARN 64 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-12-03 20:09:53.566  WARN 64 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "user_roles" does not exist, skipping
+2019-12-03 20:09:53.591  WARN 64 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-12-03 20:09:53.592  WARN 64 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "users" does not exist, skipping
+2019-12-03 20:09:53.716  INFO 64 --- [restartedMain] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@3964461c'
+2019-12-03 20:09:53.730  INFO 64 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-03 20:09:53.981  INFO 64 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-03 20:09:58.643  INFO 64 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-12-03 20:10:03.966  WARN 64 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-03 20:10:03.975  INFO 64 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-03 20:10:04.013  WARN 64 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-03 20:10:04.015  INFO 64 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-03 20:10:05.839  INFO 64 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-03 20:10:06.414  WARN 64 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-03 20:10:10.481  INFO 64 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-03 20:10:10.972  INFO 64 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-12-03 20:10:12.273  INFO 64 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-12-03 20:10:12.280  INFO 64 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-12-03 20:10:13.955  INFO 64 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-12-03 20:10:13.956  INFO 64 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-12-03 20:10:16.110  INFO 64 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-03 20:10:16.356  INFO 64 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-12-03 20:10:16.358  INFO 64 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-12-03 20:10:16.361  INFO 64 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-12-03 20:10:16.364  INFO 64 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-12-03 20:10:16.366  INFO 64 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-12-03 20:10:16.367  INFO 64 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-12-03 20:10:16.368  INFO 64 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-12-03 20:10:17.014  INFO 64 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-12-03 20:10:17.021  INFO 64 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-12-03 20:10:17.026  INFO 64 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-12-03 20:10:17.038  INFO 64 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1575403817035 with initial instances count: 0
+2019-12-03 20:10:17.042  INFO 64 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USERS with eureka with status UP
+2019-12-03 20:10:17.045  INFO 64 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1575403817045, current=UP, previous=STARTING]
+2019-12-03 20:10:17.053  INFO 64 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS/46a8216f885c:users:8081: registering service...
+2019-12-03 20:10:17.199  INFO 64 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS/46a8216f885c:users:8081 - registration status: 204
+2019-12-03 20:10:17.206  INFO 64 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2019-12-03 20:10:17.209  INFO 64 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2019-12-03 20:10:17.215  INFO 64 --- [restartedMain] c.example.usersapi.UsersApiApplication   : Started UsersApiApplication in 77.378 seconds (JVM running for 85.604)
+2019-12-03 20:10:46.987  INFO 64 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-12-03 20:10:46.990  INFO 64 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-12-03 20:10:46.992  INFO 64 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-12-03 20:10:46.993  INFO 64 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-12-03 20:10:46.995  INFO 64 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-12-03 20:10:46.996  INFO 64 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2019-12-03 20:10:46.997  INFO 64 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-12-03 20:10:47.119  INFO 64 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-12-03 20:10:59.313  INFO 64 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-03 20:10:59.316  INFO 64 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-03 20:10:59.358  INFO 64 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 40 ms
+2019-12-03 20:15:16.019  INFO 64 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

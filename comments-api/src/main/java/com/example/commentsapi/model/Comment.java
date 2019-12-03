@@ -19,11 +19,10 @@ public class Comment {
     @Column(name = "text", nullable = false)
     private String text;
 
-    @NotEmpty
-    @Column(name = "username", nullable = false)
+    @Column(name = "username")
     private String username;
 
-    @Column(name = "post_id", nullable = false)
+    @Column(name = "post_id")
     private long postId;
 
     public Comment() {}
