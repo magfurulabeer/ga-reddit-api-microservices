@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 @RestController
 public class CommentController {
 
@@ -30,7 +32,7 @@ public class CommentController {
     }
 
     @PostMapping("/{postId}")
-    public Comment createComment(@RequestBody Comment comment, @PathVariable long postId, @RequestHeader("username") String username) throws PostNotFoundException {
+    public Comment createComment(@Valid @RequestBody Comment comment, @PathVariable long postId, @RequestHeader("username") String username) throws PostNotFoundException {
         return commentService.createComment(comment, postId, username);
     }
 
