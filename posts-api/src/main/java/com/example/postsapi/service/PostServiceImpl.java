@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.util.Optional;
 
 @Service
 public class PostServiceImpl implements PostService {
@@ -26,8 +27,11 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public Post searchById(long id) {
-        return postRepository.findById(id).get();
+    public Post searchById(long id) throws PostNotFoundException {
+        Post p = postRepository
+                .findById(id)
+                .orElseThrow(() -> new PostNotFoundException("Post with id " + id + " does not exist!"));
+        return p;
     }
 
     @Override

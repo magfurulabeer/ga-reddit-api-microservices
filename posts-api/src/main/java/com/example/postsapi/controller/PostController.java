@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.io.IOException;
 
 @RestController
@@ -31,14 +32,18 @@ public class PostController {
     }
 
     @PostMapping("/")
-    public Post createPost(@RequestBody Post post, @RequestHeader("username") String username) {
+    public Post createPost(@Valid @RequestBody Post post, @RequestHeader("username") String username) {
         return postService.createPost(post, username);
     }
 
     @GetMapping("/{postId}")
-    public boolean postWithPostIdExists(@PathVariable long postId) {
-        Post post = postService.searchById(postId);
-        return post != null;
+    public boolean postWithPostIdExists(@PathVariable long postId){
+        try {
+            Post post = postService.searchById(postId);
+            return post != null;
+        } catch(PostNotFoundException e) {
+            return false;
+        }
     }
 
 //    @PatchMapping("/update/{id}")

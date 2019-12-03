@@ -1,5 +1,6 @@
 package com.example.postsapi.controller;
 
+import com.example.postsapi.exception.PostNotFoundException;
 import com.example.postsapi.model.Post;
 import com.example.postsapi.service.PostService;
 import org.junit.Before;
@@ -21,6 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.mockito.ArgumentMatchers.anyLong;
+import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.when;
 import static org.mockito.ArgumentMatchers.any;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -56,7 +58,7 @@ public class PostControllerTests {
     private static String createPostInJson(String title, String description, String username) {
         return "{ \"title\": \"" + title + "\", " +
                 "\"username\":\"" + username + "\", " +
-                "\"body\":\"" + description + "\"}";
+                "\"description\":\"" + description + "\"}";
     }
 
     @Test
@@ -131,6 +133,20 @@ public class PostControllerTests {
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
                 .andExpect(content().string("true"))
+                .andReturn();
+    }
+
+    @Test
+    public void postWithPostIdExists_False_Failure() throws Exception {
+        RequestBuilder requestBuilder = MockMvcRequestBuilders
+                .get("/1")
+                .contentType(MediaType.APPLICATION_JSON);
+
+        doThrow(PostNotFoundException.class).when(postService).searchById(anyLong());
+
+        MvcResult result = mockMvc.perform(requestBuilder)
+                .andExpect(status().isOk())
+                .andExpect(content().string("false"))
                 .andReturn();
     }
 }
