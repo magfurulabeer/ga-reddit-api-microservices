@@ -10,14 +10,12 @@
 //import org.junit.Test;
 //import org.junit.rules.ExternalResource;
 //import org.junit.runner.RunWith;
-//import org.junit.runner.Runner;
-//import org.mockito.InjectMocks;
 //import org.springframework.amqp.rabbit.core.RabbitTemplate;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.beans.factory.annotation.Value;
 //import org.springframework.boot.test.context.SpringBootTest;
-//import org.springframework.boot.test.mock.mockito.MockBean;
 //import org.springframework.dao.EmptyResultDataAccessException;
+//import org.springframework.test.context.ActiveProfiles;
 //import org.springframework.test.context.junit4.SpringRunner;
 //
 //import java.io.File;
@@ -28,12 +26,10 @@
 //
 //import static org.assertj.core.api.Assertions.assertThat;
 //
-////@ActiveProfiles("test")
+//@ActiveProfiles("test")
 //@RunWith(SpringRunner.class)
 //@SpringBootTest
 //public class DeletePostIntegrationTest {
-//    @Value("${spring.rabbitmq.port}")
-//    private String rabbitmqPort;
 //
 //    @Autowired
 //    private RabbitTemplate rabbitTemplate;
@@ -51,22 +47,27 @@
 //        @Override
 //        protected void before() throws Throwable {
 //            Properties properties = new Properties();
-//            properties.load(new FileInputStream(new File("src/test/resources/application.properties")));
+//            properties.load(new FileInputStream(new File("src/main/resources/application-test.properties")));
 //            String amqpPort = properties.getProperty("spring.rabbitmq.port");
 //            File tmpFolder = Files.createTempDir();
-//            String userDir = System.getProperty("user.dir").toString();
+//
+//            //Get path to project
+//            String userDir = System.getProperty("user.dir");
 //            File file = new File(userDir);
 //            String homePath = file.getAbsolutePath();
+//
 //            BrokerOptions brokerOptions = new BrokerOptions();
 //            brokerOptions.setConfigProperty("qpid.work_dir", tmpFolder.getAbsolutePath());
 //            brokerOptions.setConfigProperty("qpid.amqp_port", amqpPort);
 //            brokerOptions.setConfigProperty("qpid.home_dir", homePath);
 //            brokerOptions.setInitialConfigurationLocation(homePath + "/src/test/resources/qpid-config.json");
 //            broker.startup(brokerOptions);
+//            System.out.println("-------------startup");
 //        }
 //
 //        @Override
 //        protected void after() {
+//            System.out.println("-----------shutdown");
 //            broker.shutdown();
 //        }
 //    };
@@ -75,7 +76,9 @@
 //    @Test
 //    public void simpleReceive_Message_Success() throws Exception {
 //        rabbitTemplate.convertAndSend("queue1", "Test 1");
+//        System.out.println("------------before");
 //        Thread.sleep(5000);
+//        System.out.println("------------after");
 //        assertThat(receiver.getId()).isEqualTo("Test 1");
 //    }
 //
@@ -92,7 +95,7 @@
 //    }
 //
 //    @Test(expected = EmptyResultDataAccessException.class)
-//    public void deletePost_NoPostWithId_Failure() throws IOException, InterruptedException {
+//    public void deletePost_NoPostWithId_Failure() throws IOException {
 //        postService.deletePost(1L);
 //    }
 //

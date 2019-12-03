@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-12-03T10:49:20</date>
+  <millis>1575388160072</millis>
+  <sequence>0</sequence>
+  <logger>org.apache.catalina.core.StandardService</logger>
+  <level>INFO</level>
+  <class>org.apache.catalina.core.StandardService</class>
+  <method>startInternal</method>
+  <thread>11</thread>
+  <message>Starting service [Tomcat]</message>
+</record>
+<record>
+  <date>2019-12-03T10:49:20</date>
+  <millis>1575388160077</millis>
+  <sequence>1</sequence>
+  <logger>org.apache.catalina.core.StandardEngine</logger>
+  <level>INFO</level>
+  <class>org.apache.catalina.core.StandardEngine</class>
+  <method>startInternal</method>
+  <thread>11</thread>
+  <message>Starting Servlet engine: [Apache Tomcat/9.0.16]</message>
+</record>
+<record>
+  <date>2019-12-03T10:49:20</date>
+  <millis>1575388160090</millis>
+  <sequence>2</sequence>
+  <logger>org.apache.catalina.core.AprLifecycleListener</logger>
+  <level>INFO</level>
+  <class>org.apache.catalina.core.AprLifecycleListener</class>
+  <method>lifecycleEvent</method>
+  <thread>11</thread>
+  <message>The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/grantkopplin/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]</message>
+</record>
+<record>
+  <date>2019-12-03T10:49:20</date>
+  <millis>1575388160234</millis>
+  <sequence>3</sequence>
+  <logger>org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]</logger>
+  <level>INFO</level>
+  <class>org.apache.catalina.core.ApplicationContext</class>
+  <method>log</method>
+  <thread>11</thread>
+  <message>Initializing Spring embedded WebApplicationContext</message>
+</record>
+</log>
