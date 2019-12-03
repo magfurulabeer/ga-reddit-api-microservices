@@ -11,7 +11,6 @@ public class DummyReceiver {
 
     @RabbitHandler
     public void receive(String id) {
-        System.out.println(id);
         this.id = id;
     }
 
