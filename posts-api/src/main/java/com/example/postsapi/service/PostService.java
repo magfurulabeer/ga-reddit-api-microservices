@@ -12,7 +12,7 @@ public interface PostService {
 
     public Iterable<Post> getAll();
 
-    public Post searchById(long id);
+    public Post searchById(long id) throws PostNotFoundException;
 
     public HttpStatus deletePost(long id) throws PostNotFoundException;
 

@@ -73,7 +73,7 @@ public class PostServiceTests {
     }
 
     @Test
-    public void searchById_Post_Success() {
+    public void searchById_Post_Success() throws PostNotFoundException {
         when(postRepository.findById(any())).thenReturn(java.util.Optional.of(post));
         Post result = postService.searchById(1L);
 

@@ -4,6 +4,8 @@ import com.example.commentsapi.serializer.CommentSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name = "comments")
@@ -13,9 +15,11 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @NotEmpty
     @Column(name = "text", nullable = false)
     private String text;
 
+    @NotEmpty
     @Column(name = "username", nullable = false)
     private String username;
 
