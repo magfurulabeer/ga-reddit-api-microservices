@@ -1,6 +1,7 @@
 package com.example.commentsapi.service;
 
 import com.example.commentsapi.exception.CommentNotFoundException;
+import com.example.commentsapi.exception.PostNotFoundException;
 import com.example.commentsapi.model.Comment;
 import org.springframework.http.HttpStatus;
 
@@ -14,7 +15,7 @@ public interface CommentService {
 
     public HttpStatus deleteComment(long id) throws CommentNotFoundException;
 
-    public Comment createComment(Comment comment, long postId, String username) throws Exception;
+    public Comment createComment(Comment comment, long postId, String username) throws PostNotFoundException;
 
 //    public HttpStatus updateComment(long id, Comment commentRequest);
 

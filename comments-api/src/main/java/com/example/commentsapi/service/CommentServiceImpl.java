@@ -1,6 +1,7 @@
 package com.example.commentsapi.service;
 
 import com.example.commentsapi.exception.CommentNotFoundException;
+import com.example.commentsapi.exception.PostNotFoundException;
 import com.example.commentsapi.feign.PostsClient;
 import com.example.commentsapi.model.Comment;
 import com.example.commentsapi.repository.CommentRepository;
@@ -45,9 +46,10 @@ public class CommentServiceImpl implements CommentService {
     }
 
     @Override
-    public Comment createComment(Comment comment, long postId, String username) throws Exception {
+    public Comment createComment(Comment comment, long postId, String username) throws PostNotFoundException {
         if(!postsClient.postWithPostIdExists(postId)) {
-            throw new Exception("Post with id " + postId + " does not exist!");
+            // TODO: Throw Custom Exception
+            throw new PostNotFoundException("Post with id " + postId + " does not exist!");
         }
         comment.setPostId(postId);
         comment.setUsername(username);

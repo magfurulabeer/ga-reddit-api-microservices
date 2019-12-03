@@ -37,14 +37,8 @@ public class PostController {
 
     @GetMapping("/{postId}")
     public boolean postWithPostIdExists(@PathVariable long postId) {
-        try {
-            Post post = postService.searchById(postId);
-            return post != null;
-        } catch(Exception e) {
-            // GK: can we make this exception more specific?
-            e.printStackTrace();
-            return false;
-        }
+        Post post = postService.searchById(postId);
+        return post != null;
     }
 
 //    @PatchMapping("/update/{id}")
