@@ -1,5 +1,6 @@
 package com.example.postsapi.controller;
 
+import com.example.postsapi.exception.PostNotFoundException;
 import com.example.postsapi.model.Post;
 import com.example.postsapi.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,7 @@ public class PostController {
 //    }
 
     @DeleteMapping("/{id}")
-    public HttpStatus deletePost(@PathVariable long id) throws IOException {
+    public HttpStatus deletePost(@PathVariable long id) throws PostNotFoundException {
         return postService.deletePost(id);
     }
 
@@ -36,14 +37,8 @@ public class PostController {
 
     @GetMapping("/{postId}")
     public boolean postWithPostIdExists(@PathVariable long postId) {
-        try {
-            Post post = postService.searchById(postId);
-            return post != null;
-        } catch(Exception e) {
-            // GK: can we make this exception more specific?
-            e.printStackTrace();
-            return false;
-        }
+        Post post = postService.searchById(postId);
+        return post != null;
     }
 
 //    @PatchMapping("/update/{id}")

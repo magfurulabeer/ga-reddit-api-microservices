@@ -1,5 +1,6 @@
 package com.example.postsapi.service;
 
+import com.example.postsapi.exception.PostNotFoundException;
 import com.example.postsapi.model.Post;
 import com.example.postsapi.mq.Sender;
 import com.example.postsapi.repository.PostRepository;
@@ -10,11 +11,14 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.mockito.ArgumentMatchers.anyLong;
+import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.when;
 import static org.mockito.ArgumentMatchers.any;
 import static org.junit.Assert.assertEquals;
@@ -84,4 +88,11 @@ public class PostServiceTests {
         assertNotNull(result);
         assertEquals(result, HttpStatus.OK);
     }
+
+    @Test(expected = PostNotFoundException.class)
+    public void deletePost_Post_Failure() throws Exception {
+        doThrow(new EmptyResultDataAccessException(0)).when(postRepository).deleteById(anyLong());
+        postService.deletePost(500L);
+    }
+
 }

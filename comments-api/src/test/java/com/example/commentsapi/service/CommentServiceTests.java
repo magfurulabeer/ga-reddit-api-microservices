@@ -1,5 +1,7 @@
 package com.example.commentsapi.service;
 
+import com.example.commentsapi.exception.CommentNotFoundException;
+import com.example.commentsapi.exception.PostNotFoundException;
 import com.example.commentsapi.feign.PostsClient;
 import com.example.commentsapi.model.Comment;
 import com.example.commentsapi.repository.CommentRepository;
@@ -9,12 +11,14 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.mockito.ArgumentMatchers.anyLong;
+import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.when;
 import static org.mockito.ArgumentMatchers.any;
 import static org.junit.Assert.assertEquals;
@@ -57,6 +61,15 @@ public class CommentServiceTests {
         assertEquals(result, comment);
     }
 
+    @Test(expected = PostNotFoundException.class)
+    public void createComment_Comment_Failure() throws Exception {
+        Comment commentRequest = new Comment();
+        commentRequest.setText("text");
+
+        when(postsClient.postWithPostIdExists(anyLong())).thenReturn(false);
+        commentService.createComment(commentRequest, 1L,"username");
+    }
+
     @Test
     public void deleteCommentsByPostId_HttpStatusOK_Success() {
         HttpStatus result = commentService.deleteCommentsByPostId(1L);
@@ -66,11 +79,17 @@ public class CommentServiceTests {
     }
 
     @Test
-    public void deleteComment_HttpStatusOK_Success() {
+    public void deleteComment_HttpStatusOK_Success() throws CommentNotFoundException {
         HttpStatus result = commentService.deleteComment(1L);
 
         assertNotNull(result);
         assertEquals(result, HttpStatus.OK);
+    }
+
+    @Test(expected = CommentNotFoundException.class)
+    public void deleteComment_Exception_Failure() throws CommentNotFoundException {
+        doThrow(new EmptyResultDataAccessException(0)).when(commentRepository).deleteById(anyLong());
+        commentService.deleteComment(500L);
     }
 
     @Test

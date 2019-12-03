@@ -1,9 +1,12 @@
 package com.example.commentsapi.service;
 
+import com.example.commentsapi.exception.CommentNotFoundException;
+import com.example.commentsapi.exception.PostNotFoundException;
 import com.example.commentsapi.feign.PostsClient;
 import com.example.commentsapi.model.Comment;
 import com.example.commentsapi.repository.CommentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
@@ -33,15 +36,20 @@ public class CommentServiceImpl implements CommentService {
 //        }
 
     @Override
-    public HttpStatus deleteComment(long id) {
-        commentRepository.deleteById(id);
+    public HttpStatus deleteComment(long id) throws CommentNotFoundException {
+        try {
+            commentRepository.deleteById(id);
+        } catch(EmptyResultDataAccessException e) {
+            throw new CommentNotFoundException("Comment with id " + id + " does not exist!");
+        }
         return HttpStatus.OK;
     }
 
     @Override
-    public Comment createComment(Comment comment, long postId, String username) throws Exception {
+    public Comment createComment(Comment comment, long postId, String username) throws PostNotFoundException {
         if(!postsClient.postWithPostIdExists(postId)) {
-            throw new Exception("Post with id " + postId + " does not exist!");
+            // TODO: Throw Custom Exception
+            throw new PostNotFoundException("Post with id " + postId + " does not exist!");
         }
         comment.setPostId(postId);
         comment.setUsername(username);
