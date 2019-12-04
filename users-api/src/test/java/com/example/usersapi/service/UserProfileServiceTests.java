@@ -66,7 +66,7 @@ public class UserProfileServiceTests {
 
     @Test(expected = EntityNotFoundException.class)
     public void createUserProfile_Exception_Failure() throws EntityNotFoundException {
-        when(userProfileRepository.findById(anyLong())).thenThrow(NoSuchElementException.class);
+//        when(userProfileRepository.findById(anyLong())).thenThrow(NoSuchElementException.class);
         userProfileService.createUserProfile(1L, userProfile);
     }
 
