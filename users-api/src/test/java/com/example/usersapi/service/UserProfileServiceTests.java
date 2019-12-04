@@ -12,6 +12,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
+import java.util.NoSuchElementException;
+
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.when;
 import static org.mockito.ArgumentMatchers.any;
@@ -62,6 +64,12 @@ public class UserProfileServiceTests {
         assertEquals(result, userProfile);
     }
 
+    @Test(expected = EntityNotFoundException.class)
+    public void createUserProfile_Exception_Failure() throws EntityNotFoundException {
+        when(userProfileRepository.findById(anyLong())).thenThrow(NoSuchElementException.class);
+        userProfileService.createUserProfile(1L, userProfile);
+    }
+
     @Test
     public void updateUserProfile_UserProfile_Success() throws EntityNotFoundException {
 
@@ -80,6 +88,12 @@ public class UserProfileServiceTests {
         assertEquals(result, updatedProfile);
     }
 
+    @Test(expected = EntityNotFoundException.class)
+    public void updateUserProfile_Exception_Failure() throws EntityNotFoundException {
+        when(userProfileRepository.findById(anyLong())).thenThrow(NoSuchElementException.class);
+        userProfileService.updateUserProfile(1L, userProfile);
+    }
+
     @Test
     public void searchById_UserProfile_Success() throws EntityNotFoundException {
         when(userProfileRepository.findById(anyLong())).thenReturn(java.util.Optional.of(userProfile));
@@ -89,4 +103,12 @@ public class UserProfileServiceTests {
         assertNotNull(result);
         assertEquals(result, userProfile);
     }
+
+    @Test(expected = EntityNotFoundException.class)
+    public void searchById_Exception_Failure() throws EntityNotFoundException {
+        when(userProfileRepository.findById(anyLong())).thenThrow(NoSuchElementException.class);
+        userProfileService.searchById(1L);
+    }
+
+
 }

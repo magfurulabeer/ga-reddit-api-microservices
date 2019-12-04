@@ -29,12 +29,6 @@ public class UserProfileServiceImpl implements UserProfileService {
 
     }
 
-//    @Override
-//    public HttpStatus deleteUserProfile(long id) {
-//        userProfileRepository.deleteById(id);
-//        return HttpStatus.OK;
-//    }
-
     @Override
     public UserProfile updateUserProfile(long id, UserProfile userProfileRequest) throws EntityNotFoundException {
         try {
