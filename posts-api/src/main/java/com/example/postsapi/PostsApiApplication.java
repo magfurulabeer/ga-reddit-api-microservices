@@ -15,10 +15,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableFeignClients
 public class PostsApiApplication {
 
-	@RequestMapping("/")
-	public String home() {
-		return "some posts";
-	}
+//	@RequestMapping("/")
+//	public String home() {
+//		return "some posts";
+//	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(PostsApiApplication.class, args);

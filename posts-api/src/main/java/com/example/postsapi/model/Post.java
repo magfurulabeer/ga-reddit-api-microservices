@@ -4,6 +4,7 @@ import com.example.postsapi.serializer.PostSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name = "posts")
@@ -13,22 +14,24 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @NotEmpty
     @Column(name = "title", nullable = false)
     private String title;
 
+    @NotEmpty
     @Column(name = "description")
     private String description;
 
-    @Column(name = "username", nullable = false)
+    @Column(name = "username")
     private String username;
 
     public Post() {}
 
-    public Post(long id, String title, String description) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-    }
+//    public Post(long id, String title, String description) {
+//        this.id = id;
+//        this.title = title;
+//        this.description = description;
+//    }
 
     public long getId() {
         return id;
