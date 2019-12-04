@@ -11,7 +11,10 @@ import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.authentication.configurers.provisioning.InMemoryUserDetailsManagerConfigurer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.FilterChainProxy;
@@ -30,6 +33,7 @@ import org.springframework.mock.web.MockHttpServletRequest;
 
 import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppContextSetup;
@@ -52,11 +56,17 @@ public class SecurityConfigTest {
     @Mock
     private PasswordEncoder bCryptPasswordEncoder;
 
+    @Mock
+    AuthenticationManagerBuilder builder;
+
     private MockHttpServletRequest request = new MockHttpServletRequest();
 
 
     @Mock
     HttpServletResponse response;
+
+    @Mock
+    InMemoryUserDetailsManagerConfigurer<AuthenticationManagerBuilder> inMemoryAuthentication;
 
     @Before
     public void setUp() throws Exception {
@@ -65,7 +75,6 @@ public class SecurityConfigTest {
 
     @Test
     public void encoder_PasswordEncoder_Success() {
-//        when(securityConfig.encoder()).thenReturn(bCryptPasswordEncoder);
         PasswordEncoder pe = securityConfig.encoder();
         assertEquals(pe.getClass(), BCryptPasswordEncoder.class);
     }
@@ -77,6 +86,22 @@ public class SecurityConfigTest {
         request.setAttribute("javax.servlet.include.context_path", "/");
         CorsConfiguration config = source.getCorsConfiguration(request);
         assertNotNull(config);
+    }
+
+    /*
+    public void configure(AuthenticationManagerBuilder auth) throws Exception {
+        User.UserBuilder users = User.withDefaultPasswordEncoder();
+
+        auth.inMemoryAuthentication().withUser(users.username("test").password("test").roles("DBA"));
+    }
+     */
+
+    @Test(expected = Exception.class)
+    public void configure_Void_Success() throws Exception {
+        securityConfig.configure(builder);
+        when(builder.inMemoryAuthentication()).thenReturn(inMemoryAuthentication);
+
+        verify(builder).inMemoryAuthentication();
     }
 
 }

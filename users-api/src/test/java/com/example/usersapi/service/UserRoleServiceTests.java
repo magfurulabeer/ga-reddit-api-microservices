@@ -16,6 +16,7 @@ import org.springframework.http.HttpStatus;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.when;
@@ -78,6 +79,13 @@ public class UserRoleServiceTests {
         assertEquals(result, userRoles);
     }
 
+    @Test(expected = EntityNotFoundException.class)
+    public void searchByUserId_Exception_Failure() throws EntityNotFoundException {
+        when(userRepository.findById(anyLong())).thenThrow(NoSuchElementException.class);
+
+        userRoleService.searchByUserId(1L);
+    }
+
     @Test
     public void deleteUserRole_HttpStatusOK_Success() throws EntityNotFoundException {
 
@@ -85,5 +93,11 @@ public class UserRoleServiceTests {
 
         assertNotNull(result);
         assertEquals(result, HttpStatus.OK);
+    }
+
+    @Test(expected = EntityNotFoundException.class)
+    public void deleteUserRole_Exception_Failure() throws EntityNotFoundException {
+        when(userRoleService.deleteUserRole(anyLong())).thenThrow(NoSuchElementException.class);
+        userRoleService.deleteUserRole(1L);
     }
 }
