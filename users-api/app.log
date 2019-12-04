@@ -730,3 +730,167 @@ insert into users (id, email, password, profile_id, username) values (null, ?, ?
 2019-12-03 21:02:40.653  INFO 40 --- [Thread-13] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
 2019-12-03 21:02:40.662  INFO 40 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2019-12-03 21:02:40.804  INFO 40 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-04 03:07:23.242  INFO 63756 --- [main] c.e.usersapi.SignUpIntegrationTest       : The following profiles are active: test
+2019-12-04 03:07:23.849  INFO 63756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-04 03:07:23.998  INFO 63756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 137ms. Found 3 repository interfaces.
+2019-12-04 03:07:24.392  INFO 63756 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=10205156-98df-3653-bd67-7f5b0b10d1d3
+2019-12-04 03:07:24.552  INFO 63756 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e8782814] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-04 03:07:24.595  INFO 63756 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$4922b11] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-04 03:07:24.904  INFO 63756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-04 03:07:25.279  INFO 63756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-04 03:07:25.402  INFO 63756 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-12-04 03:07:25.551  INFO 63756 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-12-04 03:07:25.553  INFO 63756 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-12-04 03:07:25.635  INFO 63756 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-12-04 03:07:25.888  INFO 63756 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-12-04 03:07:27.000  INFO 63756 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@4a9a8f3e'
+2019-12-04 03:07:27.005  INFO 63756 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-04 03:07:27.584  INFO 63756 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-12-04 03:07:28.684  WARN 63756 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-04 03:07:28.684  INFO 63756 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-04 03:07:28.694  WARN 63756 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-04 03:07:28.694  INFO 63756 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-04 03:07:29.087  INFO 63756 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-04 03:07:29.113  WARN 63756 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-04 03:07:29.842  INFO 63756 --- [main] c.e.usersapi.SignUpIntegrationTest       : Started SignUpIntegrationTest in 7.44 seconds (JVM running for 11.261)
+2019-12-04 03:07:29.938  WARN 63756 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23505, SQLState: 23505
+2019-12-04 03:07:29.938 ERROR 63756 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unique index or primary key violation: "PUBLIC.UK_6DOTKOTT2KJSP8VW4D0M25FB7_INDEX_4 ON PUBLIC.USERS(EMAIL) VALUES 2"; SQL statement:
+insert into users (id, email, password, profile_id, username) values (null, ?, ?, ?, ?) [23505-200]
+2019-12-04 03:07:30.379  INFO 63756 --- [Thread-8] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-04 03:07:30.383  INFO 63756 --- [Thread-8] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USERS with eureka with status DOWN
+2019-12-04 03:07:30.387  INFO 63756 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-04 03:07:30.389  INFO 63756 --- [Thread-8] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-04 03:07:30.390  INFO 63756 --- [Thread-8] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2019-12-04 03:07:30.391  WARN 63756 --- [Thread-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2019-12-04 03:07:30.392 ERROR 63756 --- [Thread-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2019-12-04 03:07:30.392  WARN 63756 --- [Thread-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2019-12-04 03:07:30.392 ERROR 63756 --- [Thread-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2019-12-04 03:07:30.393  INFO 63756 --- [Thread-8] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+2019-12-04 03:07:30.394  INFO 63756 --- [Thread-8] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2019-12-04 03:07:30.395  INFO 63756 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-04 03:07:30.399  INFO 63756 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-04 03:08:37.793  INFO 63898 --- [main] c.e.usersapi.SignUpIntegrationTest       : The following profiles are active: test
+2019-12-04 03:08:38.296  INFO 63898 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-04 03:08:38.383  INFO 63898 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79ms. Found 3 repository interfaces.
+2019-12-04 03:08:38.753  INFO 63898 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=10205156-98df-3653-bd67-7f5b0b10d1d3
+2019-12-04 03:08:38.913  INFO 63898 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e8782814] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-04 03:08:38.955  INFO 63898 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$4922b11] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-04 03:08:39.246  INFO 63898 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-04 03:08:39.602  INFO 63898 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-04 03:08:39.709  INFO 63898 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-12-04 03:08:39.817  INFO 63898 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-12-04 03:08:39.819  INFO 63898 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-12-04 03:08:39.882  INFO 63898 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-12-04 03:08:40.093  INFO 63898 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-12-04 03:08:41.067  INFO 63898 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@4a9a8f3e'
+2019-12-04 03:08:41.071  INFO 63898 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-04 03:08:41.589  INFO 63898 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-12-04 03:08:42.560  WARN 63898 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-04 03:08:42.560  INFO 63898 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-04 03:08:42.569  WARN 63898 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-04 03:08:42.569  INFO 63898 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-04 03:08:42.951  INFO 63898 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-04 03:08:42.980  WARN 63898 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-04 03:08:43.678  INFO 63898 --- [main] c.e.usersapi.SignUpIntegrationTest       : Started SignUpIntegrationTest in 6.665 seconds (JVM running for 9.866)
+2019-12-04 03:08:43.761  WARN 63898 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23505, SQLState: 23505
+2019-12-04 03:08:43.761 ERROR 63898 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unique index or primary key violation: "PUBLIC.UK_6DOTKOTT2KJSP8VW4D0M25FB7_INDEX_4 ON PUBLIC.USERS(EMAIL) VALUES 2"; SQL statement:
+insert into users (id, email, password, profile_id, username) values (null, ?, ?, ?, ?) [23505-200]
+2019-12-04 03:08:44.156  INFO 63898 --- [Thread-8] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-04 03:08:44.160  INFO 63898 --- [Thread-8] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USERS with eureka with status DOWN
+2019-12-04 03:08:44.164  INFO 63898 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-04 03:08:44.166  INFO 63898 --- [Thread-8] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-04 03:08:44.167  INFO 63898 --- [Thread-8] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2019-12-04 03:08:44.168  WARN 63898 --- [Thread-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2019-12-04 03:08:44.168 ERROR 63898 --- [Thread-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2019-12-04 03:08:44.169  WARN 63898 --- [Thread-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2019-12-04 03:08:44.169 ERROR 63898 --- [Thread-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2019-12-04 03:08:44.169  INFO 63898 --- [Thread-8] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+2019-12-04 03:08:44.171  INFO 63898 --- [Thread-8] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2019-12-04 03:08:44.171  INFO 63898 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-04 03:08:44.175  INFO 63898 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-04 03:59:39.680  INFO 68679 --- [main] c.e.usersapi.SignUpIntegrationTest       : The following profiles are active: test
+2019-12-04 03:59:40.219  INFO 68679 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-04 03:59:40.321  INFO 68679 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91ms. Found 3 repository interfaces.
+2019-12-04 03:59:40.748  INFO 68679 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=10205156-98df-3653-bd67-7f5b0b10d1d3
+2019-12-04 03:59:40.902  INFO 68679 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e8782814] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-04 03:59:40.944  INFO 68679 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$4922b11] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-04 03:59:41.228  INFO 68679 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-04 03:59:41.546  INFO 68679 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-04 03:59:41.658  INFO 68679 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-12-04 03:59:41.775  INFO 68679 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-12-04 03:59:41.777  INFO 68679 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-12-04 03:59:41.840  INFO 68679 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-12-04 03:59:42.058  INFO 68679 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-12-04 03:59:43.004  INFO 68679 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@4a9a8f3e'
+2019-12-04 03:59:43.009  INFO 68679 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-04 03:59:43.544  INFO 68679 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-12-04 03:59:44.587  WARN 68679 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-04 03:59:44.588  INFO 68679 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-04 03:59:44.596  WARN 68679 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-04 03:59:44.596  INFO 68679 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-04 03:59:44.966  INFO 68679 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-04 03:59:44.987  WARN 68679 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-04 03:59:45.662  INFO 68679 --- [main] c.e.usersapi.SignUpIntegrationTest       : Started SignUpIntegrationTest in 6.824 seconds (JVM running for 10.35)
+2019-12-04 03:59:45.751  WARN 68679 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23505, SQLState: 23505
+2019-12-04 03:59:45.751 ERROR 68679 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unique index or primary key violation: "PUBLIC.UK_6DOTKOTT2KJSP8VW4D0M25FB7_INDEX_4 ON PUBLIC.USERS(EMAIL) VALUES 2"; SQL statement:
+insert into users (id, email, password, profile_id, username) values (null, ?, ?, ?, ?) [23505-200]
+2019-12-04 03:59:46.151  INFO 68679 --- [Thread-8] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-04 03:59:46.154  INFO 68679 --- [Thread-8] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USERS with eureka with status DOWN
+2019-12-04 03:59:46.159  INFO 68679 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-04 03:59:46.161  INFO 68679 --- [Thread-8] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-04 03:59:46.162  INFO 68679 --- [Thread-8] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2019-12-04 03:59:46.164  WARN 68679 --- [Thread-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2019-12-04 03:59:46.164 ERROR 68679 --- [Thread-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2019-12-04 03:59:46.164  WARN 68679 --- [Thread-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2019-12-04 03:59:46.165 ERROR 68679 --- [Thread-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2019-12-04 03:59:46.165  INFO 68679 --- [Thread-8] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+2019-12-04 03:59:46.167  INFO 68679 --- [Thread-8] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2019-12-04 03:59:46.167  INFO 68679 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-04 03:59:46.171  INFO 68679 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-04 04:33:11.098  INFO 71728 --- [main] c.e.usersapi.SignUpIntegrationTest       : The following profiles are active: test
+2019-12-04 04:33:12.995  INFO 71728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-04 04:33:13.299  INFO 71728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 286ms. Found 3 repository interfaces.
+2019-12-04 04:33:14.416  INFO 71728 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=10205156-98df-3653-bd67-7f5b0b10d1d3
+2019-12-04 04:33:15.086  INFO 71728 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e8782814] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-04 04:33:15.239  INFO 71728 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$4922b11] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-04 04:33:16.211  INFO 71728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-04 04:33:17.481  INFO 71728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-04 04:33:17.818  INFO 71728 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-12-04 04:33:18.249  INFO 71728 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-12-04 04:33:18.254  INFO 71728 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-12-04 04:33:18.489  INFO 71728 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-12-04 04:33:19.241  INFO 71728 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-12-04 04:33:21.423  INFO 71728 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@4a9a8f3e'
+2019-12-04 04:33:21.430  INFO 71728 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-04 04:33:22.821  INFO 71728 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-12-04 04:33:25.108  WARN 71728 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-04 04:33:25.108  INFO 71728 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-04 04:33:25.122  WARN 71728 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-04 04:33:25.122  INFO 71728 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-04 04:33:25.728  INFO 71728 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-04 04:33:25.755  WARN 71728 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-04 04:33:26.685  INFO 71728 --- [main] c.e.usersapi.SignUpIntegrationTest       : Started SignUpIntegrationTest in 17.687 seconds (JVM running for 26.332)
+2019-12-04 04:33:26.830  WARN 71728 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23505, SQLState: 23505
+2019-12-04 04:33:26.830 ERROR 71728 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unique index or primary key violation: "PUBLIC.UK_6DOTKOTT2KJSP8VW4D0M25FB7_INDEX_4 ON PUBLIC.USERS(EMAIL) VALUES 2"; SQL statement:
+insert into users (id, email, password, profile_id, username) values (null, ?, ?, ?, ?) [23505-200]
+2019-12-04 04:33:27.375  INFO 71728 --- [Thread-8] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-04 04:33:27.378  INFO 71728 --- [Thread-8] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USERS with eureka with status DOWN
+2019-12-04 04:33:27.382  INFO 71728 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-04 04:33:27.385  INFO 71728 --- [Thread-8] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-04 04:33:27.385  INFO 71728 --- [Thread-8] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2019-12-04 04:33:27.387  WARN 71728 --- [Thread-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2019-12-04 04:33:27.387 ERROR 71728 --- [Thread-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2019-12-04 04:33:27.387  WARN 71728 --- [Thread-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2019-12-04 04:33:27.387 ERROR 71728 --- [Thread-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2019-12-04 04:33:27.388  INFO 71728 --- [Thread-8] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+2019-12-04 04:33:27.389  INFO 71728 --- [Thread-8] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2019-12-04 04:33:27.390  INFO 71728 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-04 04:33:27.394  INFO 71728 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

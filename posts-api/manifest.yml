@@ -1,0 +1,19 @@
+applications:
+- name: posts-api
+  disk_quota: 512M
+  instances: 1
+  memory: 512M
+  env:
+    JAVA_OPTS: '-XX:ReservedCodeCacheSize=32M -XX:MaxDirectMemorySize=32M'
+    JBP_CONFIG_OPEN_JDK_JRE: '[memory_calculator: {stack_threads: 30}, jre: {version: 11.+}]'
+  path: target/posts-api.jar
+  routes:
+  - route: posts-api.cfapps.io
+  services:
+  - postgres
+  - rabbitmq
+  - eureka
+  buildpacks:
+  - https://github.com/cloudfoundry/java-buildpack.git
+  stack: cflinuxfs3
+  timeout: 120

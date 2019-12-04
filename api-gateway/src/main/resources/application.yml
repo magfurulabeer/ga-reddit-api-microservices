@@ -1,0 +1,11 @@
+zuul:
+  routes:
+    users:
+      path: /users/**
+      url: https://users-api.cfapps.io/
+    posts:
+      path: /posts/**
+      url: https://posts-api.cfapps.io/
+    comments:
+      path: /comments/**
+      url: https://comments-api.cfapps.io/

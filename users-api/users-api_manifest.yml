@@ -1,0 +1,11 @@
+applications:
+- name: users-api
+  disk_quota: 1G
+  instances: 1
+  memory: 1G
+  routes:
+  - route: users-api.cfapps.io
+  services:
+  - postgres
+  stack: cflinuxfs3
+  timeout: 120
