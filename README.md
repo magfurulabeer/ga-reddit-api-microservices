@@ -12,6 +12,9 @@
 >* Spring Boot - Backend Framework
 >* Hibernate - ORM
 >* Feign - HTTP Client
+>* RabbitMQ - Messaging Queue
+>* Jenkins - CI/CD Server
+>* Elasticsearch/ Logstash/ Kibana - Monitoring
 >* PostgreSQL - Database
 >* Docker - Containers
 >* Docker Compose - Container Orchestration 
