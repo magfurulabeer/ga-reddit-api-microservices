@@ -1,4 +1,5 @@
-[[https://github.com/magfurulabeer/ga-reddit-api-microservices/blob/assets/header.png]]
+![Header](https://github.com/magfurulabeer/ga-reddit-api-microservices/blob/assets/header.png)
+
 GA Reddit API Microservices is the Capstone project by Grant Kopplin and Magfurul Abeer for General Assembly's Cognizant Java Academy. While it is a Reddit-like web application, this repository only contains the backend API for it. There is a focus on DevOps with Docker, PWS, Jenkins, and the ELK stack.
 [Learn more about our project by visiting our wiki!](https://github.com/magfurulabeer/ga-reddit-api-microservices/wiki)
 
