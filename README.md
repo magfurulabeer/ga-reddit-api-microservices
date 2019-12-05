@@ -1,10 +1,11 @@
-# GA Reddit API Microservices
+[[https://github.com/magfurulabeer/ga-reddit-api-microservices/blob/assets/header.png]]
+GA Reddit API Microservices is the Capstone project by Grant Kopplin and Magfurul Abeer for General Assembly's Cognizant Java Academy. While it is a Reddit-like web application, this repository only contains the backend API for it. There is a focus on DevOps with Docker, PWS, Jenkins, and the ELK stack.
+[Learn more about our project by visiting our wiki!](https://github.com/magfurulabeer/ga-reddit-api-microservices/wiki)
 
-### Pivotal Tracker
->https://www.pivotaltracker.com/n/projects/2416893
+### Architecture
+>![Image of Architecture](https://github.com/magfurulabeer/ga-reddit-api-microservices/blob/master/docs/assets/architecture-diagram.png)
 
-### ERD
->![Image of ERD](https://github.com/magfurulabeer/ga-reddit-api-monolith/blob/master/erd-final.png)
+>Our Architecture is quite standard. When the client sends a request to our backend (in this case, through the frontend application), it goes to our API Gateway (Netflix Zuul) first and then goes to our Service Discovery (Netflix Eureka) which then locates one of three services: Users, Posts, or Comments. All 3 services, as well as our API Gateway, use and depend on our shared Postgres Database.
 
 ## Technologies Used
 >* Pivotal Tracker - User Stories
@@ -23,10 +24,11 @@
 >* IntelliJ IDEA - IDE
 >* Sketch - Image Editing
 
-### Architecture
->![Image of Architecture](https://github.com/magfurulabeer/ga-reddit-api-microservices/blob/master/docs/assets/architecture-diagram.png)
+### Pivotal Tracker
+>https://www.pivotaltracker.com/n/projects/2416893
 
->Our Architecture is quite standard. When the client sends a request to our backend (in this case, through the frontend application), it goes to our API Gateway (Netflix Zuul) first and then goes to our Service Discovery (Netflix Eureka) which then locates one of three services: Users, Posts, or Comments. All 3 services, as well as our API Gateway, use and depend on our shared Postgres Database.
+### ERD
+>![Image of ERD](https://github.com/magfurulabeer/ga-reddit-api-monolith/blob/master/erd-final.png)
 
 ### Challenges
 
